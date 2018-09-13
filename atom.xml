@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Ganlv&#39;s Blog</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://ganlvtech.github.io/"/>
+  <updated>2018-09-11T17:18:30.232Z</updated>
+  <id>https://ganlvtech.github.io/</id>
+  
+  <author>
+    <name>Ganlv</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Jekyll v.s. Hexo</title>
+    <link href="https://ganlvtech.github.io/2018/09/10/jekyll-vs-hexo/"/>
+    <id>https://ganlvtech.github.io/2018/09/10/jekyll-vs-hexo/</id>
+    <published>2018-09-10T13:51:47.000Z</published>
+    <updated>2018-09-11T17:18:30.232Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;最近我想用 &lt;a href=&quot;https://pages.github.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub Pages&lt;/a&gt; 搭建一个静态博客。最先想到的肯定是 &lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="jekyll" scheme="https://ganlvtech.github.io/tags/jekyll/"/>
+    
+      <category term="hexo" scheme="https://ganlvtech.github.io/tags/hexo/"/>
+    
+      <category term="comparison" scheme="https://ganlvtech.github.io/tags/comparison/"/>
+    
+      <category term="ruby" scheme="https://ganlvtech.github.io/tags/ruby/"/>
+    
+      <category term="gem" scheme="https://ganlvtech.github.io/tags/gem/"/>
+    
+      <category term="node.js" scheme="https://ganlvtech.github.io/tags/node-js/"/>
+    
+      <category term="npm" scheme="https://ganlvtech.github.io/tags/npm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://ganlvtech.github.io/2018/09/07/hello-world/"/>
+    <id>https://ganlvtech.github.io/2018/09/07/hello-world/</id>
+    <published>2018-09-06T17:59:34.068Z</published>
+    <updated>2018-09-11T17:22:22.299Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="hello" scheme="https://ganlvtech.github.io/tags/hello/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>从零开始写一个PHP网站</title>
+    <link href="https://ganlvtech.github.io/2018/09/06/build-a-php-site-from-scratch/"/>
+    <id>https://ganlvtech.github.io/2018/09/06/build-a-php-site-from-scratch/</id>
+    <published>2018-09-05T18:10:43.000Z</published>
+    <updated>2018-09-11T17:22:12.045Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;《年薪百万程序员教你两个小时写出淘宝网站》，你的首页推荐似乎已经不堪入目了。&lt;/p&gt;
+&lt;p&gt;我不是年薪百万的程序员，我也不能两个小时写出淘宝网站，我就是一个热爱互联网技术的热爱学习的业余程序员。虽然如此，但是这篇文章将带你从零开始写一个 PHP
+        
+      
+    
+    </summary>
+    
+    
+      <category term="php" scheme="https://ganlvtech.github.io/tags/php/"/>
+    
+      <category term="installation" scheme="https://ganlvtech.github.io/tags/installation/"/>
+    
+      <category term="tutorial" scheme="https://ganlvtech.github.io/tags/tutorial/"/>
+    
+      <category term="laravel" scheme="https://ganlvtech.github.io/tags/laravel/"/>
+    
+  </entry>
+  
+</feed>
