@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ganlvtech.github.io/"/>
-  <updated>2018-09-11T17:18:30.232Z</updated>
+  <updated>2018-09-13T18:26:43.301Z</updated>
   <id>https://ganlvtech.github.io/</id>
   
   <author>
@@ -17,11 +17,64 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hello World</title>
+    <link href="https://ganlvtech.github.io/2018/09/13/hello-world/"/>
+    <id>https://ganlvtech.github.io/2018/09/13/hello-world/</id>
+    <published>2018-09-13T18:26:43.301Z</published>
+    <updated>2018-09-13T18:26:43.301Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="hello" scheme="https://ganlvtech.github.io/tags/hello/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>grub-image</title>
+    <link href="https://ganlvtech.github.io/2018/09/13/grub-image/"/>
+    <id>https://ganlvtech.github.io/2018/09/13/grub-image/</id>
+    <published>2018-09-13T17:20:05.000Z</published>
+    <updated>2018-09-13T18:26:43.301Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;今天尝试安装了一下 Ubuntu 18.04.1，现在安装系统越来越简单了，用 Rufus 做一个 U 盘启动盘，然后就正常下一步就行了，Ubuntu 直接提供安装 Windows 和 Ubuntu 双系统的选项。&lt;/p&gt;
+&lt;p&gt;安装之后想利用 Grub2
+        
+      
+    
+    </summary>
+    
+    
+      <category term="ubuntu" scheme="https://ganlvtech.github.io/tags/ubuntu/"/>
+    
+      <category term="linux" scheme="https://ganlvtech.github.io/tags/linux/"/>
+    
+      <category term="grub" scheme="https://ganlvtech.github.io/tags/grub/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Jekyll v.s. Hexo</title>
     <link href="https://ganlvtech.github.io/2018/09/10/jekyll-vs-hexo/"/>
     <id>https://ganlvtech.github.io/2018/09/10/jekyll-vs-hexo/</id>
     <published>2018-09-10T13:51:47.000Z</published>
-    <updated>2018-09-11T17:18:30.232Z</updated>
+    <updated>2018-09-13T18:26:43.301Z</updated>
     
     <summary type="html">
     
@@ -53,35 +106,11 @@
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://ganlvtech.github.io/2018/09/07/hello-world/"/>
-    <id>https://ganlvtech.github.io/2018/09/07/hello-world/</id>
-    <published>2018-09-06T17:59:34.068Z</published>
-    <updated>2018-09-11T17:22:22.299Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="hello" scheme="https://ganlvtech.github.io/tags/hello/"/>
-    
-  </entry>
-  
-  <entry>
     <title>从零开始写一个PHP网站</title>
-    <link href="https://ganlvtech.github.io/2018/09/06/build-a-php-site-from-scratch/"/>
-    <id>https://ganlvtech.github.io/2018/09/06/build-a-php-site-from-scratch/</id>
-    <published>2018-09-05T18:10:43.000Z</published>
-    <updated>2018-09-11T17:22:12.045Z</updated>
+    <link href="https://ganlvtech.github.io/2018/09/05/build-a-php-site-from-scratch/"/>
+    <id>https://ganlvtech.github.io/2018/09/05/build-a-php-site-from-scratch/</id>
+    <published>2018-09-05T10:10:43.000Z</published>
+    <updated>2018-09-13T18:26:43.301Z</updated>
     
     <summary type="html">
     
