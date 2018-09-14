@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ganlvtech.github.io/"/>
-  <updated>2018-09-13T18:26:43.301Z</updated>
+  <updated>2018-09-14T04:43:39.430Z</updated>
   <id>https://ganlvtech.github.io/</id>
   
   <author>
@@ -17,35 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://ganlvtech.github.io/2018/09/13/hello-world/"/>
-    <id>https://ganlvtech.github.io/2018/09/13/hello-world/</id>
-    <published>2018-09-13T18:26:43.301Z</published>
-    <updated>2018-09-13T18:26:43.301Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="hello" scheme="https://ganlvtech.github.io/tags/hello/"/>
-    
-  </entry>
-  
-  <entry>
     <title>grub-image</title>
     <link href="https://ganlvtech.github.io/2018/09/13/grub-image/"/>
     <id>https://ganlvtech.github.io/2018/09/13/grub-image/</id>
     <published>2018-09-13T17:20:05.000Z</published>
-    <updated>2018-09-13T18:26:43.301Z</updated>
+    <updated>2018-09-14T04:43:39.430Z</updated>
     
     <summary type="html">
     
@@ -74,7 +50,7 @@
     <link href="https://ganlvtech.github.io/2018/09/10/jekyll-vs-hexo/"/>
     <id>https://ganlvtech.github.io/2018/09/10/jekyll-vs-hexo/</id>
     <published>2018-09-10T13:51:47.000Z</published>
-    <updated>2018-09-13T18:26:43.301Z</updated>
+    <updated>2018-09-14T04:43:39.430Z</updated>
     
     <summary type="html">
     
@@ -110,7 +86,7 @@
     <link href="https://ganlvtech.github.io/2018/09/05/build-a-php-site-from-scratch/"/>
     <id>https://ganlvtech.github.io/2018/09/05/build-a-php-site-from-scratch/</id>
     <published>2018-09-05T10:10:43.000Z</published>
-    <updated>2018-09-13T18:26:43.301Z</updated>
+    <updated>2018-09-14T04:43:39.430Z</updated>
     
     <summary type="html">
     
