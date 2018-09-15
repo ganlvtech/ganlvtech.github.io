@@ -80,7 +80,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/13/grub-image/">grub-image</a>
+      <a class="article-title" href="/2018/09/13/grub-image/">Grub2 添加背景图片</a>
     </h1>
   
 
@@ -121,7 +121,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ganlvtech.github.io/2018/09/13/grub-image/" data-id="cjm1iqbh90001ro5u7rc3l15c" class="article-share-link">Share</a>
+      <a data-url="https://ganlvtech.github.io/2018/09/13/grub-image/" data-id="cjm30h6wr0000rq5zgso51byk" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/grub/">grub</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li></ul>
@@ -296,7 +296,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ganlvtech.github.io/2018/09/10/jekyll-vs-hexo/" data-id="cjm1iqbhz000gro5u796za7bw" class="article-share-link">Share</a>
+      <a data-url="https://ganlvtech.github.io/2018/09/10/jekyll-vs-hexo/" data-id="cjm30h6xi000orq5zt8g8wsdw" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/comparison/">comparison</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gem/">gem</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jekyll/">jekyll</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node-js/">node.js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm/">npm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ruby/">ruby</a></li></ul>
@@ -322,7 +322,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/05/build-a-php-site-from-scratch/">从零开始写一个PHP网站</a>
+      <a class="article-title" href="/2018/09/05/build-a-php-site-from-scratch/">从零开始写一个 PHP 网站</a>
     </h1>
   
 
@@ -363,14 +363,31 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php -v</span><br></pre></td></tr></table></figure>
 <p>成功显示版本号了，证明你可以从任何位置访问 <code>php</code> 了。</p>
 <h2 id="To-Be-Continued"><a href="#To-Be-Continued" class="headerlink" title="To Be Continued"></a>To Be Continued</h2><p>Images will comming soon.</p>
+<h2 id="安装-MariaDB-数据库"><a href="#安装-MariaDB-数据库" class="headerlink" title="安装 MariaDB 数据库"></a>安装 MariaDB 数据库</h2><p>存数据总不能像大学计算机 C 语言课程上，都是操作文本文件吧，我们要用一个更牛逼的东西——数据库。</p>
+<p>我用的是 <a href="https://mariadb.org/" target="_blank" rel="noopener">MariaDB</a>，到 <a href="https://downloads.mariadb.org/" target="_blank" rel="noopener">下载页面</a> 去下载一个最新版就行了。</p>
+<h2 id="安装-Composer"><a href="#安装-Composer" class="headerlink" title="安装 Composer"></a>安装 Composer</h2><p>代码不能全是自己写，有现成的就用现成的，<a href="https://getcomposer.org/" target="_blank" rel="noopener">Composer</a> 可以自动帮我们下载 <a href="https://packagist.org/" target="_blank" rel="noopener">Packagist</a> 上面现成的包。</p>
+<p>到 <a href="https://getcomposer.org/download/" target="_blank" rel="noopener">Composer 下载页面</a> 中下载 <code>Composer-Setup.exe</code> 正常安装即可。</p>
+<h2 id="新建-Laravel-项目"><a href="#新建-Laravel-项目" class="headerlink" title="新建 Laravel 项目"></a>新建 Laravel 项目</h2><p>php 网站可以全部由自己从头写起，不过开发效率太低，我使用 <a href="https://laravel.com/" target="_blank" rel="noopener">Laravel</a> 这个框架。</p>
+<p>使用框架，我们不用考虑如何操作数据库等等细节内容，我们只需要完成每个页面的逻辑过程就行了。</p>
+<h3 id="安装-Laravel-Installer"><a href="#安装-Laravel-Installer" class="headerlink" title="安装 Laravel Installer"></a>安装 Laravel Installer</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer global require <span class="string">"laravel/installer"</span></span><br></pre></td></tr></table></figure>
+<h3 id="新建-Laravel-应用"><a href="#新建-Laravel-应用" class="headerlink" title="新建 Laravel 应用"></a>新建 Laravel 应用</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">laravel new myapp</span><br></pre></td></tr></table></figure>
+<p>然后进入这个文件夹。</p>
+<h2 id="写代码"><a href="#写代码" class="headerlink" title="写代码"></a>写代码</h2><p>要学习这个框架，可以参考 <a href="https://laracasts.com/series/laravel-from-scratch-2017" target="_blank" rel="noopener">Laravel 5.4 from scratch</a> 视频教程。如果有任何问题，应该首先查找 <a href="https://laravel.com/docs/" target="_blank" rel="noopener">Laravel 说明文档</a>。</p>
+<h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><p><code>.env</code> 文件</p>
+<p><code>config</code> 文件夹</p>
+<h3 id="启动开发服务器"><a href="#启动开发服务器" class="headerlink" title="启动开发服务器"></a>启动开发服务器</h3><p>我们需要一边写代码，一边看效果。Laravel 给我们提供了一个开发服务器，直接运行下面这条命令即可。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php artisan serve</span><br></pre></td></tr></table></figure>
+<h3 id="后端代码"><a href="#后端代码" class="headerlink" title="后端代码"></a>后端代码</h3><p>10 倍速快进（此处省略 3000 行代码）</p>
+<h3 id="前端代码"><a href="#前端代码" class="headerlink" title="前端代码"></a>前端代码</h3><p>10 倍速快进（此处省略 3000 行代码）</p>
+<h2 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h2><p>写完的项目我们可以放到 GitHub 开放给其他人。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ganlvtech.github.io/2018/09/05/build-a-php-site-from-scratch/" data-id="cjm1iqbgz0000ro5u3hmmbr65" class="article-share-link">Share</a>
+      <a data-url="https://ganlvtech.github.io/2018/09/05/build-a-php-site-from-scratch/" data-id="cjm30h6wx0001rq5zqvru7adf" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/installation/">installation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/laravel/">laravel</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tutorial/">tutorial</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PATH/">PATH</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/chrome/">chrome</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/composer/">composer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/installation/">installation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/laravel/">laravel</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mariadb/">mariadb</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tutorial/">tutorial</a></li></ul>
 
     </footer>
   </div>
@@ -392,7 +409,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/comparison/">comparison</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gem/">gem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/grub/">grub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/installation/">installation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jekyll/">jekyll</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/laravel/">laravel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ruby/">ruby</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tutorial/">tutorial</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/PATH/">PATH</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chrome/">chrome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/comparison/">comparison</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/composer/">composer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gem/">gem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/grub/">grub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/installation/">installation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jekyll/">jekyll</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/laravel/">laravel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mariadb/">mariadb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ruby/">ruby</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tutorial/">tutorial</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a></li></ul>
     </div>
   </div>
 
@@ -402,7 +419,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/comparison/" style="font-size: 10px;">comparison</a> <a href="/tags/gem/" style="font-size: 10px;">gem</a> <a href="/tags/grub/" style="font-size: 10px;">grub</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/installation/" style="font-size: 10px;">installation</a> <a href="/tags/jekyll/" style="font-size: 10px;">jekyll</a> <a href="/tags/laravel/" style="font-size: 10px;">laravel</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/ruby/" style="font-size: 10px;">ruby</a> <a href="/tags/tutorial/" style="font-size: 10px;">tutorial</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a>
+      <a href="/tags/PATH/" style="font-size: 10px;">PATH</a> <a href="/tags/chrome/" style="font-size: 10px;">chrome</a> <a href="/tags/comparison/" style="font-size: 10px;">comparison</a> <a href="/tags/composer/" style="font-size: 10px;">composer</a> <a href="/tags/gem/" style="font-size: 10px;">gem</a> <a href="/tags/grub/" style="font-size: 10px;">grub</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/installation/" style="font-size: 10px;">installation</a> <a href="/tags/jekyll/" style="font-size: 10px;">jekyll</a> <a href="/tags/laravel/" style="font-size: 10px;">laravel</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/mariadb/" style="font-size: 10px;">mariadb</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/ruby/" style="font-size: 10px;">ruby</a> <a href="/tags/tutorial/" style="font-size: 10px;">tutorial</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a>
     </div>
   </div>
 
@@ -424,7 +441,7 @@
       <ul>
         
           <li>
-            <a href="/2018/09/13/grub-image/">grub-image</a>
+            <a href="/2018/09/13/grub-image/">Grub2 添加背景图片</a>
           </li>
         
           <li>
@@ -432,7 +449,7 @@
           </li>
         
           <li>
-            <a href="/2018/09/05/build-a-php-site-from-scratch/">从零开始写一个PHP网站</a>
+            <a href="/2018/09/05/build-a-php-site-from-scratch/">从零开始写一个 PHP 网站</a>
           </li>
         
       </ul>

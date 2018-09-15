@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ganlvtech.github.io/"/>
-  <updated>2018-09-14T04:43:39.430Z</updated>
+  <updated>2018-09-15T05:48:09.999Z</updated>
   <id>https://ganlvtech.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>grub-image</title>
+    <title>Grub2 添加背景图片</title>
     <link href="https://ganlvtech.github.io/2018/09/13/grub-image/"/>
     <id>https://ganlvtech.github.io/2018/09/13/grub-image/</id>
     <published>2018-09-13T17:20:05.000Z</published>
-    <updated>2018-09-14T04:43:39.430Z</updated>
+    <updated>2018-09-15T05:48:09.999Z</updated>
     
     <summary type="html">
     
@@ -50,7 +50,7 @@
     <link href="https://ganlvtech.github.io/2018/09/10/jekyll-vs-hexo/"/>
     <id>https://ganlvtech.github.io/2018/09/10/jekyll-vs-hexo/</id>
     <published>2018-09-10T13:51:47.000Z</published>
-    <updated>2018-09-14T04:43:39.430Z</updated>
+    <updated>2018-09-15T05:48:09.999Z</updated>
     
     <summary type="html">
     
@@ -82,11 +82,11 @@
   </entry>
   
   <entry>
-    <title>从零开始写一个PHP网站</title>
+    <title>从零开始写一个 PHP 网站</title>
     <link href="https://ganlvtech.github.io/2018/09/05/build-a-php-site-from-scratch/"/>
     <id>https://ganlvtech.github.io/2018/09/05/build-a-php-site-from-scratch/</id>
     <published>2018-09-05T10:10:43.000Z</published>
-    <updated>2018-09-14T04:43:39.430Z</updated>
+    <updated>2018-09-15T05:48:09.999Z</updated>
     
     <summary type="html">
     
@@ -102,11 +102,19 @@
     </summary>
     
     
-      <category term="php" scheme="https://ganlvtech.github.io/tags/php/"/>
-    
       <category term="installation" scheme="https://ganlvtech.github.io/tags/installation/"/>
     
       <category term="tutorial" scheme="https://ganlvtech.github.io/tags/tutorial/"/>
+    
+      <category term="chrome" scheme="https://ganlvtech.github.io/tags/chrome/"/>
+    
+      <category term="php" scheme="https://ganlvtech.github.io/tags/php/"/>
+    
+      <category term="PATH" scheme="https://ganlvtech.github.io/tags/PATH/"/>
+    
+      <category term="mariadb" scheme="https://ganlvtech.github.io/tags/mariadb/"/>
+    
+      <category term="composer" scheme="https://ganlvtech.github.io/tags/composer/"/>
     
       <category term="laravel" scheme="https://ganlvtech.github.io/tags/laravel/"/>
     
