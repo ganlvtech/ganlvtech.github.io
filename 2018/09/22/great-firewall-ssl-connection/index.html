@@ -5,19 +5,24 @@
   
 
   
-  <title>Tag: npm | Ganlv&#39;s Blog</title>
+  <title>关于 GFW 的 SSL 连接检测 | Ganlv&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Hello everyone. This is Ganlv. Welcome to my static blog. Comment is not available now. The blog is under built. I will find or build a beautiful theme later. If you like my projects on GitHub, giving">
+  <meta name="description" content="当访问 https://zh.wikipedia.org/ 时会在 SSL 握手时直接被 RESET 或 ABORT，因为握手的时候是明文发送域名的。  由于墙并没有去管 https://en.wikipedia.org/ 或 https://www.wikipedia.org/，这两个网站可以正常访问，SSL 握手正常进行，Socket 成功连接了。  这时再访问 https://zh.wiki">
 <meta name="keywords" content="php,javascript,node,node.js,laravel,open source,hexo">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ganlv&#39;s Blog">
-<meta property="og:url" content="https://ganlvtech.github.io/tags/npm/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于 GFW 的 SSL 连接检测">
+<meta property="og:url" content="https://ganlvtech.github.io/2018/09/22/great-firewall-ssl-connection/index.html">
 <meta property="og:site_name" content="Ganlv&#39;s Blog">
-<meta property="og:description" content="Hello everyone. This is Ganlv. Welcome to my static blog. Comment is not available now. The blog is under built. I will find or build a beautiful theme later. If you like my projects on GitHub, giving">
+<meta property="og:description" content="当访问 https://zh.wikipedia.org/ 时会在 SSL 握手时直接被 RESET 或 ABORT，因为握手的时候是明文发送域名的。  由于墙并没有去管 https://en.wikipedia.org/ 或 https://www.wikipedia.org/，这两个网站可以正常访问，SSL 握手正常进行，Socket 成功连接了。  这时再访问 https://zh.wiki">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://ganlvtech.github.io/images/great-firewall-ssl-connection/1.jpg">
+<meta property="og:image" content="https://ganlvtech.github.io/images/great-firewall-ssl-connection/2.jpg">
+<meta property="og:image" content="https://ganlvtech.github.io/images/great-firewall-ssl-connection/3.jpg">
+<meta property="og:updated_time" content="2018-09-22T15:27:50.476Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ganlv&#39;s Blog">
-<meta name="twitter:description" content="Hello everyone. This is Ganlv. Welcome to my static blog. Comment is not available now. The blog is under built. I will find or build a beautiful theme later. If you like my projects on GitHub, giving">
+<meta name="twitter:title" content="关于 GFW 的 SSL 连接检测">
+<meta name="twitter:description" content="当访问 https://zh.wikipedia.org/ 时会在 SSL 握手时直接被 RESET 或 ABORT，因为握手的时候是明文发送域名的。  由于墙并没有去管 https://en.wikipedia.org/ 或 https://www.wikipedia.org/，这两个网站可以正常访问，SSL 握手正常进行，Socket 成功连接了。  这时再访问 https://zh.wiki">
+<meta name="twitter:image" content="https://ganlvtech.github.io/images/great-firewall-ssl-connection/1.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Ganlv&#39;s Blog" type="application/atom+xml">
   
@@ -64,40 +69,58 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/09/10/jekyll-vs-hexo/" class="archive-article-date">
-  <time datetime="2018-09-10T13:51:47.000Z" itemprop="datePublished">9月 10</time>
+        <section id="main"><article id="post-great-firewall-ssl-connection" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/09/22/great-firewall-ssl-connection/" class="article-date">
+  <time datetime="2018-09-22T15:11:47.000Z" itemprop="datePublished">2018-09-22</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/10/jekyll-vs-hexo/">Jekyll v.s. Hexo</a>
+    <h1 class="article-title" itemprop="name">
+      关于 GFW 的 SSL 连接检测
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>当访问 <a href="https://zh.wikipedia.org/" target="_blank" rel="noopener">https://zh.wikipedia.org/</a> 时会在 SSL 握手时直接被 RESET 或 ABORT，因为握手的时候是明文发送域名的。</p>
+<p><img src="/images/great-firewall-ssl-connection/1.jpg" alt=""></p>
+<p>由于墙并没有去管 <a href="https://en.wikipedia.org/" target="_blank" rel="noopener">https://en.wikipedia.org/</a> 或 <a href="https://www.wikipedia.org/" target="_blank" rel="noopener">https://www.wikipedia.org/</a>，这两个网站可以正常访问，SSL 握手正常进行，Socket 成功连接了。</p>
+<p><img src="/images/great-firewall-ssl-connection/2.jpg" alt=""></p>
+<p>这时再访问 <a href="https://zh.wikipedia.org/" target="_blank" rel="noopener">https://zh.wikipedia.org/</a>，由于这两个网站在一个服务器上，可以直接使用刚才的 Socket，于是访问中文维基百科时完全处于加密中。</p>
+<p><img src="/images/great-firewall-ssl-connection/3.jpg" alt=""></p>
+<p>也就是说，假如能和对方成功建立起 SSL 连接，那么这种检测证书的方式就会被绕过。</p>
 
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ganlvtech.github.io/2018/09/22/great-firewall-ssl-connection/" data-id="cjmdl9it90001rz66a17orngl" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/09/13/grub-image/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Grub2 添加背景图片</div>
+    </a>
+  
+</nav>
+
+  
+</article>
 
 </section>
         

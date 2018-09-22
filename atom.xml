@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ganlvtech.github.io/"/>
-  <updated>2018-09-22T09:57:57.237Z</updated>
+  <updated>2018-09-22T15:27:50.476Z</updated>
   <id>https://ganlvtech.github.io/</id>
   
   <author>
@@ -17,11 +17,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>关于 GFW 的 SSL 连接检测</title>
+    <link href="https://ganlvtech.github.io/2018/09/22/great-firewall-ssl-connection/"/>
+    <id>https://ganlvtech.github.io/2018/09/22/great-firewall-ssl-connection/</id>
+    <published>2018-09-22T15:11:47.000Z</published>
+    <updated>2018-09-22T15:27:50.476Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;当访问 &lt;a href=&quot;https://zh.wikipedia.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://zh.wikipedia.org/&lt;/a&gt; 时会在 SSL 握手时直接被 RESET 或
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Grub2 添加背景图片</title>
     <link href="https://ganlvtech.github.io/2018/09/13/grub-image/"/>
     <id>https://ganlvtech.github.io/2018/09/13/grub-image/</id>
     <published>2018-09-13T17:20:05.000Z</published>
-    <updated>2018-09-22T09:57:57.237Z</updated>
+    <updated>2018-09-22T15:27:50.476Z</updated>
     
     <summary type="html">
     
@@ -50,7 +72,7 @@
     <link href="https://ganlvtech.github.io/2018/09/10/jekyll-vs-hexo/"/>
     <id>https://ganlvtech.github.io/2018/09/10/jekyll-vs-hexo/</id>
     <published>2018-09-10T13:51:47.000Z</published>
-    <updated>2018-09-22T09:57:57.237Z</updated>
+    <updated>2018-09-22T15:27:50.476Z</updated>
     
     <summary type="html">
     
@@ -86,7 +108,7 @@
     <link href="https://ganlvtech.github.io/2018/09/05/build-a-php-site-from-scratch/"/>
     <id>https://ganlvtech.github.io/2018/09/05/build-a-php-site-from-scratch/</id>
     <published>2018-09-05T10:10:43.000Z</published>
-    <updated>2018-09-22T09:57:57.237Z</updated>
+    <updated>2018-09-22T15:27:50.472Z</updated>
     
     <summary type="html">
     
