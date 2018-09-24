@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ganlvtech.github.io/"/>
-  <updated>2018-09-22T15:27:50.476Z</updated>
+  <updated>2018-09-24T10:09:09.579Z</updated>
   <id>https://ganlvtech.github.io/</id>
   
   <author>
@@ -17,11 +17,41 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>XX-Net Teredo 问题</title>
+    <link href="https://ganlvtech.github.io/2018/09/24/xx-net-teredo-problem/"/>
+    <id>https://ganlvtech.github.io/2018/09/24/xx-net-teredo-problem/</id>
+    <published>2018-09-24T09:34:35.000Z</published>
+    <updated>2018-09-24T10:09:09.579Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;偶尔用 &lt;a href=&quot;https://github.com/XX-net/XX-Net&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;XX-Net&lt;/a&gt; 来访问 &lt;a href=&quot;https://www.google.com/ncr&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="gfw" scheme="https://ganlvtech.github.io/tags/gfw/"/>
+    
+      <category term="xx-net" scheme="https://ganlvtech.github.io/tags/xx-net/"/>
+    
+      <category term="teredo" scheme="https://ganlvtech.github.io/tags/teredo/"/>
+    
+      <category term="google" scheme="https://ganlvtech.github.io/tags/google/"/>
+    
+  </entry>
+  
+  <entry>
     <title>关于 GFW 的 SSL 连接检测</title>
     <link href="https://ganlvtech.github.io/2018/09/22/great-firewall-ssl-connection/"/>
     <id>https://ganlvtech.github.io/2018/09/22/great-firewall-ssl-connection/</id>
     <published>2018-09-22T15:11:47.000Z</published>
-    <updated>2018-09-22T15:27:50.476Z</updated>
+    <updated>2018-09-24T10:09:09.579Z</updated>
     
     <summary type="html">
     
@@ -36,6 +66,12 @@
     </summary>
     
     
+      <category term="gfw" scheme="https://ganlvtech.github.io/tags/gfw/"/>
+    
+      <category term="ssl" scheme="https://ganlvtech.github.io/tags/ssl/"/>
+    
+      <category term="tunnel" scheme="https://ganlvtech.github.io/tags/tunnel/"/>
+    
   </entry>
   
   <entry>
@@ -43,7 +79,7 @@
     <link href="https://ganlvtech.github.io/2018/09/13/grub-image/"/>
     <id>https://ganlvtech.github.io/2018/09/13/grub-image/</id>
     <published>2018-09-13T17:20:05.000Z</published>
-    <updated>2018-09-22T15:27:50.476Z</updated>
+    <updated>2018-09-24T10:09:09.579Z</updated>
     
     <summary type="html">
     
@@ -72,7 +108,7 @@
     <link href="https://ganlvtech.github.io/2018/09/10/jekyll-vs-hexo/"/>
     <id>https://ganlvtech.github.io/2018/09/10/jekyll-vs-hexo/</id>
     <published>2018-09-10T13:51:47.000Z</published>
-    <updated>2018-09-22T15:27:50.476Z</updated>
+    <updated>2018-09-24T10:09:09.579Z</updated>
     
     <summary type="html">
     
@@ -108,7 +144,7 @@
     <link href="https://ganlvtech.github.io/2018/09/05/build-a-php-site-from-scratch/"/>
     <id>https://ganlvtech.github.io/2018/09/05/build-a-php-site-from-scratch/</id>
     <published>2018-09-05T10:10:43.000Z</published>
-    <updated>2018-09-22T15:27:50.472Z</updated>
+    <updated>2018-09-24T10:09:09.579Z</updated>
     
     <summary type="html">
     

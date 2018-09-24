@@ -66,6 +66,52 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-xx-net-teredo-problem" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/09/24/xx-net-teredo-problem/" class="article-date">
+  <time datetime="2018-09-24T09:34:35.000Z" itemprop="datePublished">2018-09-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/24/xx-net-teredo-problem/">XX-Net Teredo 问题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>偶尔用 <a href="https://github.com/XX-net/XX-Net" target="_blank" rel="noopener">XX-Net</a> 来访问 <a href="https://www.google.com/ncr" target="_blank" rel="noopener">Google</a>、<a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN</a>。教育网原生 IPv6 可以完全正常使用 XX-net，但其他情况下需要 Teredo 隧道，然而我的电脑就是用不了，周围的人都可以，一直不知道为什么。</p>
+<p>今天终发现于原因了：我刚装系统的时候手贱把很多防火墙规则都改成禁用了，然后默认就阻止连接了。</p>
+<h2 id="发现过程"><a href="#发现过程" class="headerlink" title="发现过程"></a>发现过程</h2><p>我今天再一次查看 <a href="https://github.com/XX-net/XX-Net/wiki/%E5%A6%82%E4%BD%95%E5%BC%80%E5%90%AFIPv6" target="_blank" rel="noopener">XX-Net IPv6 说明</a>，很随意的点开了 <a href="https://en.wikipedia.org/wiki/Teredo_tunneling" target="_blank" rel="noopener">Teredo Wikipedia</a>。简单浏览了一下，突然发现这个服务是需要开启 UDP 3544 端口。我猛然意识到我刚装系统之后，在防火墙中把大部分端口都禁了。</p>
+<p><img src="/images/xx-net-teredo-problem/firewall-settings.jpg" alt="Windows Defender Firewall Advanced Settings"></p>
+<p>在高级安全 Windows Defender 防火墙设置中，把与 IPv6 有关的条目都启用，再试了一下果然就成功了。</p>
+<p>自己手欠啊！</p>
+<p>我继续看 XX-Net 的 Wiki 中，FAQ 中提到了 <a href="https://support.xbox.com/zh-CN/xbox-on-windows/social/troubleshoot-party-chat" target="_blank" rel="noopener">Teredo Xbox Support</a>，点进去发现里面说了防火墙问题。</p>
+<p>真是懒啊，没耐心去读文档。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ganlvtech.github.io/2018/09/24/xx-net-teredo-problem/" data-id="cjmg4rjjx0004mu5g9pr933vc" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gfw/">gfw</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/google/">google</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/teredo/">teredo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/xx-net/">xx-net</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-great-firewall-ssl-connection" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/09/22/great-firewall-ssl-connection/" class="article-date">
@@ -89,19 +135,21 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>当访问 <a href="https://zh.wikipedia.org/" target="_blank" rel="noopener">https://zh.wikipedia.org/</a> 时会在 SSL 握手时直接被 RESET 或 ABORT，因为握手的时候是明文发送域名的。</p>
-<p><img src="/images/great-firewall-ssl-connection/1.jpg" alt=""></p>
+<p><img src="/images/great-firewall-ssl-connection/1.jpg" alt="zh wikipedia abort"></p>
 <p>由于墙并没有去管 <a href="https://en.wikipedia.org/" target="_blank" rel="noopener">https://en.wikipedia.org/</a> 或 <a href="https://www.wikipedia.org/" target="_blank" rel="noopener">https://www.wikipedia.org/</a>，这两个网站可以正常访问，SSL 握手正常进行，Socket 成功连接了。</p>
-<p><img src="/images/great-firewall-ssl-connection/2.jpg" alt=""></p>
+<p><img src="/images/great-firewall-ssl-connection/2.jpg" alt="www wikipedia ok"></p>
 <p>这时再访问 <a href="https://zh.wikipedia.org/" target="_blank" rel="noopener">https://zh.wikipedia.org/</a>，由于这两个网站在一个服务器上，可以直接使用刚才的 Socket，于是访问中文维基百科时完全处于加密中。</p>
-<p><img src="/images/great-firewall-ssl-connection/3.jpg" alt=""></p>
+<p><img src="/images/great-firewall-ssl-connection/3.jpg" alt="zh wikipedia use www ssl tunnel"></p>
 <p>也就是说，假如能和对方成功建立起 SSL 连接，那么这种检测证书的方式就会被绕过。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ganlvtech.github.io/2018/09/22/great-firewall-ssl-connection/" data-id="cjmdl9it90001rz66a17orngl" class="article-share-link">Share</a>
+      <a data-url="https://ganlvtech.github.io/2018/09/22/great-firewall-ssl-connection/" data-id="cjmg4rjji0001mu5gey5txuug" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gfw/">gfw</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ssl/">ssl</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tunnel/">tunnel</a></li></ul>
+
     </footer>
   </div>
   
@@ -164,7 +212,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ganlvtech.github.io/2018/09/13/grub-image/" data-id="cjmdl9ite0003rz665m2hw8jk" class="article-share-link">Share</a>
+      <a data-url="https://ganlvtech.github.io/2018/09/13/grub-image/" data-id="cjmg4rjjt0003mu5go6ihbxrn" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/grub/">grub</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li></ul>
@@ -339,7 +387,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ganlvtech.github.io/2018/09/10/jekyll-vs-hexo/" data-id="cjmdl9iu1000prz665r87xo6n" class="article-share-link">Share</a>
+      <a data-url="https://ganlvtech.github.io/2018/09/10/jekyll-vs-hexo/" data-id="cjmg4rjl40014mu5gmi9mafo7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/comparison/">comparison</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gem/">gem</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jekyll/">jekyll</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node-js/">node.js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm/">npm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ruby/">ruby</a></li></ul>
@@ -427,7 +475,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ganlvtech.github.io/2018/09/05/build-a-php-site-from-scratch/" data-id="cjmdl9it30000rz669oryuyix" class="article-share-link">Share</a>
+      <a data-url="https://ganlvtech.github.io/2018/09/05/build-a-php-site-from-scratch/" data-id="cjmg4rjj50000mu5gk2n2obl6" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PATH/">PATH</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/chrome/">chrome</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/composer/">composer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/installation/">installation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/laravel/">laravel</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mariadb/">mariadb</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tutorial/">tutorial</a></li></ul>
@@ -452,7 +500,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/PATH/">PATH</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chrome/">chrome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/comparison/">comparison</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/composer/">composer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gem/">gem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/grub/">grub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/installation/">installation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jekyll/">jekyll</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/laravel/">laravel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mariadb/">mariadb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ruby/">ruby</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tutorial/">tutorial</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/PATH/">PATH</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chrome/">chrome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/comparison/">comparison</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/composer/">composer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gem/">gem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gfw/">gfw</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/google/">google</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/grub/">grub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/installation/">installation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jekyll/">jekyll</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/laravel/">laravel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mariadb/">mariadb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ruby/">ruby</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssl/">ssl</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/teredo/">teredo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tunnel/">tunnel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tutorial/">tutorial</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xx-net/">xx-net</a></li></ul>
     </div>
   </div>
 
@@ -462,7 +510,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/PATH/" style="font-size: 10px;">PATH</a> <a href="/tags/chrome/" style="font-size: 10px;">chrome</a> <a href="/tags/comparison/" style="font-size: 10px;">comparison</a> <a href="/tags/composer/" style="font-size: 10px;">composer</a> <a href="/tags/gem/" style="font-size: 10px;">gem</a> <a href="/tags/grub/" style="font-size: 10px;">grub</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/installation/" style="font-size: 10px;">installation</a> <a href="/tags/jekyll/" style="font-size: 10px;">jekyll</a> <a href="/tags/laravel/" style="font-size: 10px;">laravel</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/mariadb/" style="font-size: 10px;">mariadb</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/ruby/" style="font-size: 10px;">ruby</a> <a href="/tags/tutorial/" style="font-size: 10px;">tutorial</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a>
+      <a href="/tags/PATH/" style="font-size: 10px;">PATH</a> <a href="/tags/chrome/" style="font-size: 10px;">chrome</a> <a href="/tags/comparison/" style="font-size: 10px;">comparison</a> <a href="/tags/composer/" style="font-size: 10px;">composer</a> <a href="/tags/gem/" style="font-size: 10px;">gem</a> <a href="/tags/gfw/" style="font-size: 20px;">gfw</a> <a href="/tags/google/" style="font-size: 10px;">google</a> <a href="/tags/grub/" style="font-size: 10px;">grub</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/installation/" style="font-size: 10px;">installation</a> <a href="/tags/jekyll/" style="font-size: 10px;">jekyll</a> <a href="/tags/laravel/" style="font-size: 10px;">laravel</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/mariadb/" style="font-size: 10px;">mariadb</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/ruby/" style="font-size: 10px;">ruby</a> <a href="/tags/ssl/" style="font-size: 10px;">ssl</a> <a href="/tags/teredo/" style="font-size: 10px;">teredo</a> <a href="/tags/tunnel/" style="font-size: 10px;">tunnel</a> <a href="/tags/tutorial/" style="font-size: 10px;">tutorial</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/xx-net/" style="font-size: 10px;">xx-net</a>
     </div>
   </div>
 
@@ -482,6 +530,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/09/24/xx-net-teredo-problem/">XX-Net Teredo 问题</a>
+          </li>
         
           <li>
             <a href="/2018/09/22/great-firewall-ssl-connection/">关于 GFW 的 SSL 连接检测</a>

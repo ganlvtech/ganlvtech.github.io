@@ -5,19 +5,22 @@
   
 
   
-  <title>归档: 2018/9 | Ganlv&#39;s Blog</title>
+  <title>XX-Net Teredo 问题 | Ganlv&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Hello everyone. This is Ganlv. Welcome to my static blog. Comment is not available now. The blog is under built. I will find or build a beautiful theme later. If you like my projects on GitHub, giving">
-<meta name="keywords" content="php,javascript,node,node.js,laravel,open source,hexo">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ganlv&#39;s Blog">
-<meta property="og:url" content="https://ganlvtech.github.io/archives/2018/09/index.html">
+  <meta name="description" content="偶尔用 XX-Net 来访问 Google、MDN。教育网原生 IPv6 可以完全正常使用 XX-net，但其他情况下需要 Teredo 隧道，然而我的电脑就是用不了，周围的人都可以，一直不知道为什么。 今天终发现于原因了：我刚装系统的时候手贱把很多防火墙规则都改成禁用了，然后默认就阻止连接了。 发现过程我今天再一次查看 XX-Net IPv6 说明，很随意的点开了 Teredo Wikipedi">
+<meta name="keywords" content="gfw,xx-net,teredo,google">
+<meta property="og:type" content="article">
+<meta property="og:title" content="XX-Net Teredo 问题">
+<meta property="og:url" content="https://ganlvtech.github.io/2018/09/24/xx-net-teredo-problem/index.html">
 <meta property="og:site_name" content="Ganlv&#39;s Blog">
-<meta property="og:description" content="Hello everyone. This is Ganlv. Welcome to my static blog. Comment is not available now. The blog is under built. I will find or build a beautiful theme later. If you like my projects on GitHub, giving">
+<meta property="og:description" content="偶尔用 XX-Net 来访问 Google、MDN。教育网原生 IPv6 可以完全正常使用 XX-net，但其他情况下需要 Teredo 隧道，然而我的电脑就是用不了，周围的人都可以，一直不知道为什么。 今天终发现于原因了：我刚装系统的时候手贱把很多防火墙规则都改成禁用了，然后默认就阻止连接了。 发现过程我今天再一次查看 XX-Net IPv6 说明，很随意的点开了 Teredo Wikipedi">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://ganlvtech.github.io/images/xx-net-teredo-problem/firewall-settings.jpg">
+<meta property="og:updated_time" content="2018-09-24T10:09:09.579Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ganlv&#39;s Blog">
-<meta name="twitter:description" content="Hello everyone. This is Ganlv. Welcome to my static blog. Comment is not available now. The blog is under built. I will find or build a beautiful theme later. If you like my projects on GitHub, giving">
+<meta name="twitter:title" content="XX-Net Teredo 问题">
+<meta name="twitter:description" content="偶尔用 XX-Net 来访问 Google、MDN。教育网原生 IPv6 可以完全正常使用 XX-net，但其他情况下需要 Teredo 隧道，然而我的电脑就是用不了，周围的人都可以，一直不知道为什么。 今天终发现于原因了：我刚装系统的时候手贱把很多防火墙规则都改成禁用了，然后默认就阻止连接了。 发现过程我今天再一次查看 XX-Net IPv6 说明，很随意的点开了 Teredo Wikipedi">
+<meta name="twitter:image" content="https://ganlvtech.github.io/images/xx-net-teredo-problem/firewall-settings.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Ganlv&#39;s Blog" type="application/atom+xml">
   
@@ -64,116 +67,61 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/09/24/xx-net-teredo-problem/" class="archive-article-date">
-  <time datetime="2018-09-24T09:34:35.000Z" itemprop="datePublished">9月 24</time>
+        <section id="main"><article id="post-xx-net-teredo-problem" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/09/24/xx-net-teredo-problem/" class="article-date">
+  <time datetime="2018-09-24T09:34:35.000Z" itemprop="datePublished">2018-09-24</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/24/xx-net-teredo-problem/">XX-Net Teredo 问题</a>
+    <h1 class="article-title" itemprop="name">
+      XX-Net Teredo 问题
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/09/22/great-firewall-ssl-connection/" class="archive-article-date">
-  <time datetime="2018-09-22T15:11:47.000Z" itemprop="datePublished">9月 22</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/22/great-firewall-ssl-connection/">关于 GFW 的 SSL 连接检测</a>
-    </h1>
-  
+        <p>偶尔用 <a href="https://github.com/XX-net/XX-Net" target="_blank" rel="noopener">XX-Net</a> 来访问 <a href="https://www.google.com/ncr" target="_blank" rel="noopener">Google</a>、<a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN</a>。教育网原生 IPv6 可以完全正常使用 XX-net，但其他情况下需要 Teredo 隧道，然而我的电脑就是用不了，周围的人都可以，一直不知道为什么。</p>
+<p>今天终发现于原因了：我刚装系统的时候手贱把很多防火墙规则都改成禁用了，然后默认就阻止连接了。</p>
+<h2 id="发现过程"><a href="#发现过程" class="headerlink" title="发现过程"></a>发现过程</h2><p>我今天再一次查看 <a href="https://github.com/XX-net/XX-Net/wiki/%E5%A6%82%E4%BD%95%E5%BC%80%E5%90%AFIPv6" target="_blank" rel="noopener">XX-Net IPv6 说明</a>，很随意的点开了 <a href="https://en.wikipedia.org/wiki/Teredo_tunneling" target="_blank" rel="noopener">Teredo Wikipedia</a>。简单浏览了一下，突然发现这个服务是需要开启 UDP 3544 端口。我猛然意识到我刚装系统之后，在防火墙中把大部分端口都禁了。</p>
+<p><img src="/images/xx-net-teredo-problem/firewall-settings.jpg" alt="Windows Defender Firewall Advanced Settings"></p>
+<p>在高级安全 Windows Defender 防火墙设置中，把与 IPv6 有关的条目都启用，再试了一下果然就成功了。</p>
+<p>自己手欠啊！</p>
+<p>我继续看 XX-Net 的 Wiki 中，FAQ 中提到了 <a href="https://support.xbox.com/zh-CN/xbox-on-windows/social/troubleshoot-party-chat" target="_blank" rel="noopener">Teredo Xbox Support</a>，点进去发现里面说了防火墙问题。</p>
+<p>真是懒啊，没耐心去读文档。</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-blog">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/09/13/grub-image/" class="archive-article-date">
-  <time datetime="2018-09-13T17:20:05.000Z" itemprop="datePublished">9月 14</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/13/grub-image/">Grub2 添加背景图片</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/09/10/jekyll-vs-hexo/" class="archive-article-date">
-  <time datetime="2018-09-10T13:51:47.000Z" itemprop="datePublished">9月 10</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ganlvtech.github.io/2018/09/24/xx-net-teredo-problem/" data-id="cjmg4rjjx0004mu5g9pr933vc" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/10/jekyll-vs-hexo/">Jekyll v.s. Hexo</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/09/05/build-a-php-site-from-scratch/" class="archive-article-date">
-  <time datetime="2018-09-05T10:10:43.000Z" itemprop="datePublished">9月 5</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/05/build-a-php-site-from-scratch/">从零开始写一个 PHP 网站</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gfw/">gfw</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/google/">google</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/teredo/">teredo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/xx-net/">xx-net</a></li></ul>
 
-    </header>
+    </footer>
   </div>
-</article>
+  
+    
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2018/09/22/great-firewall-ssl-connection/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">关于 GFW 的 SSL 连接检测</div>
+    </a>
   
+</nav>
 
+  
+</article>
 
 </section>
         
