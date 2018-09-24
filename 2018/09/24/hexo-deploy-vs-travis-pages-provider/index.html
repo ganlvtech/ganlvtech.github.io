@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  
+
+  
+  <title>hexo deploy v.s. Travis Pages provider | Ganlv&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="之前用的是 Hexo 自带的 hexo deploy 来部署 GitHub Pages，这个配置文件显得很不美观。 123456789before_script:  - npm install -g hexo-cli  - git config --global user.name &quot;Ganlv&quot;  - git config --global user.email &quot;nospam@example.">
+<meta name="keywords" content="hexo,node.js,npm,travis,ci,github,pages">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo deploy v.s. Travis Pages provider">
+<meta property="og:url" content="https://ganlvtech.github.io/2018/09/24/hexo-deploy-vs-travis-pages-provider/index.html">
+<meta property="og:site_name" content="Ganlv&#39;s Blog">
+<meta property="og:description" content="之前用的是 Hexo 自带的 hexo deploy 来部署 GitHub Pages，这个配置文件显得很不美观。 123456789before_script:  - npm install -g hexo-cli  - git config --global user.name &quot;Ganlv&quot;  - git config --global user.email &quot;nospam@example.">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://ganlvtech.github.io/images/hexo-deploy-vs-travis-pages-provider/different-committers.jpg">
+<meta property="og:updated_time" content="2018-09-24T14:18:57.605Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hexo deploy v.s. Travis Pages provider">
+<meta name="twitter:description" content="之前用的是 Hexo 自带的 hexo deploy 来部署 GitHub Pages，这个配置文件显得很不美观。 123456789before_script:  - npm install -g hexo-cli  - git config --global user.name &quot;Ganlv&quot;  - git config --global user.email &quot;nospam@example.">
+<meta name="twitter:image" content="https://ganlvtech.github.io/images/hexo-deploy-vs-travis-pages-provider/different-committers.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Ganlv&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Ganlv&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://ganlvtech.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-hexo-deploy-vs-travis-pages-provider" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/09/24/hexo-deploy-vs-travis-pages-provider/" class="article-date">
+  <time datetime="2018-09-24T13:54:53.000Z" itemprop="datePublished">2018-09-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      hexo deploy v.s. Travis Pages provider
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>之前用的是 Hexo 自带的 <code>hexo deploy</code> 来部署 GitHub Pages，这个配置文件显得很不美观。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">before_script:</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">npm</span> <span class="string">install</span> <span class="bullet">-g</span> <span class="string">hexo-cli</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">git</span> <span class="string">config</span> <span class="bullet">--global</span> <span class="string">user.name</span> <span class="string">"Ganlv"</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">git</span> <span class="string">config</span> <span class="bullet">--global</span> <span class="string">user.email</span> <span class="string">"nospam@example.com"</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">sed</span> <span class="bullet">-i</span> <span class="string">"s/git@github.com:/https:\/\/$&#123;__GITHUB_TOKEN__&#125;@github.com\//"</span> <span class="string">_config.yml</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">git</span> <span class="string">clone</span> <span class="bullet">-b</span> <span class="string">master</span> <span class="attr">https://github.com/ganlvtech/ganlvtech.github.io.git</span> <span class="string">.deploy_git</span></span><br><span class="line"></span><br><span class="line"><span class="attr">script:</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">hexo</span> <span class="string">deploy</span></span><br></pre></td></tr></table></figure>
+<p>通过 <code>sed</code> 来修改 <code>_config.yml</code> 的内容，把环境变量 <code>__GITHUB_TOKEN__</code> 嵌入到 git 仓库的地址当中，然后手动把仓库克隆下来保留提交历史。</p>
+<p>而且也不知道是不是因为使用了 <code>nospam</code> 的邮箱，GitHub 无法识别我这个提交的来源用户，就将提交者的视为陌生人了。</p>
+<p><img src="/images/hexo-deploy-vs-travis-pages-provider/different-committers.jpg" alt=""></p>
+<p>于是，我就想，hexo 只负责生成静态页面，部署到 GitHub Pages 使用 Travis CI 的 Pages Provider，这样提交者会显示成 <code>travisbot</code>，一目了然，知道这个是自动提交的。而且配置文件似乎更简洁。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">before_script:</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">npm</span> <span class="string">install</span> <span class="bullet">-g</span> <span class="string">hexo-cli</span></span><br><span class="line"></span><br><span class="line"><span class="attr">script:</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">hexo</span> <span class="string">generate</span></span><br><span class="line"></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  provider:</span> <span class="string">pages</span></span><br><span class="line"><span class="attr">  skip-cleanup:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  keep-history:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  github-token:</span> <span class="string">$GITHUB_TOKEN</span></span><br><span class="line"><span class="attr">  local-dir:</span> <span class="string">public</span></span><br><span class="line"><span class="attr">  target-branch:</span> <span class="string">master</span></span><br><span class="line"><span class="attr">  on:</span></span><br><span class="line"><span class="attr">    branch:</span> <span class="string">dev</span></span><br></pre></td></tr></table></figure>
+<p>在执行生成脚本之前只是全局安装 <code>hexo-cli</code>，然后执行 <code>hexo generate</code> 生成静态页面，然后利用 Travis CI 自动部署就完事儿啦，轻而易举，多么简洁。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ganlvtech.github.io/2018/09/24/hexo-deploy-vs-travis-pages-provider/" data-id="cjmgdorhc0004qv5up6jqz1hs" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ci/">ci</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node-js/">node.js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm/">npm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pages/">pages</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/travis/">travis</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/09/24/xx-net-teredo-problem/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">XX-Net Teredo 问题</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/PATH/">PATH</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chrome/">chrome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ci/">ci</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/comparison/">comparison</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/composer/">composer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gem/">gem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gfw/">gfw</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/google/">google</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/grub/">grub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/installation/">installation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jekyll/">jekyll</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/laravel/">laravel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mariadb/">mariadb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pages/">pages</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ruby/">ruby</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssl/">ssl</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/teredo/">teredo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/travis/">travis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tunnel/">tunnel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tutorial/">tutorial</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xx-net/">xx-net</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/PATH/" style="font-size: 10px;">PATH</a> <a href="/tags/chrome/" style="font-size: 10px;">chrome</a> <a href="/tags/ci/" style="font-size: 20px;">ci</a> <a href="/tags/comparison/" style="font-size: 10px;">comparison</a> <a href="/tags/composer/" style="font-size: 10px;">composer</a> <a href="/tags/gem/" style="font-size: 10px;">gem</a> <a href="/tags/gfw/" style="font-size: 20px;">gfw</a> <a href="/tags/github/" style="font-size: 20px;">github</a> <a href="/tags/google/" style="font-size: 10px;">google</a> <a href="/tags/grub/" style="font-size: 10px;">grub</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/installation/" style="font-size: 10px;">installation</a> <a href="/tags/jekyll/" style="font-size: 10px;">jekyll</a> <a href="/tags/laravel/" style="font-size: 10px;">laravel</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/mariadb/" style="font-size: 10px;">mariadb</a> <a href="/tags/node-js/" style="font-size: 20px;">node.js</a> <a href="/tags/npm/" style="font-size: 20px;">npm</a> <a href="/tags/pages/" style="font-size: 20px;">pages</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/ruby/" style="font-size: 10px;">ruby</a> <a href="/tags/ssl/" style="font-size: 10px;">ssl</a> <a href="/tags/teredo/" style="font-size: 10px;">teredo</a> <a href="/tags/travis/" style="font-size: 20px;">travis</a> <a href="/tags/tunnel/" style="font-size: 10px;">tunnel</a> <a href="/tags/tutorial/" style="font-size: 10px;">tutorial</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/xx-net/" style="font-size: 10px;">xx-net</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">九月 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/09/24/hexo-deploy-vs-travis-pages-provider/">hexo deploy v.s. Travis Pages provider</a>
+          </li>
+        
+          <li>
+            <a href="/2018/09/24/xx-net-teredo-problem/">XX-Net Teredo 问题</a>
+          </li>
+        
+          <li>
+            <a href="/2018/09/22/great-firewall-ssl-connection/">关于 GFW 的 SSL 连接检测</a>
+          </li>
+        
+          <li>
+            <a href="/2018/09/13/grub-image/">Grub2 添加背景图片</a>
+          </li>
+        
+          <li>
+            <a href="/2018/09/10/jekyll-vs-hexo/">Jekyll v.s. Hexo</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Ganlv<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/BSOD.js"></script>
+
+<script src="/js/script.js"></script>
+
+
+
+  </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+</body>
+</html>

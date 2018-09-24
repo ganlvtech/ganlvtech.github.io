@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ganlvtech.github.io/"/>
-  <updated>2018-09-24T13:52:31.584Z</updated>
+  <updated>2018-09-24T14:18:57.605Z</updated>
   <id>https://ganlvtech.github.io/</id>
   
   <author>
@@ -17,11 +17,48 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>hexo deploy v.s. Travis Pages provider</title>
+    <link href="https://ganlvtech.github.io/2018/09/24/hexo-deploy-vs-travis-pages-provider/"/>
+    <id>https://ganlvtech.github.io/2018/09/24/hexo-deploy-vs-travis-pages-provider/</id>
+    <published>2018-09-24T13:54:53.000Z</published>
+    <updated>2018-09-24T14:18:57.605Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;之前用的是 Hexo 自带的 &lt;code&gt;hexo deploy&lt;/code&gt; 来部署 GitHub Pages，这个配置文件显得很不美观。&lt;/p&gt;
+&lt;figure class=&quot;highlight yaml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
+        
+      
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="https://ganlvtech.github.io/tags/hexo/"/>
+    
+      <category term="node.js" scheme="https://ganlvtech.github.io/tags/node-js/"/>
+    
+      <category term="npm" scheme="https://ganlvtech.github.io/tags/npm/"/>
+    
+      <category term="travis" scheme="https://ganlvtech.github.io/tags/travis/"/>
+    
+      <category term="ci" scheme="https://ganlvtech.github.io/tags/ci/"/>
+    
+      <category term="github" scheme="https://ganlvtech.github.io/tags/github/"/>
+    
+      <category term="pages" scheme="https://ganlvtech.github.io/tags/pages/"/>
+    
+  </entry>
+  
+  <entry>
     <title>XX-Net Teredo 问题</title>
     <link href="https://ganlvtech.github.io/2018/09/24/xx-net-teredo-problem/"/>
     <id>https://ganlvtech.github.io/2018/09/24/xx-net-teredo-problem/</id>
     <published>2018-09-24T09:34:35.000Z</published>
-    <updated>2018-09-24T13:52:31.584Z</updated>
+    <updated>2018-09-24T14:18:57.605Z</updated>
     
     <summary type="html">
     
@@ -51,7 +88,7 @@
     <link href="https://ganlvtech.github.io/2018/09/22/great-firewall-ssl-connection/"/>
     <id>https://ganlvtech.github.io/2018/09/22/great-firewall-ssl-connection/</id>
     <published>2018-09-22T15:11:47.000Z</published>
-    <updated>2018-09-24T13:52:31.584Z</updated>
+    <updated>2018-09-24T14:18:57.605Z</updated>
     
     <summary type="html">
     
@@ -79,7 +116,7 @@
     <link href="https://ganlvtech.github.io/2018/09/13/grub-image/"/>
     <id>https://ganlvtech.github.io/2018/09/13/grub-image/</id>
     <published>2018-09-13T17:20:05.000Z</published>
-    <updated>2018-09-24T13:52:31.584Z</updated>
+    <updated>2018-09-24T14:18:57.605Z</updated>
     
     <summary type="html">
     
@@ -108,7 +145,7 @@
     <link href="https://ganlvtech.github.io/2018/09/10/jekyll-vs-hexo/"/>
     <id>https://ganlvtech.github.io/2018/09/10/jekyll-vs-hexo/</id>
     <published>2018-09-10T13:51:47.000Z</published>
-    <updated>2018-09-24T13:52:31.584Z</updated>
+    <updated>2018-09-24T14:18:57.605Z</updated>
     
     <summary type="html">
     
@@ -123,19 +160,27 @@
     </summary>
     
     
-      <category term="jekyll" scheme="https://ganlvtech.github.io/tags/jekyll/"/>
-    
       <category term="hexo" scheme="https://ganlvtech.github.io/tags/hexo/"/>
+    
+      <category term="node.js" scheme="https://ganlvtech.github.io/tags/node-js/"/>
+    
+      <category term="npm" scheme="https://ganlvtech.github.io/tags/npm/"/>
+    
+      <category term="travis" scheme="https://ganlvtech.github.io/tags/travis/"/>
+    
+      <category term="ci" scheme="https://ganlvtech.github.io/tags/ci/"/>
+    
+      <category term="github" scheme="https://ganlvtech.github.io/tags/github/"/>
+    
+      <category term="pages" scheme="https://ganlvtech.github.io/tags/pages/"/>
+    
+      <category term="jekyll" scheme="https://ganlvtech.github.io/tags/jekyll/"/>
     
       <category term="comparison" scheme="https://ganlvtech.github.io/tags/comparison/"/>
     
       <category term="ruby" scheme="https://ganlvtech.github.io/tags/ruby/"/>
     
       <category term="gem" scheme="https://ganlvtech.github.io/tags/gem/"/>
-    
-      <category term="node.js" scheme="https://ganlvtech.github.io/tags/node-js/"/>
-    
-      <category term="npm" scheme="https://ganlvtech.github.io/tags/npm/"/>
     
   </entry>
   
@@ -144,7 +189,7 @@
     <link href="https://ganlvtech.github.io/2018/09/05/build-a-php-site-from-scratch/"/>
     <id>https://ganlvtech.github.io/2018/09/05/build-a-php-site-from-scratch/</id>
     <published>2018-09-05T10:10:43.000Z</published>
-    <updated>2018-09-24T13:52:31.584Z</updated>
+    <updated>2018-09-24T14:18:57.605Z</updated>
     
     <summary type="html">
     
