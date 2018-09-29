@@ -2,19 +2,20 @@
 <html>
 <head>
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-<title>归档 | Ganlv&#39;s Blog</title>
+<title>Ubuntu Use Noto Sans CJK SC as Default Fallback Font | Ganlv&#39;s Blog</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-<meta name="description" content="Hello everyone. This is Ganlv. Welcome to my static blog. Comment is not available now. The blog is under built. I will find or build a beautiful theme later. If you like my projects on GitHub, giving">
-<meta name="keywords" content="php,javascript,node,node.js,laravel,open source,hexo">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ganlv&#39;s Blog">
-<meta property="og:url" content="https://ganlvtech.github.io/archives/index.html">
+<meta name="description" content="如何正确为 Noto Sans CJK 配置 fontconfig 使中文不会被显示为日文字型？ How to1sudo vi /etc/fonts/conf.d/64-language-selector-prefer.conf Use yy (yield a whole line) and p (paste) to move Noto Sans CJK SC to the first. And">
+<meta name="keywords" content="ubuntu,locale,i18n">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ubuntu Use Noto Sans CJK SC as Default Fallback Font">
+<meta property="og:url" content="https://ganlvtech.github.io/2018/09/28/ubuntu-font-noto-sans-cjk-problem/index.html">
 <meta property="og:site_name" content="Ganlv&#39;s Blog">
-<meta property="og:description" content="Hello everyone. This is Ganlv. Welcome to my static blog. Comment is not available now. The blog is under built. I will find or build a beautiful theme later. If you like my projects on GitHub, giving">
+<meta property="og:description" content="如何正确为 Noto Sans CJK 配置 fontconfig 使中文不会被显示为日文字型？ How to1sudo vi /etc/fonts/conf.d/64-language-selector-prefer.conf Use yy (yield a whole line) and p (paste) to move Noto Sans CJK SC to the first. And">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-09-29T08:03:26.814Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ganlv&#39;s Blog">
-<meta name="twitter:description" content="Hello everyone. This is Ganlv. Welcome to my static blog. Comment is not available now. The blog is under built. I will find or build a beautiful theme later. If you like my projects on GitHub, giving">
+<meta name="twitter:title" content="Ubuntu Use Noto Sans CJK SC as Default Fallback Font">
+<meta name="twitter:description" content="如何正确为 Noto Sans CJK 配置 fontconfig 使中文不会被显示为日文字型？ How to1sudo vi /etc/fonts/conf.d/64-language-selector-prefer.conf Use yy (yield a whole line) and p (paste) to move Noto Sans CJK SC to the first. And">
 <link rel="alternate" href="/atom.xml" title="Ganlv&#39;s Blog" type="application/atom+xml">
 <link rel="icon" href="/favicon.png">
 <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
@@ -49,97 +50,39 @@
 </div>
 </header>
 <div class="outer">
-<section id="main">
-<section class="archives-wrap">
-<div class="archive-year-wrap">
-<a href="/archives/2018" class="archive-year">2018</a>
-</div>
-<div class="archives">
-<article class="archive-article archive-type-post">
-<div class="archive-article-inner">
-<header class="archive-article-header">
-<a href="/2018/09/28/ubuntu-font-noto-sans-cjk-problem/" class="archive-article-date">
-<time datetime="2018-09-28T23:25:00.000Z" itemprop="datePublished">9月 29</time>
+<section id="main"><article id="post-ubuntu-font-noto-sans-cjk-problem" class="article article-type-post" itemscope itemprop="blogPost">
+<div class="article-meta">
+<a href="/2018/09/28/ubuntu-font-noto-sans-cjk-problem/" class="article-date">
+<time datetime="2018-09-28T23:25:00.000Z" itemprop="datePublished">2018-09-29</time>
 </a>
-<h1 itemprop="name">
-<a class="archive-article-title" href="/2018/09/28/ubuntu-font-noto-sans-cjk-problem/">Ubuntu Use Noto Sans CJK SC as Default Fallback Font</a>
+</div>
+<div class="article-inner">
+<header class="article-header">
+<h1 class="article-title" itemprop="name">
+Ubuntu Use Noto Sans CJK SC as Default Fallback Font
 </h1>
 </header>
+<div class="article-entry" itemprop="articleBody">
+<p><a href="https://www.zhihu.com/question/47141667" target="_blank" rel="noopener">如何正确为 Noto Sans CJK 配置 fontconfig 使中文不会被显示为日文字型？</a></p>
+<h2 id="How-to"><a href="#How-to" class="headerlink" title="How to"></a>How to</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/fonts/conf.d/64-language-selector-prefer.conf</span><br></pre></td></tr></table></figure>
+<p>Use <code>yy</code> (yield a whole line) and <code>p</code> (paste) to move <code>Noto Sans CJK SC</code> to the first. And then <code>:wq</code> (write and quite). Restart running program may apply the changes.</p>
+<h2 id="About-The-Default-Order"><a href="#About-The-Default-Order" class="headerlink" title="About The Default Order"></a>About The Default Order</h2><p><code>JP, KR, SC, TC</code>. They are sorted by alphabet. So a newly installed copy of Ubuntu would prefer <code>Noto Sans CJK JP</code> as default fallback font.</p>
+<blockquote>
+<p><code>CJK</code>, <code>Chinese, Japanese, Korean</code>, is also sorted by alphabet resulting in Chinese <code>C</code> first.</p>
+</blockquote>
 </div>
-</article>
-<article class="archive-article archive-type-post">
-<div class="archive-article-inner">
-<header class="archive-article-header">
-<a href="/2018/09/24/hexo-deploy-vs-travis-pages-provider/" class="archive-article-date">
-<time datetime="2018-09-24T13:54:53.000Z" itemprop="datePublished">9月 24</time>
+<footer class="article-footer">
+<a data-url="https://ganlvtech.github.io/2018/09/28/ubuntu-font-noto-sans-cjk-problem/" data-id="cjmn5hcaw00057i5zzma0r0o3" class="article-share-link">Share</a>
+<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/i18n/">i18n</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/locale/">locale</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li></ul>
+</footer>
+</div>
+<nav id="article-nav">
+<a href="/2018/09/24/hexo-deploy-vs-travis-pages-provider/" id="article-nav-older" class="article-nav-link-wrap">
+<strong class="article-nav-caption">Older</strong>
+<div class="article-nav-title">hexo deploy v.s. Travis Pages provider</div>
 </a>
-<h1 itemprop="name">
-<a class="archive-article-title" href="/2018/09/24/hexo-deploy-vs-travis-pages-provider/">hexo deploy v.s. Travis Pages provider</a>
-</h1>
-</header>
-</div>
+</nav>
 </article>
-<article class="archive-article archive-type-post">
-<div class="archive-article-inner">
-<header class="archive-article-header">
-<a href="/2018/09/24/xx-net-teredo-problem/" class="archive-article-date">
-<time datetime="2018-09-24T09:34:35.000Z" itemprop="datePublished">9月 24</time>
-</a>
-<h1 itemprop="name">
-<a class="archive-article-title" href="/2018/09/24/xx-net-teredo-problem/">XX-Net Teredo 问题</a>
-</h1>
-</header>
-</div>
-</article>
-<article class="archive-article archive-type-post">
-<div class="archive-article-inner">
-<header class="archive-article-header">
-<a href="/2018/09/22/great-firewall-ssl-connection/" class="archive-article-date">
-<time datetime="2018-09-22T15:11:47.000Z" itemprop="datePublished">9月 22</time>
-</a>
-<h1 itemprop="name">
-<a class="archive-article-title" href="/2018/09/22/great-firewall-ssl-connection/">关于 GFW 的 SSL 连接检测</a>
-</h1>
-</header>
-</div>
-</article>
-<article class="archive-article archive-type-blog">
-<div class="archive-article-inner">
-<header class="archive-article-header">
-<a href="/2018/09/13/grub-image/" class="archive-article-date">
-<time datetime="2018-09-13T17:20:05.000Z" itemprop="datePublished">9月 14</time>
-</a>
-<h1 itemprop="name">
-<a class="archive-article-title" href="/2018/09/13/grub-image/">Grub2 添加背景图片</a>
-</h1>
-</header>
-</div>
-</article>
-<article class="archive-article archive-type-post">
-<div class="archive-article-inner">
-<header class="archive-article-header">
-<a href="/2018/09/10/jekyll-vs-hexo/" class="archive-article-date">
-<time datetime="2018-09-10T13:51:47.000Z" itemprop="datePublished">9月 10</time>
-</a>
-<h1 itemprop="name">
-<a class="archive-article-title" href="/2018/09/10/jekyll-vs-hexo/">Jekyll v.s. Hexo</a>
-</h1>
-</header>
-</div>
-</article>
-<article class="archive-article archive-type-post">
-<div class="archive-article-inner">
-<header class="archive-article-header">
-<a href="/2018/09/05/build-a-php-site-from-scratch/" class="archive-article-date">
-<time datetime="2018-09-05T10:10:43.000Z" itemprop="datePublished">9月 5</time>
-</a>
-<h1 itemprop="name">
-<a class="archive-article-title" href="/2018/09/05/build-a-php-site-from-scratch/">从零开始写一个 PHP 网站</a>
-</h1>
-</header>
-</div>
-</article>
-</div></section>
 </section>
 <aside id="sidebar">
 <div class="widget-wrap">
