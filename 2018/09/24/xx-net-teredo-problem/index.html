@@ -4,19 +4,19 @@
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
 <title>XX-Net Teredo 问题 | Ganlv&#39;s Blog</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-<meta name="description" content="偶尔用 XX-Net 来访问 Google、MDN。教育网原生 IPv6 可以完全正常使用 XX-net，但其他情况下需要 Teredo 隧道，然而我的电脑就是用不了，周围的人都可以，一直不知道为什么。 今天终发现于原因了：我刚装系统的时候手贱把很多防火墙规则都改成禁用了，然后默认就阻止连接了。 发现过程我今天再一次查看 XX-Net IPv6 说明，很随意的点开了 Teredo Wikipedi">
+<meta name="description" content="偶尔用 XX-Net 来访问 Google、MDN。教育网原生 IPv6 可以完全正常使用 XX-net，但其他情况下需要 Teredo 隧道，然而我的电脑就是用不了，周围的人都可以，一直不知道为什么。 今天终发现于原因了：我刚装系统的时候手贱把很多防火墙规则都改成禁用了，然后默认就阻止连接了。 发现过程#我今天再一次查看 XX-Net IPv6 说明，很随意的点开了 Teredo Wikiped">
 <meta name="keywords" content="gfw,xx-net,teredo,google">
 <meta property="og:type" content="article">
 <meta property="og:title" content="XX-Net Teredo 问题">
 <meta property="og:url" content="https://ganlvtech.github.io/2018/09/24/xx-net-teredo-problem/index.html">
 <meta property="og:site_name" content="Ganlv&#39;s Blog">
-<meta property="og:description" content="偶尔用 XX-Net 来访问 Google、MDN。教育网原生 IPv6 可以完全正常使用 XX-net，但其他情况下需要 Teredo 隧道，然而我的电脑就是用不了，周围的人都可以，一直不知道为什么。 今天终发现于原因了：我刚装系统的时候手贱把很多防火墙规则都改成禁用了，然后默认就阻止连接了。 发现过程我今天再一次查看 XX-Net IPv6 说明，很随意的点开了 Teredo Wikipedi">
+<meta property="og:description" content="偶尔用 XX-Net 来访问 Google、MDN。教育网原生 IPv6 可以完全正常使用 XX-net，但其他情况下需要 Teredo 隧道，然而我的电脑就是用不了，周围的人都可以，一直不知道为什么。 今天终发现于原因了：我刚装系统的时候手贱把很多防火墙规则都改成禁用了，然后默认就阻止连接了。 发现过程#我今天再一次查看 XX-Net IPv6 说明，很随意的点开了 Teredo Wikiped">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://ganlvtech.github.io/images/xx-net-teredo-problem/firewall-settings.jpg">
-<meta property="og:updated_time" content="2018-10-10T06:24:20.837Z">
+<meta property="og:updated_time" content="2018-10-12T20:15:06.303Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="XX-Net Teredo 问题">
-<meta name="twitter:description" content="偶尔用 XX-Net 来访问 Google、MDN。教育网原生 IPv6 可以完全正常使用 XX-net，但其他情况下需要 Teredo 隧道，然而我的电脑就是用不了，周围的人都可以，一直不知道为什么。 今天终发现于原因了：我刚装系统的时候手贱把很多防火墙规则都改成禁用了，然后默认就阻止连接了。 发现过程我今天再一次查看 XX-Net IPv6 说明，很随意的点开了 Teredo Wikipedi">
+<meta name="twitter:description" content="偶尔用 XX-Net 来访问 Google、MDN。教育网原生 IPv6 可以完全正常使用 XX-net，但其他情况下需要 Teredo 隧道，然而我的电脑就是用不了，周围的人都可以，一直不知道为什么。 今天终发现于原因了：我刚装系统的时候手贱把很多防火墙规则都改成禁用了，然后默认就阻止连接了。 发现过程#我今天再一次查看 XX-Net IPv6 说明，很随意的点开了 Teredo Wikiped">
 <meta name="twitter:image" content="https://ganlvtech.github.io/images/xx-net-teredo-problem/firewall-settings.jpg">
 <link rel="alternate" href="/atom.xml" title="Ganlv&#39;s Blog" type="application/atom+xml">
 <link rel="icon" href="/favicon.png">
@@ -67,7 +67,7 @@ XX-Net Teredo 问题
 <div class="article-entry" itemprop="articleBody">
 <p>偶尔用 <a href="https://github.com/XX-net/XX-Net" target="_blank" rel="noopener">XX-Net</a> 来访问 <a href="https://www.google.com/ncr" target="_blank" rel="noopener">Google</a>、<a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN</a>。教育网原生 IPv6 可以完全正常使用 XX-net，但其他情况下需要 Teredo 隧道，然而我的电脑就是用不了，周围的人都可以，一直不知道为什么。</p>
 <p>今天终发现于原因了：我刚装系统的时候手贱把很多防火墙规则都改成禁用了，然后默认就阻止连接了。</p>
-<h2 id="发现过程"><a href="#发现过程" class="headerlink" title="发现过程"></a>发现过程</h2><p>我今天再一次查看 <a href="https://github.com/XX-net/XX-Net/wiki/%E5%A6%82%E4%BD%95%E5%BC%80%E5%90%AFIPv6" target="_blank" rel="noopener">XX-Net IPv6 说明</a>，很随意的点开了 <a href="https://en.wikipedia.org/wiki/Teredo_tunneling" target="_blank" rel="noopener">Teredo Wikipedia</a>。简单浏览了一下，突然发现这个服务是需要开启 UDP 3544 端口。我猛然意识到我刚装系统之后，在防火墙中把大部分端口都禁了。</p>
+<h2><span id="fa-xian-guo-cheng">发现过程</span><a href="#fa-xian-guo-cheng" class="header-anchor">#</a></h2><p>我今天再一次查看 <a href="https://github.com/XX-net/XX-Net/wiki/%E5%A6%82%E4%BD%95%E5%BC%80%E5%90%AFIPv6" target="_blank" rel="noopener">XX-Net IPv6 说明</a>，很随意的点开了 <a href="https://en.wikipedia.org/wiki/Teredo_tunneling" target="_blank" rel="noopener">Teredo Wikipedia</a>。简单浏览了一下，突然发现这个服务是需要开启 UDP 3544 端口。我猛然意识到我刚装系统之后，在防火墙中把大部分端口都禁了。</p>
 <p><img src="/images/xx-net-teredo-problem/firewall-settings.jpg" alt="Windows Defender Firewall Advanced Settings"></p>
 <p>在高级安全 Windows Defender 防火墙设置中，把与 IPv6 有关的条目都启用，再试了一下果然就成功了。</p>
 <p>自己手欠啊！</p>
@@ -75,7 +75,7 @@ XX-Net Teredo 问题
 <p>真是懒啊，没耐心去读文档。</p>
 </div>
 <footer class="article-footer">
-<a data-url="https://ganlvtech.github.io/2018/09/24/xx-net-teredo-problem/" data-id="cjn2rrsp10008xoy6zo6wb0xb" class="article-share-link">Share</a>
+<a data-url="https://ganlvtech.github.io/2018/09/24/xx-net-teredo-problem/" data-id="cjn6gbxal0008vxo4hwogwx82" class="article-share-link">Share</a>
 <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gfw/">gfw</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/google/">google</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/teredo/">teredo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/xx-net/">xx-net</a></li></ul>
 </footer>
 </div>

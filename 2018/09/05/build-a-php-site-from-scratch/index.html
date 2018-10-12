@@ -4,18 +4,18 @@
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
 <title>从零开始写一个 PHP 网站 | Ganlv&#39;s Blog</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-<meta name="description" content="《年薪百万程序员教你两个小时写出淘宝网站》，你的首页推荐似乎已经不堪入目了。 我不是年薪百万的程序员，我也不能两个小时写出淘宝网站，我就是一个热爱互联网技术的热爱学习的业余程序员。虽然如此，但是这篇文章将带你从零开始写一个 PHP 网站。 这篇文章有点类似 Hello, world!，就是那种你只要照着我说的去做就行了，至于为什么这么做，做完之后你自己去慢慢理解。 首先你需要有一台电脑虽然说电脑现">
+<meta name="description" content="《年薪百万程序员教你两个小时写出淘宝网站》，你的首页推荐似乎已经不堪入目了。 我不是年薪百万的程序员，我也不能两个小时写出淘宝网站，我就是一个热爱互联网技术的热爱学习的业余程序员。虽然如此，但是这篇文章将带你从零开始写一个 PHP 网站。 这篇文章有点类似 Hello, world!，就是那种你只要照着我说的去做就行了，至于为什么这么做，做完之后你自己去慢慢理解。   首先你需要有一台电脑 安装">
 <meta name="keywords" content="installation,tutorial,chrome,php,PATH,mariadb,composer,laravel">
 <meta property="og:type" content="article">
 <meta property="og:title" content="从零开始写一个 PHP 网站">
 <meta property="og:url" content="https://ganlvtech.github.io/2018/09/05/build-a-php-site-from-scratch/index.html">
 <meta property="og:site_name" content="Ganlv&#39;s Blog">
-<meta property="og:description" content="《年薪百万程序员教你两个小时写出淘宝网站》，你的首页推荐似乎已经不堪入目了。 我不是年薪百万的程序员，我也不能两个小时写出淘宝网站，我就是一个热爱互联网技术的热爱学习的业余程序员。虽然如此，但是这篇文章将带你从零开始写一个 PHP 网站。 这篇文章有点类似 Hello, world!，就是那种你只要照着我说的去做就行了，至于为什么这么做，做完之后你自己去慢慢理解。 首先你需要有一台电脑虽然说电脑现">
+<meta property="og:description" content="《年薪百万程序员教你两个小时写出淘宝网站》，你的首页推荐似乎已经不堪入目了。 我不是年薪百万的程序员，我也不能两个小时写出淘宝网站，我就是一个热爱互联网技术的热爱学习的业余程序员。虽然如此，但是这篇文章将带你从零开始写一个 PHP 网站。 这篇文章有点类似 Hello, world!，就是那种你只要照着我说的去做就行了，至于为什么这么做，做完之后你自己去慢慢理解。   首先你需要有一台电脑 安装">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-10-10T06:24:20.837Z">
+<meta property="og:updated_time" content="2018-10-12T20:15:06.303Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从零开始写一个 PHP 网站">
-<meta name="twitter:description" content="《年薪百万程序员教你两个小时写出淘宝网站》，你的首页推荐似乎已经不堪入目了。 我不是年薪百万的程序员，我也不能两个小时写出淘宝网站，我就是一个热爱互联网技术的热爱学习的业余程序员。虽然如此，但是这篇文章将带你从零开始写一个 PHP 网站。 这篇文章有点类似 Hello, world!，就是那种你只要照着我说的去做就行了，至于为什么这么做，做完之后你自己去慢慢理解。 首先你需要有一台电脑虽然说电脑现">
+<meta name="twitter:description" content="《年薪百万程序员教你两个小时写出淘宝网站》，你的首页推荐似乎已经不堪入目了。 我不是年薪百万的程序员，我也不能两个小时写出淘宝网站，我就是一个热爱互联网技术的热爱学习的业余程序员。虽然如此，但是这篇文章将带你从零开始写一个 PHP 网站。 这篇文章有点类似 Hello, world!，就是那种你只要照着我说的去做就行了，至于为什么这么做，做完之后你自己去慢慢理解。   首先你需要有一台电脑 安装">
 <link rel="alternate" href="/atom.xml" title="Ganlv&#39;s Blog" type="application/atom+xml">
 <link rel="icon" href="/favicon.png">
 <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
@@ -66,18 +66,42 @@
 <p>《年薪百万程序员教你两个小时写出淘宝网站》，你的首页推荐似乎已经不堪入目了。</p>
 <p>我不是年薪百万的程序员，我也不能两个小时写出淘宝网站，我就是一个热爱互联网技术的热爱学习的业余程序员。虽然如此，但是这篇文章将带你从零开始写一个 PHP 网站。</p>
 <p>这篇文章有点类似 <code>Hello, world!</code>，就是那种你只要照着我说的去做就行了，至于为什么这么做，做完之后你自己去慢慢理解。</p>
-<h2 id="首先你需要有一台电脑"><a href="#首先你需要有一台电脑" class="headerlink" title="首先你需要有一台电脑"></a>首先你需要有一台电脑</h2><p>虽然说电脑现在已经很普遍了，但是如果你是用手机看这篇文章并且只有一部手机，那么我推荐你，为了您更好的编程体验，买一台电脑。</p>
+<div class="toc">
+<ul>
+<li><a href="#shou-xian-ni-xu-yao-you-yi-tai-dian-nao">首先你需要有一台电脑</a></li>
+<li><a href="#an-zhuang-chrome">安装 Chrome</a></li>
+<li><a href="#an-zhuang-php">安装 PHP</a></li>
+<li><a href="#huan-jing-bian-liang-path">环境变量 PATH</a></li>
+<li><a href="#to-be-continued">To Be Continued</a></li>
+<li><a href="#an-zhuang-mariadb-shu-ju-ku">安装 MariaDB 数据库</a></li>
+<li><a href="#an-zhuang-composer">安装 Composer</a></li>
+<li><a href="#xin-jian-laravel-xiang-mu">新建 Laravel 项目</a><ul>
+<li><a href="#an-zhuang-laravel-installer">安装 Laravel Installer</a></li>
+<li><a href="#xin-jian-laravel-ying-yong">新建 Laravel 应用</a></li>
+</ul>
+</li>
+<li><a href="#xie-dai-ma">写代码</a><ul>
+<li><a href="#pei-zhi-wen-jian">配置文件</a></li>
+<li><a href="#qi-dong-kai-fa-fu-wu-qi">启动开发服务器</a></li>
+<li><a href="#hou-duan-dai-ma">后端代码</a></li>
+<li><a href="#qian-duan-dai-ma">前端代码</a></li>
+</ul>
+</li>
+<li><a href="#github">GitHub</a></li>
+</ul>
+</div>
+<h2><span id="shou-xian-ni-xu-yao-you-yi-tai-dian-nao">首先你需要有一台电脑</span><a href="#shou-xian-ni-xu-yao-you-yi-tai-dian-nao" class="header-anchor">#</a></h2><p>虽然说电脑现在已经很普遍了，但是如果你是用手机看这篇文章并且只有一部手机，那么我推荐你，为了您更好的编程体验，买一台电脑。</p>
 <p>PHP 编程并不需要多么强大的电脑，3000 元人民币的笔记本电脑都可以完美胜任。</p>
 <blockquote>
 <p>我推荐您选用自带 Windows 10 操作系统的电脑，这可能为您避免许多麻烦。</p>
 </blockquote>
-<h2 id="安装-Chrome"><a href="#安装-Chrome" class="headerlink" title="安装 Chrome"></a>安装 Chrome</h2><p>现在你用的是一台全新的电脑。</p>
+<h2><span id="an-zhuang-chrome">安装 Chrome</span><a href="#an-zhuang-chrome" class="header-anchor">#</a></h2><p>现在你用的是一台全新的电脑。</p>
 <p>我推荐，开机之后你要装的第一个软件是 <a href="https://www.google.cn/chrome/" target="_blank" rel="noopener">Chrome 浏览器</a>，我使用 <a href="https://www.chrome64bit.com/" target="_blank" rel="noopener">Chrome 64-bit</a> 这个非官方网站下载离线安装包。</p>
 <p>Chrome 是全自动安装，下载完安装包之后，双击运行即可。</p>
 <blockquote>
 <p>安装位置是 <code>C:\Users\用户名\AppData\Local\Google\Chrome\Application</code>，这个目前并不重要。</p>
 </blockquote>
-<h2 id="安装-PHP"><a href="#安装-PHP" class="headerlink" title="安装 PHP"></a>安装 PHP</h2><p>到 <a href="http://php.net/" target="_blank" rel="noopener">PHP 官方网站</a> 下载最新版 PHP，因为我们使用的是 Windows，所以去 <a href="https://windows.php.net/download/" target="_blank" rel="noopener">PHP For Windows</a> 下载，推荐使用最新版的 <code>VC15 x64 Non Thread Safe</code> 版本。</p>
+<h2><span id="an-zhuang-php">安装 PHP</span><a href="#an-zhuang-php" class="header-anchor">#</a></h2><p>到 <a href="http://php.net/" target="_blank" rel="noopener">PHP 官方网站</a> 下载最新版 PHP，因为我们使用的是 Windows，所以去 <a href="https://windows.php.net/download/" target="_blank" rel="noopener">PHP For Windows</a> 下载，推荐使用最新版的 <code>VC15 x64 Non Thread Safe</code> 版本。</p>
 <blockquote>
 <p>下载页面旁边的 “Which version do I choose?” 介绍了如何选择版本，如果您有兴趣可以看一看。</p>
 </blockquote>
@@ -86,7 +110,7 @@
 <p>如果你想知道原因的话，解释如下：</p>
 <p>对于需要安装的程序，安装程序默认会安装到 <code>C:\Program Files</code>，那么对于免安装程序，我也统一放在一个位置，因为 <code>C:\Program Files</code> 这个文件夹是需要管理员权限访问的，所以我们使用这个文件夹将带来诸多不便，所以就另外建一个文件夹，最开始我使用的是 <code>C:\Program</code>，但是重启之后系统提示这样命名可能会存在问题，将其改成了 <code>C:\Program1</code>，我也就这样沿用下来了。</p>
 </blockquote>
-<h2 id="环境变量-PATH"><a href="#环境变量-PATH" class="headerlink" title="环境变量 PATH"></a>环境变量 PATH</h2><p>之后可能经常要跟命令行打交道，设置 <code>PATH</code> 可以让你从任何位置轻松地访问 <code>php.exe</code>。</p>
+<h2><span id="huan-jing-bian-liang-path">环境变量 PATH</span><a href="#huan-jing-bian-liang-path" class="header-anchor">#</a></h2><p>之后可能经常要跟命令行打交道，设置 <code>PATH</code> 可以让你从任何位置轻松地访问 <code>php.exe</code>。</p>
 <p>按 <code>Win + S</code> 打开 Cortana，输入 <code>环境变量</code>，即可找到 <code>编辑系统环境变量</code> 的选项。</p>
 <blockquote>
 <p>这里的 <code>S</code> 表示 <code>Search</code></p>
@@ -95,27 +119,27 @@
 <p>这时使用 <code>Win + R</code> 打开运行窗口，输入 <code>cmd</code> 回车。在弹出的命令行窗口中输入</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php -v</span><br></pre></td></tr></table></figure>
 <p>成功显示版本号了，证明你可以从任何位置访问 <code>php</code> 了。</p>
-<h2 id="To-Be-Continued"><a href="#To-Be-Continued" class="headerlink" title="To Be Continued"></a>To Be Continued</h2><p>Images will comming soon.</p>
-<h2 id="安装-MariaDB-数据库"><a href="#安装-MariaDB-数据库" class="headerlink" title="安装 MariaDB 数据库"></a>安装 MariaDB 数据库</h2><p>存数据总不能像大学计算机 C 语言课程上，都是操作文本文件吧，我们要用一个更牛逼的东西——数据库。</p>
+<h2><span id="to-be-continued">To Be Continued</span><a href="#to-be-continued" class="header-anchor">#</a></h2><p>Images will comming soon.</p>
+<h2><span id="an-zhuang-mariadb-shu-ju-ku">安装 MariaDB 数据库</span><a href="#an-zhuang-mariadb-shu-ju-ku" class="header-anchor">#</a></h2><p>存数据总不能像大学计算机 C 语言课程上，都是操作文本文件吧，我们要用一个更牛逼的东西——数据库。</p>
 <p>我用的是 <a href="https://mariadb.org/" target="_blank" rel="noopener">MariaDB</a>，到 <a href="https://downloads.mariadb.org/" target="_blank" rel="noopener">下载页面</a> 去下载一个最新版就行了。</p>
-<h2 id="安装-Composer"><a href="#安装-Composer" class="headerlink" title="安装 Composer"></a>安装 Composer</h2><p>代码不能全是自己写，有现成的就用现成的，<a href="https://getcomposer.org/" target="_blank" rel="noopener">Composer</a> 可以自动帮我们下载 <a href="https://packagist.org/" target="_blank" rel="noopener">Packagist</a> 上面现成的包。</p>
+<h2><span id="an-zhuang-composer">安装 Composer</span><a href="#an-zhuang-composer" class="header-anchor">#</a></h2><p>代码不能全是自己写，有现成的就用现成的，<a href="https://getcomposer.org/" target="_blank" rel="noopener">Composer</a> 可以自动帮我们下载 <a href="https://packagist.org/" target="_blank" rel="noopener">Packagist</a> 上面现成的包。</p>
 <p>到 <a href="https://getcomposer.org/download/" target="_blank" rel="noopener">Composer 下载页面</a> 中下载 <code>Composer-Setup.exe</code> 正常安装即可。</p>
-<h2 id="新建-Laravel-项目"><a href="#新建-Laravel-项目" class="headerlink" title="新建 Laravel 项目"></a>新建 Laravel 项目</h2><p>php 网站可以全部由自己从头写起，不过开发效率太低，我使用 <a href="https://laravel.com/" target="_blank" rel="noopener">Laravel</a> 这个框架。</p>
+<h2><span id="xin-jian-laravel-xiang-mu">新建 Laravel 项目</span><a href="#xin-jian-laravel-xiang-mu" class="header-anchor">#</a></h2><p>php 网站可以全部由自己从头写起，不过开发效率太低，我使用 <a href="https://laravel.com/" target="_blank" rel="noopener">Laravel</a> 这个框架。</p>
 <p>使用框架，我们不用考虑如何操作数据库等等细节内容，我们只需要完成每个页面的逻辑过程就行了。</p>
-<h3 id="安装-Laravel-Installer"><a href="#安装-Laravel-Installer" class="headerlink" title="安装 Laravel Installer"></a>安装 Laravel Installer</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer global require <span class="string">"laravel/installer"</span></span><br></pre></td></tr></table></figure>
-<h3 id="新建-Laravel-应用"><a href="#新建-Laravel-应用" class="headerlink" title="新建 Laravel 应用"></a>新建 Laravel 应用</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">laravel new myapp</span><br></pre></td></tr></table></figure>
+<h3><span id="an-zhuang-laravel-installer">安装 Laravel Installer</span><a href="#an-zhuang-laravel-installer" class="header-anchor">#</a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer global require <span class="string">"laravel/installer"</span></span><br></pre></td></tr></table></figure>
+<h3><span id="xin-jian-laravel-ying-yong">新建 Laravel 应用</span><a href="#xin-jian-laravel-ying-yong" class="header-anchor">#</a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">laravel new myapp</span><br></pre></td></tr></table></figure>
 <p>然后进入这个文件夹。</p>
-<h2 id="写代码"><a href="#写代码" class="headerlink" title="写代码"></a>写代码</h2><p>要学习这个框架，可以参考 <a href="https://laracasts.com/series/laravel-from-scratch-2017" target="_blank" rel="noopener">Laravel 5.4 from scratch</a> 视频教程。如果有任何问题，应该首先查找 <a href="https://laravel.com/docs/" target="_blank" rel="noopener">Laravel 说明文档</a>。</p>
-<h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><p><code>.env</code> 文件</p>
+<h2><span id="xie-dai-ma">写代码</span><a href="#xie-dai-ma" class="header-anchor">#</a></h2><p>要学习这个框架，可以参考 <a href="https://laracasts.com/series/laravel-from-scratch-2017" target="_blank" rel="noopener">Laravel 5.4 from scratch</a> 视频教程。如果有任何问题，应该首先查找 <a href="https://laravel.com/docs/" target="_blank" rel="noopener">Laravel 说明文档</a>。</p>
+<h3><span id="pei-zhi-wen-jian">配置文件</span><a href="#pei-zhi-wen-jian" class="header-anchor">#</a></h3><p><code>.env</code> 文件</p>
 <p><code>config</code> 文件夹</p>
-<h3 id="启动开发服务器"><a href="#启动开发服务器" class="headerlink" title="启动开发服务器"></a>启动开发服务器</h3><p>我们需要一边写代码，一边看效果。Laravel 给我们提供了一个开发服务器，直接运行下面这条命令即可。</p>
+<h3><span id="qi-dong-kai-fa-fu-wu-qi">启动开发服务器</span><a href="#qi-dong-kai-fa-fu-wu-qi" class="header-anchor">#</a></h3><p>我们需要一边写代码，一边看效果。Laravel 给我们提供了一个开发服务器，直接运行下面这条命令即可。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php artisan serve</span><br></pre></td></tr></table></figure>
-<h3 id="后端代码"><a href="#后端代码" class="headerlink" title="后端代码"></a>后端代码</h3><p>10 倍速快进（此处省略 3000 行代码）</p>
-<h3 id="前端代码"><a href="#前端代码" class="headerlink" title="前端代码"></a>前端代码</h3><p>10 倍速快进（此处省略 3000 行代码）</p>
-<h2 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h2><p>写完的项目我们可以放到 GitHub 开放给其他人。</p>
+<h3><span id="hou-duan-dai-ma">后端代码</span><a href="#hou-duan-dai-ma" class="header-anchor">#</a></h3><p>10 倍速快进（此处省略 3000 行代码）</p>
+<h3><span id="qian-duan-dai-ma">前端代码</span><a href="#qian-duan-dai-ma" class="header-anchor">#</a></h3><p>10 倍速快进（此处省略 3000 行代码）</p>
+<h2><span id="github">GitHub</span><a href="#github" class="header-anchor">#</a></h2><p>写完的项目我们可以放到 GitHub 开放给其他人。</p>
 </div>
 <footer class="article-footer">
-<a data-url="https://ganlvtech.github.io/2018/09/05/build-a-php-site-from-scratch/" data-id="cjn2rrso70000xoy6hke71ah9" class="article-share-link">Share</a>
+<a data-url="https://ganlvtech.github.io/2018/09/05/build-a-php-site-from-scratch/" data-id="cjn6gbx9w0000vxo4fmxuxmpm" class="article-share-link">Share</a>
 <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PATH/">PATH</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/chrome/">chrome</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/composer/">composer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/installation/">installation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/laravel/">laravel</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mariadb/">mariadb</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tutorial/">tutorial</a></li></ul>
 </footer>
 </div>

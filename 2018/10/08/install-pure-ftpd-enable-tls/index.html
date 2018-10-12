@@ -4,20 +4,20 @@
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
 <title>安装 Pure-FTPd 并启用 TLS | Ganlv&#39;s Blog</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-<meta name="description" content="我使用的系统是 Ubuntu Server 18.04 LTS。  其实我用的是 Laravel Homestead 的 Vagrant Box，一个非常方便的虚拟机。  本文参考了 Pure-FTPd 的 Ubuntu Community Wiki 安装 Pure-FTPd1sudo apt install pure-ftpd 查看一下端口这是一个很常见的指令 1sudo netstat -tl">
+<meta name="description" content="安装 Pure-FTPd 查看一下端口 尝试连接一下 启用虚拟账户 重启 FTP 服务器 添加账号   配置 TLS 启用强制 TLS 生成证书 重启 FTP 服务器   大功告成 关于 Pure-FTPd 的配置文件   我使用的系统是 Ubuntu Server 18.04 LTS。  其实我用的是 Laravel Homestead 的 Vagrant Box，一个非常方便的虚拟机。">
 <meta name="keywords" content="ssl,ubuntu,ftp,pure-ftpd,tls">
 <meta property="og:type" content="article">
 <meta property="og:title" content="安装 Pure-FTPd 并启用 TLS">
 <meta property="og:url" content="https://ganlvtech.github.io/2018/10/08/install-pure-ftpd-enable-tls/index.html">
 <meta property="og:site_name" content="Ganlv&#39;s Blog">
-<meta property="og:description" content="我使用的系统是 Ubuntu Server 18.04 LTS。  其实我用的是 Laravel Homestead 的 Vagrant Box，一个非常方便的虚拟机。  本文参考了 Pure-FTPd 的 Ubuntu Community Wiki 安装 Pure-FTPd1sudo apt install pure-ftpd 查看一下端口这是一个很常见的指令 1sudo netstat -tl">
+<meta property="og:description" content="安装 Pure-FTPd 查看一下端口 尝试连接一下 启用虚拟账户 重启 FTP 服务器 添加账号   配置 TLS 启用强制 TLS 生成证书 重启 FTP 服务器   大功告成 关于 Pure-FTPd 的配置文件   我使用的系统是 Ubuntu Server 18.04 LTS。  其实我用的是 Laravel Homestead 的 Vagrant Box，一个非常方便的虚拟机。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://ganlvtech.github.io/images/install-pure-ftpd-enable-tls/filezilla-connect.jpg">
 <meta property="og:image" content="https://ganlvtech.github.io/images/install-pure-ftpd-enable-tls/filezilla-explicit-tls.jpg">
-<meta property="og:updated_time" content="2018-10-10T06:24:20.837Z">
+<meta property="og:updated_time" content="2018-10-12T20:15:06.303Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="安装 Pure-FTPd 并启用 TLS">
-<meta name="twitter:description" content="我使用的系统是 Ubuntu Server 18.04 LTS。  其实我用的是 Laravel Homestead 的 Vagrant Box，一个非常方便的虚拟机。  本文参考了 Pure-FTPd 的 Ubuntu Community Wiki 安装 Pure-FTPd1sudo apt install pure-ftpd 查看一下端口这是一个很常见的指令 1sudo netstat -tl">
+<meta name="twitter:description" content="安装 Pure-FTPd 查看一下端口 尝试连接一下 启用虚拟账户 重启 FTP 服务器 添加账号   配置 TLS 启用强制 TLS 生成证书 重启 FTP 服务器   大功告成 关于 Pure-FTPd 的配置文件   我使用的系统是 Ubuntu Server 18.04 LTS。  其实我用的是 Laravel Homestead 的 Vagrant Box，一个非常方便的虚拟机。">
 <meta name="twitter:image" content="https://ganlvtech.github.io/images/install-pure-ftpd-enable-tls/filezilla-connect.jpg">
 <link rel="alternate" href="/atom.xml" title="Ganlv&#39;s Blog" type="application/atom+xml">
 <link rel="icon" href="/favicon.png">
@@ -66,13 +66,33 @@
 </h1>
 </header>
 <div class="article-entry" itemprop="articleBody">
+<div class="toc">
+<ul>
+<li><a href="#an-zhuang-pure-ftpd">安装 Pure-FTPd</a><ul>
+<li><a href="#cha-kan-yi-xia-duan-kou">查看一下端口</a></li>
+<li><a href="#chang-shi-lian-jie-yi-xia">尝试连接一下</a></li>
+<li><a href="#qi-yong-xu-ni-zhang-hu">启用虚拟账户</a></li>
+<li><a href="#chong-qi-ftp-fu-wu-qi">重启 FTP 服务器</a></li>
+<li><a href="#tian-jia-zhang-hao">添加账号</a></li>
+</ul>
+</li>
+<li><a href="#pei-zhi-tls">配置 TLS</a><ul>
+<li><a href="#qi-yong-qiang-zhi-tls">启用强制 TLS</a></li>
+<li><a href="#sheng-cheng-zheng-shu">生成证书</a></li>
+<li><a href="#chong-qi-ftp-fu-wu-qi-1">重启 FTP 服务器</a></li>
+</ul>
+</li>
+<li><a href="#da-gong-gao-cheng">大功告成</a></li>
+<li><a href="#guan-yu-pure-ftpd-de-pei-zhi-wen-jian">关于 Pure-FTPd 的配置文件</a></li>
+</ul>
+</div>
 <p>我使用的系统是 Ubuntu Server 18.04 LTS。</p>
 <blockquote>
 <p>其实我用的是 <a href="https://laravel.com/docs/5.7/homestead" target="_blank" rel="noopener">Laravel Homestead</a> 的 <a href="https://www.vagrantup.com/" target="_blank" rel="noopener">Vagrant</a> <a href="https://app.vagrantup.com/laravel/boxes/homestead" target="_blank" rel="noopener">Box</a>，一个非常方便的虚拟机。</p>
 </blockquote>
 <p>本文参考了 <a href="https://www.pureftpd.org/" target="_blank" rel="noopener">Pure-FTPd</a> 的 <a href="https://help.ubuntu.com/community/PureFTP" target="_blank" rel="noopener">Ubuntu Community Wiki</a></p>
-<h2 id="安装-Pure-FTPd"><a href="#安装-Pure-FTPd" class="headerlink" title="安装 Pure-FTPd"></a>安装 Pure-FTPd</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install pure-ftpd</span><br></pre></td></tr></table></figure>
-<h3 id="查看一下端口"><a href="#查看一下端口" class="headerlink" title="查看一下端口"></a>查看一下端口</h3><p>这是一个很常见的指令</p>
+<h2><span id="an-zhuang-pure-ftpd">安装 Pure-FTPd</span><a href="#an-zhuang-pure-ftpd" class="header-anchor">#</a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install pure-ftpd</span><br></pre></td></tr></table></figure>
+<h3><span id="cha-kan-yi-xia-duan-kou">查看一下端口</span><a href="#cha-kan-yi-xia-duan-kou" class="header-anchor">#</a></h3><p>这是一个很常见的指令</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo netstat -tlnp</span><br></pre></td></tr></table></figure>
 <ul>
 <li><code>t</code> 表示 TCP，只显示 TCP 连接</li>
@@ -85,16 +105,16 @@
 <blockquote>
 <p>Local Address 是 <code>0.0.0.0</code> 表示对外监听，如果是 <code>127.0.0.1</code> 的话就是只监听本机，外部的请求无法访问到这个端口。</p>
 </blockquote>
-<h3 id="尝试连接一下"><a href="#尝试连接一下" class="headerlink" title="尝试连接一下"></a>尝试连接一下</h3><p>我们可以用 <a href="https://filezilla-project.org/" target="_blank" rel="noopener">FileZilla</a> 连接一下试试。</p>
+<h3><span id="chang-shi-lian-jie-yi-xia">尝试连接一下</span><a href="#chang-shi-lian-jie-yi-xia" class="header-anchor">#</a></h3><p>我们可以用 <a href="https://filezilla-project.org/" target="_blank" rel="noopener">FileZilla</a> 连接一下试试。</p>
 <p>暂时用匿名用户 <code>anonymous</code> 登录，可以看到服务器回应 <code>Login authentication failed</code>，证明服务器是安装成功了，但是还没创建 FTP 用户呢。</p>
 <blockquote>
 <p>Laravel Homestead 虚拟机默认的 IP 是 <code>192.168.10.10</code>。</p>
 </blockquote>
-<h3 id="启用虚拟账户"><a href="#启用虚拟账户" class="headerlink" title="启用虚拟账户"></a>启用虚拟账户</h3><p>Pure-FTPd 可以使用虚拟账户，这个账户与 Linux 系统的账户无关，仅仅用于 FTP 登录验证。你可以很多 FTP 账户而不会把系统弄乱。</p>
+<h3><span id="qi-yong-xu-ni-zhang-hu">启用虚拟账户</span><a href="#qi-yong-xu-ni-zhang-hu" class="header-anchor">#</a></h3><p>Pure-FTPd 可以使用虚拟账户，这个账户与 Linux 系统的账户无关，仅仅用于 FTP 登录验证。你可以很多 FTP 账户而不会把系统弄乱。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ln -s /etc/pure-ftpd/conf/PureDB /etc/pure-ftpd/auth/PureDB</span><br></pre></td></tr></table></figure>
-<h3 id="重启-FTP-服务器"><a href="#重启-FTP-服务器" class="headerlink" title="重启 FTP 服务器"></a>重启 FTP 服务器</h3><p>重启 FTP 服务器，应用配置。</p>
+<h3><span id="chong-qi-ftp-fu-wu-qi">重启 FTP 服务器</span><a href="#chong-qi-ftp-fu-wu-qi" class="header-anchor">#</a></h3><p>重启 FTP 服务器，应用配置。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service pure-ftpd restart</span><br></pre></td></tr></table></figure>
-<h3 id="添加账号"><a href="#添加账号" class="headerlink" title="添加账号"></a>添加账号</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pure-pw useradd ganlv -u vagrant -d /home/vagrant/</span><br></pre></td></tr></table></figure>
+<h3><span id="tian-jia-zhang-hao">添加账号</span><a href="#tian-jia-zhang-hao" class="header-anchor">#</a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pure-pw useradd ganlv -u vagrant -d /home/vagrant/</span><br></pre></td></tr></table></figure>
 <ul>
 <li><code>ganlv</code> 是我一会 FTP 登录时输入的用户名。</li>
 <li><code>vagrant</code> 表示用哪个 Linux 系统账户来完成 FTP 文件操作。</li>
@@ -110,31 +130,31 @@
 <p>可以在添加账号时直接使用 <code>-m</code> 直接 <code>mkdb</code>，把两步合并成一步。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pure-pw useradd ganlv -u vagrant -d /home/vagrant/ -m</span><br></pre></td></tr></table></figure>
 <p>添加账号并不需要重启 FTP 服务器。</p>
-<h2 id="配置-TLS"><a href="#配置-TLS" class="headerlink" title="配置 TLS"></a>配置 TLS</h2><h3 id="启用强制-TLS"><a href="#启用强制-TLS" class="headerlink" title="启用强制 TLS"></a>启用强制 TLS</h3><p>这部分需要使用 root 用户来操作，但是 sudo 又不是很方便，所以直接用 <code>su</code> 切换到 root。</p>
+<h2><span id="pei-zhi-tls">配置 TLS</span><a href="#pei-zhi-tls" class="header-anchor">#</a></h2><h3><span id="qi-yong-qiang-zhi-tls">启用强制 TLS</span><a href="#qi-yong-qiang-zhi-tls" class="header-anchor">#</a></h3><p>这部分需要使用 root 用户来操作，但是 sudo 又不是很方便，所以直接用 <code>su</code> 切换到 root。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo su</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> 2 &gt; /etc/pure-ftpd/conf/TLS</span><br></pre></td></tr></table></figure>
 <p>如果想既允许普通的 FTP 又支持 FTPS，那就用 <code>echo 1</code>。</p>
 <p>然后 <code>exit</code> 退出 root 账户。</p>
-<h3 id="生成证书"><a href="#生成证书" class="headerlink" title="生成证书"></a>生成证书</h3><p>然后去生成一个自签发的证书。</p>
+<h3><span id="sheng-cheng-zheng-shu">生成证书</span><a href="#sheng-cheng-zheng-shu" class="header-anchor">#</a></h3><p>然后去生成一个自签发的证书。</p>
 <p>如果 <code>/etc/ssl/private/</code> 这个目录不存在的话就新建一个。如果存在的话就没事了。要注意这个目录的权限。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /etc/ssl/private/</span><br><span class="line">chown root:root /etc/ssl/private/</span><br><span class="line">chmod 700 /etc/ssl/private/</span><br></pre></td></tr></table></figure>
 <p>我的 Ubuntu 是自带这个目录的，默认是 <code>root:ssl-cert 710</code> 的权限，和 <a href="https://serverfault.com/questions/259302/best-location-for-ssl-certificate-and-private-keys-on-ubuntu/259307#259307" target="_blank" rel="noopener">StackOverflow 上的一个答案</a> 差不多。我感觉不到什么区别。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drwx--x---   2 root ssl-cert  4096 Jun  3 19:59 private</span><br></pre></td></tr></table></figure>
 <p>用 openssl 生成证书，填好证书的各种信息，不想看的话就一直回车就行了。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/pure-ftpd.pem -out /etc/ssl/private/pure-ftpd.pem</span><br></pre></td></tr></table></figure>
-<h3 id="重启-FTP-服务器-1"><a href="#重启-FTP-服务器-1" class="headerlink" title="重启 FTP 服务器"></a>重启 FTP 服务器</h3><p>凡是修改配置文件，肯定要重启，因为配置文件只在程序启动的时候加载，之后就不会再读取配置了。</p>
-<h2 id="大功告成"><a href="#大功告成" class="headerlink" title="大功告成"></a>大功告成</h2><p>FileZilla 连接一下试一试</p>
+<h3><span id="chong-qi-ftp-fu-wu-qi">重启 FTP 服务器</span><a href="#chong-qi-ftp-fu-wu-qi" class="header-anchor">#</a></h3><p>凡是修改配置文件，肯定要重启，因为配置文件只在程序启动的时候加载，之后就不会再读取配置了。</p>
+<h2><span id="da-gong-gao-cheng">大功告成</span><a href="#da-gong-gao-cheng" class="header-anchor">#</a></h2><p>FileZilla 连接一下试一试</p>
 <p><img src="/images/install-pure-ftpd-enable-tls/filezilla-connect.jpg" alt="使用 Pure-FTPd 连接到 FTP 服务器"></p>
 <p>确定即可，信任这个证书，以后就不会再提示了。</p>
 <p>站点管理器中也可以要求显式的 FTP 通过 TLS。</p>
 <p><img src="/images/install-pure-ftpd-enable-tls/filezilla-explicit-tls.jpg" alt="要求显式的 FTP 通过 TLS"></p>
-<h2 id="关于-Pure-FTPd-的配置文件"><a href="#关于-Pure-FTPd-的配置文件" class="headerlink" title="关于 Pure-FTPd 的配置文件"></a>关于 Pure-FTPd 的配置文件</h2><p>Pure-FTPd 并不是使用 <code>/etc/pure-ftpd/pure-ftpd.conf</code> 来作为配置文件，可以看 <code>pure-ftpd.conf</code> 这个文件的开头的说明。</p>
+<h2><span id="guan-yu-pure-ftpd-de-pei-zhi-wen-jian">关于 Pure-FTPd 的配置文件</span><a href="#guan-yu-pure-ftpd-de-pei-zhi-wen-jian" class="header-anchor">#</a></h2><p>Pure-FTPd 并不是使用 <code>/etc/pure-ftpd/pure-ftpd.conf</code> 来作为配置文件，可以看 <code>pure-ftpd.conf</code> 这个文件的开头的说明。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># If you want to run Pure-FTPd with this configuration</span><br><span class="line"># instead of command-line options, please run the</span><br><span class="line"># following command :</span><br><span class="line">#</span><br><span class="line"># /usr/sbin/pure-ftpd /etc/pure-ftpd/etc/pure-ftpd.conf</span><br></pre></td></tr></table></figure>
 <p>如果你想用这个配置文件运行 Pure-FTPd，你必须要在命令行后面加上这个文件路径作为参数。</p>
 <p>如果你不用这个配置文件，直接修改 <code>/etc/pure-ftpd/conf/</code> 下的文件内容就行。</p>
 </div>
 <footer class="article-footer">
-<a data-url="https://ganlvtech.github.io/2018/10/08/install-pure-ftpd-enable-tls/" data-id="cjn2rrsov0005xoy6tjn0gajn" class="article-share-link">Share</a>
+<a data-url="https://ganlvtech.github.io/2018/10/08/install-pure-ftpd-enable-tls/" data-id="cjn6gbxah0005vxo4lqii4dek" class="article-share-link">Share</a>
 <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ftp/">ftp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pure-ftpd/">pure-ftpd</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ssl/">ssl</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tls/">tls</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li></ul>
 </footer>
 </div>
