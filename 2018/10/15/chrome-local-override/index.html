@@ -2,19 +2,20 @@
 <html>
 <head>
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-<title>Tag: chrome | Ganlv&#39;s Blog</title>
+<title>Chrome Local Override 本地文件替换 | Ganlv&#39;s Blog</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-<meta name="description" content="Hello everyone. This is Ganlv. Welcome to my static blog. Comment is not available now. The blog is under built. I will find or build a beautiful theme later. If you like my projects on GitHub, giving">
-<meta name="keywords" content="php,javascript,node,node.js,laravel,open source,hexo">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ganlv&#39;s Blog">
-<meta property="og:url" content="https://ganlvtech.github.io/tags/chrome/index.html">
+<meta name="description" content="我们修改前端的时候，经常遇到一种情况。本地的测试服务器的数据并不是很充足，很多情况是线上的数据引发的问题，如果把线上的数据离线下来会很麻烦。 具体一点，比如我帮别人改他的网站的 js、css，我并不能访问他的数据库。如果我想模拟线上环境，我要么爬取数据，要么自己伪造数据。 还有，如果我想改别人网站的 js 代码，想简单调试一下，最后再做一个插件。我并不想把他整个网站都离线下来，然后本地测试。我想做">
+<meta name="keywords" content="chrome,devtools,frontend,production,resource-override,gooreplacer,gfw,test,js,css,html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Chrome Local Override 本地文件替换">
+<meta property="og:url" content="https://ganlvtech.github.io/2018/10/15/chrome-local-override/index.html">
 <meta property="og:site_name" content="Ganlv&#39;s Blog">
-<meta property="og:description" content="Hello everyone. This is Ganlv. Welcome to my static blog. Comment is not available now. The blog is under built. I will find or build a beautiful theme later. If you like my projects on GitHub, giving">
+<meta property="og:description" content="我们修改前端的时候，经常遇到一种情况。本地的测试服务器的数据并不是很充足，很多情况是线上的数据引发的问题，如果把线上的数据离线下来会很麻烦。 具体一点，比如我帮别人改他的网站的 js、css，我并不能访问他的数据库。如果我想模拟线上环境，我要么爬取数据，要么自己伪造数据。 还有，如果我想改别人网站的 js 代码，想简单调试一下，最后再做一个插件。我并不想把他整个网站都离线下来，然后本地测试。我想做">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-10-15T21:50:43.548Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ganlv&#39;s Blog">
-<meta name="twitter:description" content="Hello everyone. This is Ganlv. Welcome to my static blog. Comment is not available now. The blog is under built. I will find or build a beautiful theme later. If you like my projects on GitHub, giving">
+<meta name="twitter:title" content="Chrome Local Override 本地文件替换">
+<meta name="twitter:description" content="我们修改前端的时候，经常遇到一种情况。本地的测试服务器的数据并不是很充足，很多情况是线上的数据引发的问题，如果把线上的数据离线下来会很麻烦。 具体一点，比如我帮别人改他的网站的 js、css，我并不能访问他的数据库。如果我想模拟线上环境，我要么爬取数据，要么自己伪造数据。 还有，如果我想改别人网站的 js 代码，想简单调试一下，最后再做一个插件。我并不想把他整个网站都离线下来，然后本地测试。我想做">
 <link rel="alternate" href="/atom.xml" title="Ganlv&#39;s Blog" type="application/atom+xml">
 <link rel="icon" href="/favicon.png">
 <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
@@ -49,37 +50,36 @@
 </div>
 </header>
 <div class="outer">
-<section id="main">
-<section class="archives-wrap">
-<div class="archive-year-wrap">
-<a href="/archives/2018" class="archive-year">2018</a>
-</div>
-<div class="archives">
-<article class="archive-article archive-type-post">
-<div class="archive-article-inner">
-<header class="archive-article-header">
-<a href="/2018/10/15/chrome-local-override/" class="archive-article-date">
-<time datetime="2018-10-15T20:46:09.000Z" itemprop="datePublished">10月 16</time>
+<section id="main"><article id="post-chrome-local-override" class="article article-type-post" itemscope itemprop="blogPost">
+<div class="article-meta">
+<a href="/2018/10/15/chrome-local-override/" class="article-date">
+<time datetime="2018-10-15T20:46:09.000Z" itemprop="datePublished">2018-10-16</time>
 </a>
-<h1 itemprop="name">
-<a class="archive-article-title" href="/2018/10/15/chrome-local-override/">Chrome Local Override 本地文件替换</a>
+</div>
+<div class="article-inner">
+<header class="article-header">
+<h1 class="article-title" itemprop="name">
+Chrome Local Override 本地文件替换
 </h1>
 </header>
+<div class="article-entry" itemprop="articleBody">
+<p>我们修改前端的时候，经常遇到一种情况。本地的测试服务器的数据并不是很充足，很多情况是线上的数据引发的问题，如果把线上的数据离线下来会很麻烦。</p>
+<p>具体一点，比如我帮别人改他的网站的 js、css，我并不能访问他的数据库。如果我想模拟线上环境，我要么爬取数据，要么自己伪造数据。</p>
+<p>还有，如果我想改别人网站的 js 代码，想简单调试一下，最后再做一个插件。我并不想把他整个网站都离线下来，然后本地测试。我想做的只是改某一个文件。</p>
+<p>另外，比如 ajax.googleapis.com 被墙了，我想使用 ajax.proxy.ustclug.org 的镜像代替对应的文件。</p>
 </div>
-</article>
-<article class="archive-article archive-type-post">
-<div class="archive-article-inner">
-<header class="archive-article-header">
-<a href="/2018/09/05/build-a-php-site-from-scratch/" class="archive-article-date">
-<time datetime="2018-09-05T10:10:43.000Z" itemprop="datePublished">9月 5</time>
+<footer class="article-footer">
+<a data-url="https://ganlvtech.github.io/2018/10/15/chrome-local-override/" data-id="cjnau2cve0001w0ozv6vqkeon" class="article-share-link">Share</a>
+<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/chrome/">chrome</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/devtools/">devtools</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/frontend/">frontend</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gfw/">gfw</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gooreplacer/">gooreplacer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/production/">production</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/resource-override/">resource-override</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/">test</a></li></ul>
+</footer>
+</div>
+<nav id="article-nav">
+<a href="/2018/10/08/install-pure-ftpd-enable-tls/" id="article-nav-older" class="article-nav-link-wrap">
+<strong class="article-nav-caption">Older</strong>
+<div class="article-nav-title">安装 Pure-FTPd 并启用 TLS</div>
 </a>
-<h1 itemprop="name">
-<a class="archive-article-title" href="/2018/09/05/build-a-php-site-from-scratch/">从零开始写一个 PHP 网站</a>
-</h1>
-</header>
-</div>
+</nav>
 </article>
-</div></section>
 </section>
 <aside id="sidebar">
 <div class="widget-wrap">
