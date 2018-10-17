@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ganlvtech.github.io/"/>
-  <updated>2018-10-15T21:50:43.548Z</updated>
+  <updated>2018-10-17T19:23:41.039Z</updated>
   <id>https://ganlvtech.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Chrome Local Override 本地文件替换</title>
-    <link href="https://ganlvtech.github.io/2018/10/15/chrome-local-override/"/>
-    <id>https://ganlvtech.github.io/2018/10/15/chrome-local-override/</id>
-    <published>2018-10-15T20:46:09.000Z</published>
-    <updated>2018-10-15T21:50:43.548Z</updated>
+    <title>使用 rel=noopener 打开外部链接</title>
+    <link href="https://ganlvtech.github.io/2018/10/17/external-link-rel-no-opener/"/>
+    <id>https://ganlvtech.github.io/2018/10/17/external-link-rel-no-opener/</id>
+    <published>2018-10-17T17:33:35.000Z</published>
+    <updated>2018-10-17T19:23:41.039Z</updated>
     
     <summary type="html">
     
@@ -29,8 +29,7 @@
       
         
         
-          &lt;p&gt;我们修改前端的时候，经常遇到一种情况。本地的测试服务器的数据并不是很充足，很多情况是线上的数据引发的问题，如果把线上的数据离线下来会很麻烦。&lt;/p&gt;
-&lt;p&gt;具体一点，比如我帮别人改他的网站的
+          &lt;h2&gt;&lt;span id=&quot;wen-ti-yin-chu&quot;&gt;问题引出&lt;/span&gt;&lt;a href=&quot;#wen-ti-yin-chu&quot; class=&quot;header-anchor&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;&lt;figure class=&quot;highlight
         
       
     
@@ -41,11 +40,53 @@
     
       <category term="devtools" scheme="https://ganlvtech.github.io/tags/devtools/"/>
     
+      <category term="html" scheme="https://ganlvtech.github.io/tags/html/"/>
+    
+      <category term="phishing" scheme="https://ganlvtech.github.io/tags/phishing/"/>
+    
+      <category term="href" scheme="https://ganlvtech.github.io/tags/href/"/>
+    
+      <category term="anchor" scheme="https://ganlvtech.github.io/tags/anchor/"/>
+    
+      <category term="link" scheme="https://ganlvtech.github.io/tags/link/"/>
+    
+      <category term="audit" scheme="https://ganlvtech.github.io/tags/audit/"/>
+    
+      <category term="noopener" scheme="https://ganlvtech.github.io/tags/noopener/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Chrome Local Override 本地文件替换</title>
+    <link href="https://ganlvtech.github.io/2018/10/15/chrome-local-override/"/>
+    <id>https://ganlvtech.github.io/2018/10/15/chrome-local-override/</id>
+    <published>2018-10-15T20:46:09.000Z</published>
+    <updated>2018-10-17T19:23:41.039Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2&gt;&lt;span id=&quot;wen-ti&quot;&gt;问题&lt;/span&gt;&lt;a href=&quot;#wen-ti&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="chrome" scheme="https://ganlvtech.github.io/tags/chrome/"/>
+    
+      <category term="extension" scheme="https://ganlvtech.github.io/tags/extension/"/>
+    
+      <category term="devtools" scheme="https://ganlvtech.github.io/tags/devtools/"/>
+    
       <category term="frontend" scheme="https://ganlvtech.github.io/tags/frontend/"/>
     
       <category term="production" scheme="https://ganlvtech.github.io/tags/production/"/>
     
-      <category term="resource-override" scheme="https://ganlvtech.github.io/tags/resource-override/"/>
+      <category term="redirect" scheme="https://ganlvtech.github.io/tags/redirect/"/>
     
       <category term="gooreplacer" scheme="https://ganlvtech.github.io/tags/gooreplacer/"/>
     
@@ -66,7 +107,7 @@
     <link href="https://ganlvtech.github.io/2018/10/08/install-pure-ftpd-enable-tls/"/>
     <id>https://ganlvtech.github.io/2018/10/08/install-pure-ftpd-enable-tls/</id>
     <published>2018-10-08T17:38:17.000Z</published>
-    <updated>2018-10-15T21:50:43.548Z</updated>
+    <updated>2018-10-17T19:23:41.039Z</updated>
     
     <summary type="html">
     
@@ -101,7 +142,7 @@
     <link href="https://ganlvtech.github.io/2018/09/28/ubuntu-font-noto-sans-cjk-problem/"/>
     <id>https://ganlvtech.github.io/2018/09/28/ubuntu-font-noto-sans-cjk-problem/</id>
     <published>2018-09-28T23:25:00.000Z</published>
-    <updated>2018-10-15T21:50:43.548Z</updated>
+    <updated>2018-10-17T19:23:41.039Z</updated>
     
     <summary type="html">
     
@@ -129,7 +170,7 @@
     <link href="https://ganlvtech.github.io/2018/09/24/hexo-deploy-vs-travis-pages-provider/"/>
     <id>https://ganlvtech.github.io/2018/09/24/hexo-deploy-vs-travis-pages-provider/</id>
     <published>2018-09-24T13:54:53.000Z</published>
-    <updated>2018-10-15T21:50:43.548Z</updated>
+    <updated>2018-10-17T19:23:41.039Z</updated>
     
     <summary type="html">
     
@@ -166,7 +207,7 @@
     <link href="https://ganlvtech.github.io/2018/09/24/xx-net-teredo-problem/"/>
     <id>https://ganlvtech.github.io/2018/09/24/xx-net-teredo-problem/</id>
     <published>2018-09-24T09:34:35.000Z</published>
-    <updated>2018-10-15T21:50:43.548Z</updated>
+    <updated>2018-10-17T19:23:41.039Z</updated>
     
     <summary type="html">
     
@@ -196,7 +237,7 @@
     <link href="https://ganlvtech.github.io/2018/09/22/great-firewall-ssl-connection/"/>
     <id>https://ganlvtech.github.io/2018/09/22/great-firewall-ssl-connection/</id>
     <published>2018-09-22T15:11:47.000Z</published>
-    <updated>2018-10-15T21:50:43.548Z</updated>
+    <updated>2018-10-17T19:23:41.039Z</updated>
     
     <summary type="html">
     
@@ -224,7 +265,7 @@
     <link href="https://ganlvtech.github.io/2018/09/13/grub-image/"/>
     <id>https://ganlvtech.github.io/2018/09/13/grub-image/</id>
     <published>2018-09-13T17:20:05.000Z</published>
-    <updated>2018-10-15T21:50:43.548Z</updated>
+    <updated>2018-10-17T19:23:41.039Z</updated>
     
     <summary type="html">
     
@@ -253,7 +294,7 @@
     <link href="https://ganlvtech.github.io/2018/09/10/jekyll-vs-hexo/"/>
     <id>https://ganlvtech.github.io/2018/09/10/jekyll-vs-hexo/</id>
     <published>2018-09-10T13:51:47.000Z</published>
-    <updated>2018-10-15T21:50:43.548Z</updated>
+    <updated>2018-10-17T19:23:41.039Z</updated>
     
     <summary type="html">
     
@@ -297,7 +338,7 @@
     <link href="https://ganlvtech.github.io/2018/09/05/build-a-php-site-from-scratch/"/>
     <id>https://ganlvtech.github.io/2018/09/05/build-a-php-site-from-scratch/</id>
     <published>2018-09-05T10:10:43.000Z</published>
-    <updated>2018-10-15T21:50:43.548Z</updated>
+    <updated>2018-10-17T19:23:41.039Z</updated>
     
     <summary type="html">
     
