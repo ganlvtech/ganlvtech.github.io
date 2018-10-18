@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ganlvtech.github.io/"/>
-  <updated>2018-10-17T19:23:41.039Z</updated>
+  <updated>2018-10-18T05:28:05.238Z</updated>
   <id>https://ganlvtech.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://ganlvtech.github.io/2018/10/17/external-link-rel-no-opener/"/>
     <id>https://ganlvtech.github.io/2018/10/17/external-link-rel-no-opener/</id>
     <published>2018-10-17T17:33:35.000Z</published>
-    <updated>2018-10-17T19:23:41.039Z</updated>
+    <updated>2018-10-18T05:28:05.238Z</updated>
     
     <summary type="html">
     
@@ -61,7 +61,7 @@
     <link href="https://ganlvtech.github.io/2018/10/15/chrome-local-override/"/>
     <id>https://ganlvtech.github.io/2018/10/15/chrome-local-override/</id>
     <published>2018-10-15T20:46:09.000Z</published>
-    <updated>2018-10-17T19:23:41.039Z</updated>
+    <updated>2018-10-18T05:28:05.238Z</updated>
     
     <summary type="html">
     
@@ -107,7 +107,7 @@
     <link href="https://ganlvtech.github.io/2018/10/08/install-pure-ftpd-enable-tls/"/>
     <id>https://ganlvtech.github.io/2018/10/08/install-pure-ftpd-enable-tls/</id>
     <published>2018-10-08T17:38:17.000Z</published>
-    <updated>2018-10-17T19:23:41.039Z</updated>
+    <updated>2018-10-18T05:28:05.238Z</updated>
     
     <summary type="html">
     
@@ -142,7 +142,7 @@
     <link href="https://ganlvtech.github.io/2018/09/28/ubuntu-font-noto-sans-cjk-problem/"/>
     <id>https://ganlvtech.github.io/2018/09/28/ubuntu-font-noto-sans-cjk-problem/</id>
     <published>2018-09-28T23:25:00.000Z</published>
-    <updated>2018-10-17T19:23:41.039Z</updated>
+    <updated>2018-10-18T05:28:05.238Z</updated>
     
     <summary type="html">
     
@@ -170,7 +170,7 @@
     <link href="https://ganlvtech.github.io/2018/09/24/hexo-deploy-vs-travis-pages-provider/"/>
     <id>https://ganlvtech.github.io/2018/09/24/hexo-deploy-vs-travis-pages-provider/</id>
     <published>2018-09-24T13:54:53.000Z</published>
-    <updated>2018-10-17T19:23:41.039Z</updated>
+    <updated>2018-10-18T05:28:05.238Z</updated>
     
     <summary type="html">
     
@@ -207,7 +207,7 @@
     <link href="https://ganlvtech.github.io/2018/09/24/xx-net-teredo-problem/"/>
     <id>https://ganlvtech.github.io/2018/09/24/xx-net-teredo-problem/</id>
     <published>2018-09-24T09:34:35.000Z</published>
-    <updated>2018-10-17T19:23:41.039Z</updated>
+    <updated>2018-10-18T05:28:05.238Z</updated>
     
     <summary type="html">
     
@@ -237,7 +237,7 @@
     <link href="https://ganlvtech.github.io/2018/09/22/great-firewall-ssl-connection/"/>
     <id>https://ganlvtech.github.io/2018/09/22/great-firewall-ssl-connection/</id>
     <published>2018-09-22T15:11:47.000Z</published>
-    <updated>2018-10-17T19:23:41.039Z</updated>
+    <updated>2018-10-18T05:28:05.238Z</updated>
     
     <summary type="html">
     
@@ -265,7 +265,7 @@
     <link href="https://ganlvtech.github.io/2018/09/13/grub-image/"/>
     <id>https://ganlvtech.github.io/2018/09/13/grub-image/</id>
     <published>2018-09-13T17:20:05.000Z</published>
-    <updated>2018-10-17T19:23:41.039Z</updated>
+    <updated>2018-10-18T05:28:05.238Z</updated>
     
     <summary type="html">
     
@@ -294,7 +294,7 @@
     <link href="https://ganlvtech.github.io/2018/09/10/jekyll-vs-hexo/"/>
     <id>https://ganlvtech.github.io/2018/09/10/jekyll-vs-hexo/</id>
     <published>2018-09-10T13:51:47.000Z</published>
-    <updated>2018-10-17T19:23:41.039Z</updated>
+    <updated>2018-10-18T05:28:05.238Z</updated>
     
     <summary type="html">
     
@@ -330,45 +330,6 @@
       <category term="ruby" scheme="https://ganlvtech.github.io/tags/ruby/"/>
     
       <category term="gem" scheme="https://ganlvtech.github.io/tags/gem/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>从零开始写一个 PHP 网站</title>
-    <link href="https://ganlvtech.github.io/2018/09/05/build-a-php-site-from-scratch/"/>
-    <id>https://ganlvtech.github.io/2018/09/05/build-a-php-site-from-scratch/</id>
-    <published>2018-09-05T10:10:43.000Z</published>
-    <updated>2018-10-17T19:23:41.039Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;《年薪百万程序员教你两个小时写出淘宝网站》，你的首页推荐似乎已经不堪入目了。&lt;/p&gt;
-&lt;p&gt;我不是年薪百万的程序员，我也不能两个小时写出淘宝网站，我就是一个热爱互联网技术的热爱学习的业余程序员。虽然如此，但是这篇文章将带你从零开始写一个 PHP
-        
-      
-    
-    </summary>
-    
-    
-      <category term="installation" scheme="https://ganlvtech.github.io/tags/installation/"/>
-    
-      <category term="tutorial" scheme="https://ganlvtech.github.io/tags/tutorial/"/>
-    
-      <category term="chrome" scheme="https://ganlvtech.github.io/tags/chrome/"/>
-    
-      <category term="php" scheme="https://ganlvtech.github.io/tags/php/"/>
-    
-      <category term="PATH" scheme="https://ganlvtech.github.io/tags/PATH/"/>
-    
-      <category term="mariadb" scheme="https://ganlvtech.github.io/tags/mariadb/"/>
-    
-      <category term="composer" scheme="https://ganlvtech.github.io/tags/composer/"/>
-    
-      <category term="laravel" scheme="https://ganlvtech.github.io/tags/laravel/"/>
     
   </entry>
   
