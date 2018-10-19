@@ -4,25 +4,26 @@
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
 <title>安装 Pure-FTPd 并启用 TLS | Ganlv&#39;s Blog</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-<meta name="description" content="安装 Pure-FTPd 查看一下端口 尝试连接一下 启用虚拟账户 重启 FTP 服务器 添加账号   配置 TLS 启用强制 TLS 生成证书 重启 FTP 服务器   大功告成 关于 Pure-FTPd 的配置文件   我使用的系统是 Ubuntu Server 18.04 LTS。  其实我用的是 Laravel Homestead 的 Vagrant Box，一个非常方便的虚拟机。">
+<meta name="description" content="&amp;#x5B89;&amp;#x88C5; Pure-FTPd &amp;#x67E5;&amp;#x770B;&amp;#x4E00;&amp;#x4E0B;&amp;#x7AEF;&amp;#x53E3; &amp;#x5C1D;&amp;#x8BD5;&amp;#x8FDE;&amp;#x63A5;&amp;#x4E00;&amp;#x4E0B; &amp;#x542F;&amp;#x7528;&amp;#x865A;&amp;#x62DF;&amp;#x8D26;&amp;#x6237; &amp;#x91CD;&amp;#x542F; FTP &amp;#x">
 <meta name="keywords" content="ssl,ubuntu,ftp,pure-ftpd,tls">
 <meta property="og:type" content="article">
 <meta property="og:title" content="安装 Pure-FTPd 并启用 TLS">
 <meta property="og:url" content="https://ganlvtech.github.io/2018/10/08/install-pure-ftpd-enable-tls/index.html">
 <meta property="og:site_name" content="Ganlv&#39;s Blog">
-<meta property="og:description" content="安装 Pure-FTPd 查看一下端口 尝试连接一下 启用虚拟账户 重启 FTP 服务器 添加账号   配置 TLS 启用强制 TLS 生成证书 重启 FTP 服务器   大功告成 关于 Pure-FTPd 的配置文件   我使用的系统是 Ubuntu Server 18.04 LTS。  其实我用的是 Laravel Homestead 的 Vagrant Box，一个非常方便的虚拟机。">
+<meta property="og:description" content="&amp;#x5B89;&amp;#x88C5; Pure-FTPd &amp;#x67E5;&amp;#x770B;&amp;#x4E00;&amp;#x4E0B;&amp;#x7AEF;&amp;#x53E3; &amp;#x5C1D;&amp;#x8BD5;&amp;#x8FDE;&amp;#x63A5;&amp;#x4E00;&amp;#x4E0B; &amp;#x542F;&amp;#x7528;&amp;#x865A;&amp;#x62DF;&amp;#x8D26;&amp;#x6237; &amp;#x91CD;&amp;#x542F; FTP &amp;#x">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://ganlvtech.github.io/images/install-pure-ftpd-enable-tls/filezilla-connect.jpg">
 <meta property="og:image" content="https://ganlvtech.github.io/images/install-pure-ftpd-enable-tls/filezilla-explicit-tls.jpg">
-<meta property="og:updated_time" content="2018-10-19T05:29:04.062Z">
+<meta property="og:updated_time" content="2018-10-19T23:22:28.233Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="安装 Pure-FTPd 并启用 TLS">
-<meta name="twitter:description" content="安装 Pure-FTPd 查看一下端口 尝试连接一下 启用虚拟账户 重启 FTP 服务器 添加账号   配置 TLS 启用强制 TLS 生成证书 重启 FTP 服务器   大功告成 关于 Pure-FTPd 的配置文件   我使用的系统是 Ubuntu Server 18.04 LTS。  其实我用的是 Laravel Homestead 的 Vagrant Box，一个非常方便的虚拟机。">
+<meta name="twitter:description" content="&amp;#x5B89;&amp;#x88C5; Pure-FTPd &amp;#x67E5;&amp;#x770B;&amp;#x4E00;&amp;#x4E0B;&amp;#x7AEF;&amp;#x53E3; &amp;#x5C1D;&amp;#x8BD5;&amp;#x8FDE;&amp;#x63A5;&amp;#x4E00;&amp;#x4E0B; &amp;#x542F;&amp;#x7528;&amp;#x865A;&amp;#x62DF;&amp;#x8D26;&amp;#x6237; &amp;#x91CD;&amp;#x542F; FTP &amp;#x">
 <meta name="twitter:image" content="https://ganlvtech.github.io/images/install-pure-ftpd-enable-tls/filezilla-connect.jpg">
 <link rel="alternate" href="/atom.xml" title="Ganlv&#39;s Blog" type="application/atom+xml">
 <link rel="icon" href="/favicon.png">
 <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="/css/style.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/bulma-message.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 </html>
 <body>
@@ -43,6 +44,12 @@
 <a class="main-nav-link" href="/archives">Archives</a>
 </nav>
 <nav id="sub-nav">
+<a id="nav-github-link" class="nav-icon" href="https://github.com/ganlvtech" title="GitHub" target="_blank" rel="noopener"></a>
+<a id="nav-bilibili-link" class="nav-icon" href="https://space.bilibili.com/9365715" title="bilibili" target="_blank" rel="noopener">
+<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="14" height="14" viewBox="0 0 32 34" style="width:100%;height:100%;fill:currentColor">
+<path d="M30.828 30.422c-.264.001-.531.024-.792-.004-.958-.104-1.656.984-1.988 2.131-.299 1.033-1.434 1.561-2.456 1.455-1.18-.121-1.961-.796-2.262-1.863-.181-.645-.728-1.145-1.33-1.141-4.153.024-7.847.012-12 0-.478-.001-.988.457-1.128 1.02-.299 1.208-1.326 1.975-2.463 1.994-1.177.02-2.2-.727-2.543-1.981-.144-.525-.387-1.648-.889-1.62-.646.036-1.296.018-1.944.007-.708-.013-1.021-.297-1.021-.969.005-6.833.015-13.665.033-20.498.002-.706.295-.944 1.109-.945 3.337-.004 6.674-.002 10.011-.002h.698l.064-.173-2.324-1.222c-1.285-.678-2.572-1.354-3.855-2.035-.52-.276-.736-.697-.442-1.219.297-.528.788-.56 1.301-.29 3.013 1.589 6.027 3.176 9.029 4.782.769.412 2.153.165 2.648-.531L22.888.825c.054-.076.106-.155.162-.23.438-.588.935-.747 1.387-.4.523.401.433.877.097 1.354l-1.868 2.648-2.68 3.809h.894c3.314 0 6.627-.001 9.94.001 1.012.001 1.168.154 1.169 1.138.01 6.716.019 13.432.025 20.148.001.96-.176 1.123-1.186 1.129zm-4.98 2.009c.53-.035.782-1.439.943-1.97h-2.004c.197.584.47 2.01 1.061 1.97zm-19.53.001c.587.036.864-1.383 1.039-1.966H5.383c.134.549.41 1.934.935 1.966zM30 10H2v19h28V10zM4 13.882c.002-.926.449-1.831 1.381-1.832 7.113-.001 13.66-.052 20.773-.05.946 0 1.843.966 1.846 1.882.012 4.418-.007 7.818 0 12.236.002.944-.854 1.881-1.846 1.882-3.546.002-6.609 0-10.154 0s-6.608.002-10.154 0c-1.032-.001-1.847-.865-1.846-1.882.005-4.396-.008-7.84 0-12.236zm22.297 12.099c0-4.177-.143-8.01-.143-12.099H5.846c0 4.153-.024 7.984-.024 12.099h20.475zm-14.689-9.663c.058-.026.13-.021.372-.056.141.138.497.328.535.566.043.278-.106.763-.321.872-1.314.667-2.664 1.268-4.017 1.857-.412.179-.865.044-.97-.396-.069-.288.055-.835.262-.939 1.354-.685 2.753-1.282 4.139-1.904zm.413 4.458c.256-.009.587.345.772.615.148.215.086.559.19.819.197.495.568.966 1.116.85.405-.085.775-.49 1.079-.826.15-.166.125-.494.161-.751.068-.484.354-.782.832-.77.437.011.721.275.777.748.036.299.044.67.223.869.286.318.698.702 1.067.714.334.011.74-.393 1.003-.705.175-.207.165-.573.22-.872.089-.477.365-.767.859-.729.491.038.749.354.73.847-.047 1.251-.544 2.268-1.716 2.826-1.092.521-2.112.297-3.006-.504-.048-.043-.106-.074-.166-.115-.272.189-.524.408-.813.559-.945.493-1.891.452-2.763-.154-.962-.67-1.391-1.646-1.305-2.781.018-.246.474-.631.74-.64zm6.976-4.516c.232-.406.644-.517 1.029-.298 1.529.871 3.041 1.772 4.543 2.686.18.109.264.371.327.465.017.743-.598 1.147-1.164.828a164.475 164.475 0 0 1-4.487-2.652c-.392-.238-.475-.633-.248-1.029z" fill-rule="evenodd"/>
+</svg>
+</a>
 <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
 <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
 </nav>
@@ -68,93 +75,93 @@
 <div class="article-entry" itemprop="articleBody">
 <div class="toc">
 <ul>
-<li><a href="#an-zhuang-pure-ftpd">安装 Pure-FTPd</a><ul>
-<li><a href="#cha-kan-yi-xia-duan-kou">查看一下端口</a></li>
-<li><a href="#chang-shi-lian-jie-yi-xia">尝试连接一下</a></li>
-<li><a href="#qi-yong-xu-ni-zhang-hu">启用虚拟账户</a></li>
-<li><a href="#chong-qi-ftp-fu-wu-qi">重启 FTP 服务器</a></li>
-<li><a href="#tian-jia-zhang-hao">添加账号</a></li>
+<li><a href="#an-zhuang-pure-ftpd">&#x5B89;&#x88C5; Pure-FTPd</a><ul>
+<li><a href="#cha-kan-yi-xia-duan-kou">&#x67E5;&#x770B;&#x4E00;&#x4E0B;&#x7AEF;&#x53E3;</a></li>
+<li><a href="#chang-shi-lian-jie-yi-xia">&#x5C1D;&#x8BD5;&#x8FDE;&#x63A5;&#x4E00;&#x4E0B;</a></li>
+<li><a href="#qi-yong-xu-ni-zhang-hu">&#x542F;&#x7528;&#x865A;&#x62DF;&#x8D26;&#x6237;</a></li>
+<li><a href="#chong-qi-ftp-fu-wu-qi">&#x91CD;&#x542F; FTP &#x670D;&#x52A1;&#x5668;</a></li>
+<li><a href="#tian-jia-zhang-hao">&#x6DFB;&#x52A0;&#x8D26;&#x53F7;</a></li>
 </ul>
 </li>
-<li><a href="#pei-zhi-tls">配置 TLS</a><ul>
-<li><a href="#qi-yong-qiang-zhi-tls">启用强制 TLS</a></li>
-<li><a href="#sheng-cheng-zheng-shu">生成证书</a></li>
-<li><a href="#chong-qi-ftp-fu-wu-qi-1">重启 FTP 服务器</a></li>
+<li><a href="#pei-zhi-tls">&#x914D;&#x7F6E; TLS</a><ul>
+<li><a href="#qi-yong-qiang-zhi-tls">&#x542F;&#x7528;&#x5F3A;&#x5236; TLS</a></li>
+<li><a href="#sheng-cheng-zheng-shu">&#x751F;&#x6210;&#x8BC1;&#x4E66;</a></li>
+<li><a href="#chong-qi-ftp-fu-wu-qi-1">&#x91CD;&#x542F; FTP &#x670D;&#x52A1;&#x5668;</a></li>
 </ul>
 </li>
-<li><a href="#da-gong-gao-cheng">大功告成</a></li>
-<li><a href="#guan-yu-pure-ftpd-de-pei-zhi-wen-jian">关于 Pure-FTPd 的配置文件</a></li>
+<li><a href="#da-gong-gao-cheng">&#x5927;&#x529F;&#x544A;&#x6210;</a></li>
+<li><a href="#guan-yu-pure-ftpd-de-pei-zhi-wen-jian">&#x5173;&#x4E8E; Pure-FTPd &#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</a></li>
 </ul>
 </div>
-<p>我使用的系统是 Ubuntu Server 18.04 LTS。</p>
-<blockquote>
-<p>其实我用的是 <a href="https://laravel.com/docs/5.7/homestead" target="_blank" rel="noopener">Laravel Homestead</a> 的 <a href="https://www.vagrantup.com/" target="_blank" rel="noopener">Vagrant</a> <a href="https://app.vagrantup.com/laravel/boxes/homestead" target="_blank" rel="noopener">Box</a>，一个非常方便的虚拟机。</p>
-</blockquote>
-<p>本文参考了 <a href="https://www.pureftpd.org/" target="_blank" rel="noopener">Pure-FTPd</a> 的 <a href="https://help.ubuntu.com/community/PureFTP" target="_blank" rel="noopener">Ubuntu Community Wiki</a></p>
-<h2><span id="an-zhuang-pure-ftpd">安装 Pure-FTPd</span><a href="#an-zhuang-pure-ftpd" class="header-anchor">#</a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install pure-ftpd</span><br></pre></td></tr></table></figure>
-<h3><span id="cha-kan-yi-xia-duan-kou">查看一下端口</span><a href="#cha-kan-yi-xia-duan-kou" class="header-anchor">#</a></h3><p>这是一个很常见的指令</p>
+<p>&#x6211;&#x4F7F;&#x7528;&#x7684;&#x7CFB;&#x7EDF;&#x662F; Ubuntu Server 18.04 LTS&#x3002;</p>
+<section class="message is-default">
+<p>&#x5176;&#x5B9E;&#x6211;&#x7528;&#x7684;&#x662F; <a href="https://laravel.com/docs/5.7/homestead" target="_blank" rel="noopener">Laravel Homestead</a> &#x7684; <a href="https://www.vagrantup.com/" target="_blank" rel="noopener">Vagrant</a> <a href="https://app.vagrantup.com/laravel/boxes/homestead" target="_blank" rel="noopener">Box</a>&#xFF0C;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x65B9;&#x4FBF;&#x7684;&#x865A;&#x62DF;&#x673A;&#x3002;</p>
+</section>
+<p>&#x672C;&#x6587;&#x53C2;&#x8003;&#x4E86; <a href="https://www.pureftpd.org/" target="_blank" rel="noopener">Pure-FTPd</a> &#x7684; <a href="https://help.ubuntu.com/community/PureFTP" target="_blank" rel="noopener">Ubuntu Community Wiki</a></p>
+<h2><span id="an-zhuang-pure-ftpd">&#x5B89;&#x88C5; Pure-FTPd</span><a href="#an-zhuang-pure-ftpd" class="header-anchor">#</a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install pure-ftpd</span><br></pre></td></tr></table></figure>
+<h3><span id="cha-kan-yi-xia-duan-kou">&#x67E5;&#x770B;&#x4E00;&#x4E0B;&#x7AEF;&#x53E3;</span><a href="#cha-kan-yi-xia-duan-kou" class="header-anchor">#</a></h3><p>&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x5F88;&#x5E38;&#x89C1;&#x7684;&#x6307;&#x4EE4;</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo netstat -tlnp</span><br></pre></td></tr></table></figure>
 <ul>
-<li><code>t</code> 表示 TCP，只显示 TCP 连接</li>
-<li><code>l</code> 表示 listening，只显示正在监听的 Socket</li>
-<li><code>n</code> 表示 numeric，就是只显示 IP 数值，不解析域名</li>
-<li><code>p</code> 表示 programs 显示 PID/Program name</li>
+<li><code>t</code> &#x8868;&#x793A; TCP&#xFF0C;&#x53EA;&#x663E;&#x793A; TCP &#x8FDE;&#x63A5;</li>
+<li><code>l</code> &#x8868;&#x793A; listening&#xFF0C;&#x53EA;&#x663E;&#x793A;&#x6B63;&#x5728;&#x76D1;&#x542C;&#x7684; Socket</li>
+<li><code>n</code> &#x8868;&#x793A; numeric&#xFF0C;&#x5C31;&#x662F;&#x53EA;&#x663E;&#x793A; IP &#x6570;&#x503C;&#xFF0C;&#x4E0D;&#x89E3;&#x6790;&#x57DF;&#x540D;</li>
+<li><code>p</code> &#x8868;&#x793A; programs &#x663E;&#x793A; PID/Program name</li>
 </ul>
-<p>可以看到其中这两行，表示 Pure-FTPd 在对外监听 IPv4 和 IPv6 的 21 端口。</p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5176;&#x4E2D;&#x8FD9;&#x4E24;&#x884C;&#xFF0C;&#x8868;&#x793A; Pure-FTPd &#x5728;&#x5BF9;&#x5916;&#x76D1;&#x542C; IPv4 &#x548C; IPv6 &#x7684; 21 &#x7AEF;&#x53E3;&#x3002;</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name</span><br><span class="line">tcp        0      0 0.0.0.0:21              0.0.0.0:*               LISTEN      2663/pure-ftpd (SER</span><br><span class="line">tcp6       0      0 :::21                   :::*                    LISTEN      2663/pure-ftpd (SER</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>Local Address 是 <code>0.0.0.0</code> 表示对外监听，如果是 <code>127.0.0.1</code> 的话就是只监听本机，外部的请求无法访问到这个端口。</p>
-</blockquote>
-<h3><span id="chang-shi-lian-jie-yi-xia">尝试连接一下</span><a href="#chang-shi-lian-jie-yi-xia" class="header-anchor">#</a></h3><p>我们可以用 <a href="https://filezilla-project.org/" target="_blank" rel="noopener">FileZilla</a> 连接一下试试。</p>
-<p>暂时用匿名用户 <code>anonymous</code> 登录，可以看到服务器回应 <code>Login authentication failed</code>，证明服务器是安装成功了，但是还没创建 FTP 用户呢。</p>
-<blockquote>
-<p>Laravel Homestead 虚拟机默认的 IP 是 <code>192.168.10.10</code>。</p>
-</blockquote>
-<h3><span id="qi-yong-xu-ni-zhang-hu">启用虚拟账户</span><a href="#qi-yong-xu-ni-zhang-hu" class="header-anchor">#</a></h3><p>Pure-FTPd 可以使用虚拟账户，这个账户与 Linux 系统的账户无关，仅仅用于 FTP 登录验证。你可以很多 FTP 账户而不会把系统弄乱。</p>
+<section class="message is-info">
+<p>Local Address &#x662F; <code>0.0.0.0</code> &#x8868;&#x793A;&#x5BF9;&#x5916;&#x76D1;&#x542C;&#xFF0C;&#x5982;&#x679C;&#x662F; <code>127.0.0.1</code> &#x7684;&#x8BDD;&#x5C31;&#x662F;&#x53EA;&#x76D1;&#x542C;&#x672C;&#x673A;&#xFF0C;&#x5916;&#x90E8;&#x7684;&#x8BF7;&#x6C42;&#x65E0;&#x6CD5;&#x8BBF;&#x95EE;&#x5230;&#x8FD9;&#x4E2A;&#x7AEF;&#x53E3;&#x3002;</p>
+</section>
+<h3><span id="chang-shi-lian-jie-yi-xia">&#x5C1D;&#x8BD5;&#x8FDE;&#x63A5;&#x4E00;&#x4E0B;</span><a href="#chang-shi-lian-jie-yi-xia" class="header-anchor">#</a></h3><p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7528; <a href="https://filezilla-project.org/" target="_blank" rel="noopener">FileZilla</a> &#x8FDE;&#x63A5;&#x4E00;&#x4E0B;&#x8BD5;&#x8BD5;&#x3002;</p>
+<p>&#x6682;&#x65F6;&#x7528;&#x533F;&#x540D;&#x7528;&#x6237; <code>anonymous</code> &#x767B;&#x5F55;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x670D;&#x52A1;&#x5668;&#x56DE;&#x5E94; <code>Login authentication failed</code>&#xFF0C;&#x8BC1;&#x660E;&#x670D;&#x52A1;&#x5668;&#x662F;&#x5B89;&#x88C5;&#x6210;&#x529F;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x8FD8;&#x6CA1;&#x521B;&#x5EFA; FTP &#x7528;&#x6237;&#x5462;&#x3002;</p>
+<section class="message is-info">
+<p>Laravel Homestead &#x865A;&#x62DF;&#x673A;&#x9ED8;&#x8BA4;&#x7684; IP &#x662F; <code>192.168.10.10</code>&#x3002;</p>
+</section>
+<h3><span id="qi-yong-xu-ni-zhang-hu">&#x542F;&#x7528;&#x865A;&#x62DF;&#x8D26;&#x6237;</span><a href="#qi-yong-xu-ni-zhang-hu" class="header-anchor">#</a></h3><p>Pure-FTPd &#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x865A;&#x62DF;&#x8D26;&#x6237;&#xFF0C;&#x8FD9;&#x4E2A;&#x8D26;&#x6237;&#x4E0E; Linux &#x7CFB;&#x7EDF;&#x7684;&#x8D26;&#x6237;&#x65E0;&#x5173;&#xFF0C;&#x4EC5;&#x4EC5;&#x7528;&#x4E8E; FTP &#x767B;&#x5F55;&#x9A8C;&#x8BC1;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x5F88;&#x591A; FTP &#x8D26;&#x6237;&#x800C;&#x4E0D;&#x4F1A;&#x628A;&#x7CFB;&#x7EDF;&#x5F04;&#x4E71;&#x3002;</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ln -s /etc/pure-ftpd/conf/PureDB /etc/pure-ftpd/auth/PureDB</span><br></pre></td></tr></table></figure>
-<h3><span id="chong-qi-ftp-fu-wu-qi">重启 FTP 服务器</span><a href="#chong-qi-ftp-fu-wu-qi" class="header-anchor">#</a></h3><p>重启 FTP 服务器，应用配置。</p>
+<h3><span id="chong-qi-ftp-fu-wu-qi">&#x91CD;&#x542F; FTP &#x670D;&#x52A1;&#x5668;</span><a href="#chong-qi-ftp-fu-wu-qi" class="header-anchor">#</a></h3><p>&#x91CD;&#x542F; FTP &#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5E94;&#x7528;&#x914D;&#x7F6E;&#x3002;</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service pure-ftpd restart</span><br></pre></td></tr></table></figure>
-<h3><span id="tian-jia-zhang-hao">添加账号</span><a href="#tian-jia-zhang-hao" class="header-anchor">#</a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pure-pw useradd ganlv -u vagrant -d /home/vagrant/</span><br></pre></td></tr></table></figure>
+<h3><span id="tian-jia-zhang-hao">&#x6DFB;&#x52A0;&#x8D26;&#x53F7;</span><a href="#tian-jia-zhang-hao" class="header-anchor">#</a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pure-pw useradd ganlv -u vagrant -d /home/vagrant/</span><br></pre></td></tr></table></figure>
 <ul>
-<li><code>ganlv</code> 是我一会 FTP 登录时输入的用户名。</li>
-<li><code>vagrant</code> 表示用哪个 Linux 系统账户来完成 FTP 文件操作。</li>
-<li><code>/home/vagrant/</code> 表示登录 FTP 之后的根目录 <code>/</code>。</li>
+<li><code>ganlv</code> &#x662F;&#x6211;&#x4E00;&#x4F1A; FTP &#x767B;&#x5F55;&#x65F6;&#x8F93;&#x5165;&#x7684;&#x7528;&#x6237;&#x540D;&#x3002;</li>
+<li><code>vagrant</code> &#x8868;&#x793A;&#x7528;&#x54EA;&#x4E2A; Linux &#x7CFB;&#x7EDF;&#x8D26;&#x6237;&#x6765;&#x5B8C;&#x6210; FTP &#x6587;&#x4EF6;&#x64CD;&#x4F5C;&#x3002;</li>
+<li><code>/home/vagrant/</code> &#x8868;&#x793A;&#x767B;&#x5F55; FTP &#x4E4B;&#x540E;&#x7684;&#x6839;&#x76EE;&#x5F55; <code>/</code>&#x3002;</li>
 </ul>
-<p>Linux 下每个文件和文件夹都有用户和用户组，所以需要特定用户才能操作。虽然有虚拟账户系统，但是还是需要用一个系统账户来进行操作的，总不能用 root 账户来操作吧。</p>
-<blockquote>
-<p>其实在登录之后，<code>pure-ftpd</code> 会用权限较低用户（就是设置的 <code>vagrant</code>）创建一个新进程来执行操作，保证以较低的权限来执行操作。</p>
-</blockquote>
-<p>然后输入两遍密码就创建完成了。</p>
-<p>其实，这时还是登录不上的。还需要把文本文件 <code>/etc/pure-ftpd/pureftpd.passwd</code> 转换成 <code>/etc/pure-ftpd/pureftpd.pdb</code>，后面的 PDB 文件才是程序真正读取的用户数据库。</p>
+<p>Linux &#x4E0B;&#x6BCF;&#x4E2A;&#x6587;&#x4EF6;&#x548C;&#x6587;&#x4EF6;&#x5939;&#x90FD;&#x6709;&#x7528;&#x6237;&#x548C;&#x7528;&#x6237;&#x7EC4;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x7279;&#x5B9A;&#x7528;&#x6237;&#x624D;&#x80FD;&#x64CD;&#x4F5C;&#x3002;&#x867D;&#x7136;&#x6709;&#x865A;&#x62DF;&#x8D26;&#x6237;&#x7CFB;&#x7EDF;&#xFF0C;&#x4F46;&#x662F;&#x8FD8;&#x662F;&#x9700;&#x8981;&#x7528;&#x4E00;&#x4E2A;&#x7CFB;&#x7EDF;&#x8D26;&#x6237;&#x6765;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x7684;&#xFF0C;&#x603B;&#x4E0D;&#x80FD;&#x7528; root &#x8D26;&#x6237;&#x6765;&#x64CD;&#x4F5C;&#x5427;&#x3002;</p>
+<section class="message is-primary">
+<p>&#x5176;&#x5B9E;&#x5728;&#x767B;&#x5F55;&#x4E4B;&#x540E;&#xFF0C;<code>pure-ftpd</code> &#x4F1A;&#x7528;&#x6743;&#x9650;&#x8F83;&#x4F4E;&#x7528;&#x6237;&#xFF08;&#x5C31;&#x662F;&#x8BBE;&#x7F6E;&#x7684; <code>vagrant</code>&#xFF09;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x8FDB;&#x7A0B;&#x6765;&#x6267;&#x884C;&#x64CD;&#x4F5C;&#xFF0C;&#x4FDD;&#x8BC1;&#x4EE5;&#x8F83;&#x4F4E;&#x7684;&#x6743;&#x9650;&#x6765;&#x6267;&#x884C;&#x64CD;&#x4F5C;&#x3002;</p>
+</section>
+<p>&#x7136;&#x540E;&#x8F93;&#x5165;&#x4E24;&#x904D;&#x5BC6;&#x7801;&#x5C31;&#x521B;&#x5EFA;&#x5B8C;&#x6210;&#x4E86;&#x3002;</p>
+<p>&#x5176;&#x5B9E;&#xFF0C;&#x8FD9;&#x65F6;&#x8FD8;&#x662F;&#x767B;&#x5F55;&#x4E0D;&#x4E0A;&#x7684;&#x3002;&#x8FD8;&#x9700;&#x8981;&#x628A;&#x6587;&#x672C;&#x6587;&#x4EF6; <code>/etc/pure-ftpd/pureftpd.passwd</code> &#x8F6C;&#x6362;&#x6210; <code>/etc/pure-ftpd/pureftpd.pdb</code>&#xFF0C;&#x540E;&#x9762;&#x7684; PDB &#x6587;&#x4EF6;&#x624D;&#x662F;&#x7A0B;&#x5E8F;&#x771F;&#x6B63;&#x8BFB;&#x53D6;&#x7684;&#x7528;&#x6237;&#x6570;&#x636E;&#x5E93;&#x3002;</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pure-pw mkdb</span><br></pre></td></tr></table></figure>
-<p>可以在添加账号时直接使用 <code>-m</code> 直接 <code>mkdb</code>，把两步合并成一步。</p>
+<p>&#x53EF;&#x4EE5;&#x5728;&#x6DFB;&#x52A0;&#x8D26;&#x53F7;&#x65F6;&#x76F4;&#x63A5;&#x4F7F;&#x7528; <code>-m</code> &#x76F4;&#x63A5; <code>mkdb</code>&#xFF0C;&#x628A;&#x4E24;&#x6B65;&#x5408;&#x5E76;&#x6210;&#x4E00;&#x6B65;&#x3002;</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pure-pw useradd ganlv -u vagrant -d /home/vagrant/ -m</span><br></pre></td></tr></table></figure>
-<p>添加账号并不需要重启 FTP 服务器。</p>
-<h2><span id="pei-zhi-tls">配置 TLS</span><a href="#pei-zhi-tls" class="header-anchor">#</a></h2><h3><span id="qi-yong-qiang-zhi-tls">启用强制 TLS</span><a href="#qi-yong-qiang-zhi-tls" class="header-anchor">#</a></h3><p>这部分需要使用 root 用户来操作，但是 sudo 又不是很方便，所以直接用 <code>su</code> 切换到 root。</p>
+<p>&#x6DFB;&#x52A0;&#x8D26;&#x53F7;&#x5E76;&#x4E0D;&#x9700;&#x8981;&#x91CD;&#x542F; FTP &#x670D;&#x52A1;&#x5668;&#x3002;</p>
+<h2><span id="pei-zhi-tls">&#x914D;&#x7F6E; TLS</span><a href="#pei-zhi-tls" class="header-anchor">#</a></h2><h3><span id="qi-yong-qiang-zhi-tls">&#x542F;&#x7528;&#x5F3A;&#x5236; TLS</span><a href="#qi-yong-qiang-zhi-tls" class="header-anchor">#</a></h3><p>&#x8FD9;&#x90E8;&#x5206;&#x9700;&#x8981;&#x4F7F;&#x7528; root &#x7528;&#x6237;&#x6765;&#x64CD;&#x4F5C;&#xFF0C;&#x4F46;&#x662F; sudo &#x53C8;&#x4E0D;&#x662F;&#x5F88;&#x65B9;&#x4FBF;&#xFF0C;&#x6240;&#x4EE5;&#x76F4;&#x63A5;&#x7528; <code>su</code> &#x5207;&#x6362;&#x5230; root&#x3002;</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo su</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> 2 &gt; /etc/pure-ftpd/conf/TLS</span><br></pre></td></tr></table></figure>
-<p>如果想既允许普通的 FTP 又支持 FTPS，那就用 <code>echo 1</code>。</p>
-<p>然后 <code>exit</code> 退出 root 账户。</p>
-<h3><span id="sheng-cheng-zheng-shu">生成证书</span><a href="#sheng-cheng-zheng-shu" class="header-anchor">#</a></h3><p>然后去生成一个自签发的证书。</p>
-<p>如果 <code>/etc/ssl/private/</code> 这个目录不存在的话就新建一个。如果存在的话就没事了。要注意这个目录的权限。</p>
+<p>&#x5982;&#x679C;&#x60F3;&#x65E2;&#x5141;&#x8BB8;&#x666E;&#x901A;&#x7684; FTP &#x53C8;&#x652F;&#x6301; FTPS&#xFF0C;&#x90A3;&#x5C31;&#x7528; <code>echo 1</code>&#x3002;</p>
+<p>&#x7136;&#x540E; <code>exit</code> &#x9000;&#x51FA; root &#x8D26;&#x6237;&#x3002;</p>
+<h3><span id="sheng-cheng-zheng-shu">&#x751F;&#x6210;&#x8BC1;&#x4E66;</span><a href="#sheng-cheng-zheng-shu" class="header-anchor">#</a></h3><p>&#x7136;&#x540E;&#x53BB;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x81EA;&#x7B7E;&#x53D1;&#x7684;&#x8BC1;&#x4E66;&#x3002;</p>
+<p>&#x5982;&#x679C; <code>/etc/ssl/private/</code> &#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x8BDD;&#x5C31;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x3002;&#x5982;&#x679C;&#x5B58;&#x5728;&#x7684;&#x8BDD;&#x5C31;&#x6CA1;&#x4E8B;&#x4E86;&#x3002;&#x8981;&#x6CE8;&#x610F;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x7684;&#x6743;&#x9650;&#x3002;</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /etc/ssl/private/</span><br><span class="line">chown root:root /etc/ssl/private/</span><br><span class="line">chmod 700 /etc/ssl/private/</span><br></pre></td></tr></table></figure>
-<p>我的 Ubuntu 是自带这个目录的，默认是 <code>root:ssl-cert 710</code> 的权限，和 <a href="https://serverfault.com/questions/259302/best-location-for-ssl-certificate-and-private-keys-on-ubuntu/259307#259307" target="_blank" rel="noopener">StackOverflow 上的一个答案</a> 差不多。我感觉不到什么区别。</p>
+<p>&#x6211;&#x7684; Ubuntu &#x662F;&#x81EA;&#x5E26;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x7684;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F; <code>root:ssl-cert 710</code> &#x7684;&#x6743;&#x9650;&#xFF0C;&#x548C; <a href="https://serverfault.com/questions/259302/best-location-for-ssl-certificate-and-private-keys-on-ubuntu/259307#259307" target="_blank" rel="noopener">StackOverflow &#x4E0A;&#x7684;&#x4E00;&#x4E2A;&#x7B54;&#x6848;</a> &#x5DEE;&#x4E0D;&#x591A;&#x3002;&#x6211;&#x611F;&#x89C9;&#x4E0D;&#x5230;&#x4EC0;&#x4E48;&#x533A;&#x522B;&#x3002;</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drwx--x---   2 root ssl-cert  4096 Jun  3 19:59 private</span><br></pre></td></tr></table></figure>
-<p>用 openssl 生成证书，填好证书的各种信息，不想看的话就一直回车就行了。</p>
+<p>&#x7528; openssl &#x751F;&#x6210;&#x8BC1;&#x4E66;&#xFF0C;&#x586B;&#x597D;&#x8BC1;&#x4E66;&#x7684;&#x5404;&#x79CD;&#x4FE1;&#x606F;&#xFF0C;&#x4E0D;&#x60F3;&#x770B;&#x7684;&#x8BDD;&#x5C31;&#x4E00;&#x76F4;&#x56DE;&#x8F66;&#x5C31;&#x884C;&#x4E86;&#x3002;</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/pure-ftpd.pem -out /etc/ssl/private/pure-ftpd.pem</span><br></pre></td></tr></table></figure>
-<h3><span id="chong-qi-ftp-fu-wu-qi">重启 FTP 服务器</span><a href="#chong-qi-ftp-fu-wu-qi" class="header-anchor">#</a></h3><p>凡是修改配置文件，肯定要重启，因为配置文件只在程序启动的时候加载，之后就不会再读取配置了。</p>
-<h2><span id="da-gong-gao-cheng">大功告成</span><a href="#da-gong-gao-cheng" class="header-anchor">#</a></h2><p>FileZilla 连接一下试一试</p>
-<p><img src="/images/install-pure-ftpd-enable-tls/filezilla-connect.jpg" alt="使用 Pure-FTPd 连接到 FTP 服务器"></p>
-<p>确定即可，信任这个证书，以后就不会再提示了。</p>
-<p>站点管理器中也可以要求显式的 FTP 通过 TLS。</p>
-<p><img src="/images/install-pure-ftpd-enable-tls/filezilla-explicit-tls.jpg" alt="要求显式的 FTP 通过 TLS"></p>
-<h2><span id="guan-yu-pure-ftpd-de-pei-zhi-wen-jian">关于 Pure-FTPd 的配置文件</span><a href="#guan-yu-pure-ftpd-de-pei-zhi-wen-jian" class="header-anchor">#</a></h2><p>Pure-FTPd 并不是使用 <code>/etc/pure-ftpd/pure-ftpd.conf</code> 来作为配置文件，可以看 <code>pure-ftpd.conf</code> 这个文件的开头的说明。</p>
+<h3><span id="chong-qi-ftp-fu-wu-qi">&#x91CD;&#x542F; FTP &#x670D;&#x52A1;&#x5668;</span><a href="#chong-qi-ftp-fu-wu-qi" class="header-anchor">#</a></h3><p>&#x51E1;&#x662F;&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x80AF;&#x5B9A;&#x8981;&#x91CD;&#x542F;&#xFF0C;&#x56E0;&#x4E3A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x53EA;&#x5728;&#x7A0B;&#x5E8F;&#x542F;&#x52A8;&#x7684;&#x65F6;&#x5019;&#x52A0;&#x8F7D;&#xFF0C;&#x4E4B;&#x540E;&#x5C31;&#x4E0D;&#x4F1A;&#x518D;&#x8BFB;&#x53D6;&#x914D;&#x7F6E;&#x4E86;&#x3002;</p>
+<h2><span id="da-gong-gao-cheng">&#x5927;&#x529F;&#x544A;&#x6210;</span><a href="#da-gong-gao-cheng" class="header-anchor">#</a></h2><p>FileZilla &#x8FDE;&#x63A5;&#x4E00;&#x4E0B;&#x8BD5;&#x4E00;&#x8BD5;</p>
+<p><img src="/images/install-pure-ftpd-enable-tls/filezilla-connect.jpg" alt="&#x4F7F;&#x7528; Pure-FTPd &#x8FDE;&#x63A5;&#x5230; FTP &#x670D;&#x52A1;&#x5668;"></p>
+<p>&#x786E;&#x5B9A;&#x5373;&#x53EF;&#xFF0C;&#x4FE1;&#x4EFB;&#x8FD9;&#x4E2A;&#x8BC1;&#x4E66;&#xFF0C;&#x4EE5;&#x540E;&#x5C31;&#x4E0D;&#x4F1A;&#x518D;&#x63D0;&#x793A;&#x4E86;&#x3002;</p>
+<p>&#x7AD9;&#x70B9;&#x7BA1;&#x7406;&#x5668;&#x4E2D;&#x4E5F;&#x53EF;&#x4EE5;&#x8981;&#x6C42;&#x663E;&#x5F0F;&#x7684; FTP &#x901A;&#x8FC7; TLS&#x3002;</p>
+<p><img src="/images/install-pure-ftpd-enable-tls/filezilla-explicit-tls.jpg" alt="&#x8981;&#x6C42;&#x663E;&#x5F0F;&#x7684; FTP &#x901A;&#x8FC7; TLS"></p>
+<h2><span id="guan-yu-pure-ftpd-de-pei-zhi-wen-jian">&#x5173;&#x4E8E; Pure-FTPd &#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</span><a href="#guan-yu-pure-ftpd-de-pei-zhi-wen-jian" class="header-anchor">#</a></h2><p>Pure-FTPd &#x5E76;&#x4E0D;&#x662F;&#x4F7F;&#x7528; <code>/etc/pure-ftpd/pure-ftpd.conf</code> &#x6765;&#x4F5C;&#x4E3A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x770B; <code>pure-ftpd.conf</code> &#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x5F00;&#x5934;&#x7684;&#x8BF4;&#x660E;&#x3002;</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># If you want to run Pure-FTPd with this configuration</span><br><span class="line"># instead of command-line options, please run the</span><br><span class="line"># following command :</span><br><span class="line">#</span><br><span class="line"># /usr/sbin/pure-ftpd /etc/pure-ftpd/etc/pure-ftpd.conf</span><br></pre></td></tr></table></figure>
-<p>如果你想用这个配置文件运行 Pure-FTPd，你必须要在命令行后面加上这个文件路径作为参数。</p>
-<p>如果你不用这个配置文件，直接修改 <code>/etc/pure-ftpd/conf/</code> 下的文件内容就行。</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x7528;&#x8FD9;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8FD0;&#x884C; Pure-FTPd&#xFF0C;&#x4F60;&#x5FC5;&#x987B;&#x8981;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x540E;&#x9762;&#x52A0;&#x4E0A;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x4E0D;&#x7528;&#x8FD9;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x76F4;&#x63A5;&#x4FEE;&#x6539; <code>/etc/pure-ftpd/conf/</code> &#x4E0B;&#x7684;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x5C31;&#x884C;&#x3002;</p>
 </div>
 <footer class="article-footer">
-<a data-url="https://ganlvtech.github.io/2018/10/08/install-pure-ftpd-enable-tls/" data-id="cjnfkrcnb000ayav4fxslcso2" class="article-share-link">Share</a>
+<a data-url="https://ganlvtech.github.io/2018/10/08/install-pure-ftpd-enable-tls/" data-id="cjngn3t93000bw9m2o3bozi21" class="article-share-link">Share</a>
 <a href="https://ganlvtech.github.io/2018/10/08/install-pure-ftpd-enable-tls/#disqus_thread" class="article-comment-link">留言</a>
 <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ftp/">ftp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pure-ftpd/">pure-ftpd</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ssl/">ssl</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tls/">tls</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li></ul>
 </footer>
@@ -182,13 +189,13 @@ Chrome Local Override 本地文件替换
 <div class="widget-wrap">
 <h3 class="widget-title">标签</h3>
 <div class="widget">
-<ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/anchor/">anchor</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/audit/">audit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chrome/">chrome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ci/">ci</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/comment/">comment</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/comparison/">comparison</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/devtools/">devtools</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/disqus/">disqus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/extension/">extension</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/frontend/">frontend</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ftp/">ftp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gem/">gem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gfw/">gfw</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/google/">google</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gooreplacer/">gooreplacer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/grub/">grub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/href/">href</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/i18n/">i18n</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jekyll/">jekyll</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/">js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/link/">link</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/locale/">locale</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/noopener/">noopener</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pages/">pages</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/phishing/">phishing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/production/">production</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pure-ftpd/">pure-ftpd</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/redirect/">redirect</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ruby/">ruby</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssl/">ssl</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/teredo/">teredo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/">test</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tls/">tls</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/travis/">travis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tunnel/">tunnel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xx-net/">xx-net</a></li></ul>
+<ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/anchor/">anchor</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/audit/">audit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bulma/">bulma</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chrome/">chrome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ci/">ci</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/comment/">comment</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/comparison/">comparison</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/devtools/">devtools</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/disqus/">disqus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/extension/">extension</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/frontend/">frontend</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ftp/">ftp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gem/">gem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gfw/">gfw</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/google/">google</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gooreplacer/">gooreplacer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/grub/">grub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hosts/">hosts</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/href/">href</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/i18n/">i18n</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jekyll/">jekyll</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/">js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/link/">link</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/locale/">locale</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/noopener/">noopener</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pages/">pages</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/phishing/">phishing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plugin/">plugin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/production/">production</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pure-ftpd/">pure-ftpd</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/redirect/">redirect</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ruby/">ruby</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sass/">sass</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssl/">ssl</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/teredo/">teredo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/">test</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tls/">tls</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/travis/">travis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tunnel/">tunnel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xx-net/">xx-net</a></li></ul>
 </div>
 </div>
 <div class="widget-wrap">
 <h3 class="widget-title">标签云</h3>
 <div class="widget tagcloud">
-<a href="/tags/anchor/" style="font-size:10px">anchor</a> <a href="/tags/audit/" style="font-size:10px">audit</a> <a href="/tags/chrome/" style="font-size:13.33px">chrome</a> <a href="/tags/ci/" style="font-size:13.33px">ci</a> <a href="/tags/comment/" style="font-size:10px">comment</a> <a href="/tags/comparison/" style="font-size:10px">comparison</a> <a href="/tags/css/" style="font-size:10px">css</a> <a href="/tags/devtools/" style="font-size:13.33px">devtools</a> <a href="/tags/disqus/" style="font-size:10px">disqus</a> <a href="/tags/extension/" style="font-size:10px">extension</a> <a href="/tags/frontend/" style="font-size:10px">frontend</a> <a href="/tags/ftp/" style="font-size:10px">ftp</a> <a href="/tags/gem/" style="font-size:10px">gem</a> <a href="/tags/gfw/" style="font-size:20px">gfw</a> <a href="/tags/github/" style="font-size:13.33px">github</a> <a href="/tags/google/" style="font-size:10px">google</a> <a href="/tags/gooreplacer/" style="font-size:10px">gooreplacer</a> <a href="/tags/grub/" style="font-size:10px">grub</a> <a href="/tags/hexo/" style="font-size:16.67px">hexo</a> <a href="/tags/href/" style="font-size:10px">href</a> <a href="/tags/html/" style="font-size:13.33px">html</a> <a href="/tags/i18n/" style="font-size:10px">i18n</a> <a href="/tags/jekyll/" style="font-size:10px">jekyll</a> <a href="/tags/js/" style="font-size:13.33px">js</a> <a href="/tags/link/" style="font-size:10px">link</a> <a href="/tags/linux/" style="font-size:10px">linux</a> <a href="/tags/locale/" style="font-size:10px">locale</a> <a href="/tags/node-js/" style="font-size:13.33px">node.js</a> <a href="/tags/noopener/" style="font-size:10px">noopener</a> <a href="/tags/npm/" style="font-size:13.33px">npm</a> <a href="/tags/pages/" style="font-size:13.33px">pages</a> <a href="/tags/phishing/" style="font-size:10px">phishing</a> <a href="/tags/production/" style="font-size:10px">production</a> <a href="/tags/pure-ftpd/" style="font-size:10px">pure-ftpd</a> <a href="/tags/redirect/" style="font-size:10px">redirect</a> <a href="/tags/ruby/" style="font-size:10px">ruby</a> <a href="/tags/ssl/" style="font-size:13.33px">ssl</a> <a href="/tags/teredo/" style="font-size:10px">teredo</a> <a href="/tags/test/" style="font-size:10px">test</a> <a href="/tags/tls/" style="font-size:10px">tls</a> <a href="/tags/travis/" style="font-size:13.33px">travis</a> <a href="/tags/tunnel/" style="font-size:10px">tunnel</a> <a href="/tags/ubuntu/" style="font-size:16.67px">ubuntu</a> <a href="/tags/xx-net/" style="font-size:10px">xx-net</a>
+<a href="/tags/anchor/" style="font-size:10px">anchor</a> <a href="/tags/audit/" style="font-size:10px">audit</a> <a href="/tags/bulma/" style="font-size:10px">bulma</a> <a href="/tags/chrome/" style="font-size:13.33px">chrome</a> <a href="/tags/ci/" style="font-size:13.33px">ci</a> <a href="/tags/comment/" style="font-size:10px">comment</a> <a href="/tags/comparison/" style="font-size:10px">comparison</a> <a href="/tags/css/" style="font-size:13.33px">css</a> <a href="/tags/devtools/" style="font-size:13.33px">devtools</a> <a href="/tags/disqus/" style="font-size:10px">disqus</a> <a href="/tags/extension/" style="font-size:10px">extension</a> <a href="/tags/frontend/" style="font-size:10px">frontend</a> <a href="/tags/ftp/" style="font-size:10px">ftp</a> <a href="/tags/gem/" style="font-size:10px">gem</a> <a href="/tags/gfw/" style="font-size:20px">gfw</a> <a href="/tags/github/" style="font-size:13.33px">github</a> <a href="/tags/google/" style="font-size:10px">google</a> <a href="/tags/gooreplacer/" style="font-size:10px">gooreplacer</a> <a href="/tags/grub/" style="font-size:10px">grub</a> <a href="/tags/hexo/" style="font-size:20px">hexo</a> <a href="/tags/hosts/" style="font-size:10px">hosts</a> <a href="/tags/href/" style="font-size:10px">href</a> <a href="/tags/html/" style="font-size:13.33px">html</a> <a href="/tags/i18n/" style="font-size:10px">i18n</a> <a href="/tags/jekyll/" style="font-size:10px">jekyll</a> <a href="/tags/js/" style="font-size:16.67px">js</a> <a href="/tags/link/" style="font-size:10px">link</a> <a href="/tags/linux/" style="font-size:10px">linux</a> <a href="/tags/locale/" style="font-size:10px">locale</a> <a href="/tags/markdown/" style="font-size:10px">markdown</a> <a href="/tags/node-js/" style="font-size:13.33px">node.js</a> <a href="/tags/noopener/" style="font-size:10px">noopener</a> <a href="/tags/npm/" style="font-size:13.33px">npm</a> <a href="/tags/pages/" style="font-size:13.33px">pages</a> <a href="/tags/phishing/" style="font-size:10px">phishing</a> <a href="/tags/plugin/" style="font-size:10px">plugin</a> <a href="/tags/production/" style="font-size:10px">production</a> <a href="/tags/pure-ftpd/" style="font-size:10px">pure-ftpd</a> <a href="/tags/redirect/" style="font-size:10px">redirect</a> <a href="/tags/ruby/" style="font-size:10px">ruby</a> <a href="/tags/sass/" style="font-size:10px">sass</a> <a href="/tags/ssl/" style="font-size:13.33px">ssl</a> <a href="/tags/teredo/" style="font-size:10px">teredo</a> <a href="/tags/test/" style="font-size:10px">test</a> <a href="/tags/tls/" style="font-size:10px">tls</a> <a href="/tags/travis/" style="font-size:13.33px">travis</a> <a href="/tags/tunnel/" style="font-size:10px">tunnel</a> <a href="/tags/ubuntu/" style="font-size:16.67px">ubuntu</a> <a href="/tags/xx-net/" style="font-size:10px">xx-net</a>
 </div>
 </div>
 <div class="widget-wrap">
@@ -202,6 +209,9 @@ Chrome Local Override 本地文件替换
 <div class="widget">
 <ul>
 <li>
+<a href="/2018/10/19/hexo-markdown-blockquote-colorful-message/">Markdown 引用块加颜色作为提示框</a>
+</li>
+<li>
 <a href="/2018/10/18/disqus-in-china-trick/">在国内使用 Disqus 的小技巧</a>
 </li>
 <li>
@@ -212,9 +222,6 @@ Chrome Local Override 本地文件替换
 </li>
 <li>
 <a href="/2018/10/08/install-pure-ftpd-enable-tls/">安装 Pure-FTPd 并启用 TLS</a>
-</li>
-<li>
-<a href="/2018/09/28/ubuntu-font-noto-sans-cjk-problem/">Ubuntu Use Noto Sans CJK SC as Default Fallback Font</a>
 </li>
 </ul>
 </div>
@@ -234,7 +241,7 @@ Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
 <a href="/" class="mobile-nav-link">Home</a>
 <a href="/archives" class="mobile-nav-link">Archives</a>
 </nav>
-<script>var disqus_shortname="ganlvtech",disqus_url="https://ganlvtech.github.io/2018/10/08/install-pure-ftpd-enable-tls/";!function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="//a.disquscdn.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)}()</script>
+<script>var disqus_shortname="ganlvtech",disqus_url="https://ganlvtech.github.io/2018/10/08/install-pure-ftpd-enable-tls/";!function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="//c.disquscdn.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)}()</script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
 <script src="/fancybox/jquery.fancybox.pack.js"></script>

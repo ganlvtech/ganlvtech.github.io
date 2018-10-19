@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ganlvtech.github.io/"/>
-  <updated>2018-10-19T05:29:04.062Z</updated>
+  <updated>2018-10-19T23:22:28.233Z</updated>
   <id>https://ganlvtech.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>在国内使用 Disqus 的小技巧</title>
-    <link href="https://ganlvtech.github.io/2018/10/18/disqus-in-china-trick/"/>
-    <id>https://ganlvtech.github.io/2018/10/18/disqus-in-china-trick/</id>
-    <published>2018-10-18T19:30:34.000Z</published>
-    <updated>2018-10-19T05:29:04.062Z</updated>
+    <title>Markdown 引用块加颜色作为提示框</title>
+    <link href="https://ganlvtech.github.io/2018/10/19/hexo-markdown-blockquote-colorful-message/"/>
+    <id>https://ganlvtech.github.io/2018/10/19/hexo-markdown-blockquote-colorful-message/</id>
+    <published>2018-10-19T14:06:25.000Z</published>
+    <updated>2018-10-19T23:22:28.233Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,43 @@
       
         
         
-          &lt;p&gt;&lt;a href=&quot;https://disqus.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Disqus&lt;/a&gt; 是一个的评论社区。它可以通过 iframe
+          &lt;p&gt;&amp;#x672C;&amp;#x63D2;&amp;#x4EF6;&amp;#x914D;&amp;#x8272;&amp;#x65B9;&amp;#x6848;&amp;#x53C2;&amp;#x8003;&amp;#x4E86; &lt;a href=&quot;https://bulma.io/&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="js" scheme="https://ganlvtech.github.io/tags/js/"/>
+    
+      <category term="css" scheme="https://ganlvtech.github.io/tags/css/"/>
+    
+      <category term="hexo" scheme="https://ganlvtech.github.io/tags/hexo/"/>
+    
+      <category term="markdown" scheme="https://ganlvtech.github.io/tags/markdown/"/>
+    
+      <category term="plugin" scheme="https://ganlvtech.github.io/tags/plugin/"/>
+    
+      <category term="bulma" scheme="https://ganlvtech.github.io/tags/bulma/"/>
+    
+      <category term="sass" scheme="https://ganlvtech.github.io/tags/sass/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在国内使用 Disqus 的小技巧</title>
+    <link href="https://ganlvtech.github.io/2018/10/18/disqus-in-china-trick/"/>
+    <id>https://ganlvtech.github.io/2018/10/18/disqus-in-china-trick/</id>
+    <published>2018-10-18T19:30:34.000Z</published>
+    <updated>2018-10-19T23:22:28.229Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;https://disqus.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Disqus&lt;/a&gt;
         
       
     
@@ -46,6 +82,8 @@
     
       <category term="hexo" scheme="https://ganlvtech.github.io/tags/hexo/"/>
     
+      <category term="hosts" scheme="https://ganlvtech.github.io/tags/hosts/"/>
+    
   </entry>
   
   <entry>
@@ -53,7 +91,7 @@
     <link href="https://ganlvtech.github.io/2018/10/17/external-link-rel-no-opener/"/>
     <id>https://ganlvtech.github.io/2018/10/17/external-link-rel-no-opener/</id>
     <published>2018-10-17T17:33:35.000Z</published>
-    <updated>2018-10-19T05:29:04.062Z</updated>
+    <updated>2018-10-19T23:22:28.229Z</updated>
     
     <summary type="html">
     
@@ -61,7 +99,7 @@
       
         
         
-          &lt;h2&gt;&lt;span id=&quot;wen-ti-yin-chu&quot;&gt;问题引出&lt;/span&gt;&lt;a href=&quot;#wen-ti-yin-chu&quot; class=&quot;header-anchor&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;&lt;figure class=&quot;highlight
+          &lt;h2&gt;&lt;span id=&quot;wen-ti-yin-chu&quot;&gt;&amp;#x95EE;&amp;#x9898;&amp;#x5F15;&amp;#x51FA;&lt;/span&gt;&lt;a href=&quot;#wen-ti-yin-chu&quot; class=&quot;header-anchor&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;&lt;figure
         
       
     
@@ -93,7 +131,7 @@
     <link href="https://ganlvtech.github.io/2018/10/15/chrome-local-override/"/>
     <id>https://ganlvtech.github.io/2018/10/15/chrome-local-override/</id>
     <published>2018-10-15T20:46:09.000Z</published>
-    <updated>2018-10-19T05:29:04.062Z</updated>
+    <updated>2018-10-19T23:22:28.229Z</updated>
     
     <summary type="html">
     
@@ -101,7 +139,7 @@
       
         
         
-          &lt;h2&gt;&lt;span id=&quot;wen-ti&quot;&gt;问题&lt;/span&gt;&lt;a href=&quot;#wen-ti&quot;
+          &lt;h2&gt;&lt;span id=&quot;wen-ti&quot;&gt;&amp;#x95EE;&amp;#x9898;&lt;/span&gt;&lt;a href=&quot;#wen-ti&quot;
         
       
     
@@ -139,7 +177,7 @@
     <link href="https://ganlvtech.github.io/2018/10/08/install-pure-ftpd-enable-tls/"/>
     <id>https://ganlvtech.github.io/2018/10/08/install-pure-ftpd-enable-tls/</id>
     <published>2018-10-08T17:38:17.000Z</published>
-    <updated>2018-10-19T05:29:04.062Z</updated>
+    <updated>2018-10-19T23:22:28.233Z</updated>
     
     <summary type="html">
     
@@ -149,7 +187,7 @@
         
           &lt;div class=&quot;toc&quot;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#an-zhuang-pure-ftpd&quot;&gt;安装 Pure-FTPd&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#an-zhuang-pure-ftpd&quot;&gt;&amp;#x5B89;&amp;#x88C5; Pure-FTPd&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a
         
       
@@ -174,7 +212,7 @@
     <link href="https://ganlvtech.github.io/2018/09/28/ubuntu-font-noto-sans-cjk-problem/"/>
     <id>https://ganlvtech.github.io/2018/09/28/ubuntu-font-noto-sans-cjk-problem/</id>
     <published>2018-09-28T23:25:00.000Z</published>
-    <updated>2018-10-19T05:29:04.062Z</updated>
+    <updated>2018-10-19T23:22:28.233Z</updated>
     
     <summary type="html">
     
@@ -182,7 +220,7 @@
       
         
         
-          &lt;p&gt;&lt;a href=&quot;https://www.zhihu.com/question/47141667&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;如何正确为 Noto Sans CJK 配置 fontconfig
+          &lt;p&gt;&lt;a href=&quot;https://www.zhihu.com/question/47141667&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&amp;#x5982;&amp;#x4F55;&amp;#x6B63;&amp;#x786E;&amp;#x4E3A; Noto Sans CJK
         
       
     
@@ -202,7 +240,7 @@
     <link href="https://ganlvtech.github.io/2018/09/24/hexo-deploy-vs-travis-pages-provider/"/>
     <id>https://ganlvtech.github.io/2018/09/24/hexo-deploy-vs-travis-pages-provider/</id>
     <published>2018-09-24T13:54:53.000Z</published>
-    <updated>2018-10-19T05:29:04.062Z</updated>
+    <updated>2018-10-19T23:22:28.233Z</updated>
     
     <summary type="html">
     
@@ -210,8 +248,7 @@
       
         
         
-          &lt;p&gt;之前用的是 Hexo 自带的 &lt;code&gt;hexo deploy&lt;/code&gt; 来部署 GitHub Pages，这个配置文件显得很不美观。&lt;/p&gt;
-&lt;figure class=&quot;highlight yaml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
+          &lt;p&gt;&amp;#x4E4B;&amp;#x524D;&amp;#x7528;&amp;#x7684;&amp;#x662F; Hexo &amp;#x81EA;&amp;#x5E26;&amp;#x7684; &lt;code&gt;hexo deploy&lt;/code&gt; &amp;#x6765;&amp;#x90E8;&amp;#x7F72; GitHub
         
       
     
@@ -239,7 +276,7 @@
     <link href="https://ganlvtech.github.io/2018/09/24/xx-net-teredo-problem/"/>
     <id>https://ganlvtech.github.io/2018/09/24/xx-net-teredo-problem/</id>
     <published>2018-09-24T09:34:35.000Z</published>
-    <updated>2018-10-19T05:29:04.062Z</updated>
+    <updated>2018-10-19T23:22:28.233Z</updated>
     
     <summary type="html">
     
@@ -247,7 +284,7 @@
       
         
         
-          &lt;p&gt;偶尔用 &lt;a href=&quot;https://github.com/XX-net/XX-Net&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;XX-Net&lt;/a&gt; 来访问 &lt;a href=&quot;https://www.google.com/ncr&quot;
+          &lt;p&gt;&amp;#x5076;&amp;#x5C14;&amp;#x7528; &lt;a href=&quot;https://github.com/XX-net/XX-Net&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;XX-Net&lt;/a&gt; &amp;#x6765;&amp;#x8BBF;&amp;#x95EE;
         
       
     
@@ -269,7 +306,7 @@
     <link href="https://ganlvtech.github.io/2018/09/22/great-firewall-ssl-connection/"/>
     <id>https://ganlvtech.github.io/2018/09/22/great-firewall-ssl-connection/</id>
     <published>2018-09-22T15:11:47.000Z</published>
-    <updated>2018-10-19T05:29:04.062Z</updated>
+    <updated>2018-10-19T23:22:28.229Z</updated>
     
     <summary type="html">
     
@@ -277,7 +314,7 @@
       
         
         
-          &lt;p&gt;当访问 &lt;a href=&quot;https://zh.wikipedia.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://zh.wikipedia.org/&lt;/a&gt; 时会在 SSL 握手时直接被 RESET 或
+          &lt;p&gt;&amp;#x5F53;&amp;#x8BBF;&amp;#x95EE; &lt;a href=&quot;https://zh.wikipedia.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://zh.wikipedia.org/&lt;/a&gt;
         
       
     
@@ -297,7 +334,7 @@
     <link href="https://ganlvtech.github.io/2018/09/13/grub-image/"/>
     <id>https://ganlvtech.github.io/2018/09/13/grub-image/</id>
     <published>2018-09-13T17:20:05.000Z</published>
-    <updated>2018-10-19T05:29:04.062Z</updated>
+    <updated>2018-10-19T23:22:28.229Z</updated>
     
     <summary type="html">
     
@@ -305,8 +342,7 @@
       
         
         
-          &lt;p&gt;今天尝试安装了一下 Ubuntu 18.04.1，现在安装系统越来越简单了，用 Rufus 做一个 U 盘启动盘，然后就正常下一步就行了，Ubuntu 直接提供安装 Windows 和 Ubuntu 双系统的选项。&lt;/p&gt;
-&lt;p&gt;安装之后想利用 Grub2
+          &lt;p&gt;&amp;#x4ECA;&amp;#x5929;&amp;#x5C1D;&amp;#x8BD5;&amp;#x5B89;&amp;#x88C5;&amp;#x4E86;&amp;#x4E00;&amp;#x4E0B; Ubuntu
         
       
     
@@ -326,7 +362,7 @@
     <link href="https://ganlvtech.github.io/2018/09/10/jekyll-vs-hexo/"/>
     <id>https://ganlvtech.github.io/2018/09/10/jekyll-vs-hexo/</id>
     <published>2018-09-10T13:51:47.000Z</published>
-    <updated>2018-10-19T05:29:04.062Z</updated>
+    <updated>2018-10-19T23:22:28.233Z</updated>
     
     <summary type="html">
     
@@ -334,7 +370,7 @@
       
         
         
-          &lt;p&gt;最近我想用 &lt;a href=&quot;https://pages.github.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub Pages&lt;/a&gt; 搭建一个静态博客。最先想到的肯定是 &lt;a
+          &lt;p&gt;&amp;#x6700;&amp;#x8FD1;&amp;#x6211;&amp;#x60F3;&amp;#x7528; &lt;a href=&quot;https://pages.github.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub Pages&lt;/a&gt;
         
       
     
