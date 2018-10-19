@@ -2,20 +2,20 @@
 <html>
 <head>
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-<title>Grub2 添加背景图片 | Ganlv&#39;s Blog</title>
+<title>在国内使用 Disqus 的小技巧 | Ganlv&#39;s Blog</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-<meta name="description" content="今天尝试安装了一下 Ubuntu 18.04.1，现在安装系统越来越简单了，用 Rufus 做一个 U 盘启动盘，然后就正常下一步就行了，Ubuntu 直接提供安装 Windows 和 Ubuntu 双系统的选项。 安装之后想利用 Grub2 引导器页面的背景图片功能装个逼，把笔记本电脑厂商 logo 之后、Windows 启动之前那段黑屏加一个打着自己 logo 的背景图片。研究明白之后还是很简">
-<meta name="keywords" content="ubuntu,linux,grub">
+<meta name="description" content="Disqus 是一个的评论社区。它可以通过 iframe 提供嵌入式的评论区。可以用于静态网页。 但是在中国会被墙。 问题引出#disqus.com 似乎并没有被墙，只有 *.disqus.com 被墙了。 恰巧 Disqus 的评论数据是从 disqus.com 获取的。 也就是说，通过一点小技巧就可以不翻墙用 Disqus。 解决方法#Disqus 默认使用一个 script 标签来获取数据">
+<meta name="keywords" content="gfw,js,disqus,comment,hexo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Grub2 添加背景图片">
-<meta property="og:url" content="https://ganlvtech.github.io/2018/09/13/grub-image/index.html">
+<meta property="og:title" content="在国内使用 Disqus 的小技巧">
+<meta property="og:url" content="https://ganlvtech.github.io/2018/10/18/disqus-in-china-trick/index.html">
 <meta property="og:site_name" content="Ganlv&#39;s Blog">
-<meta property="og:description" content="今天尝试安装了一下 Ubuntu 18.04.1，现在安装系统越来越简单了，用 Rufus 做一个 U 盘启动盘，然后就正常下一步就行了，Ubuntu 直接提供安装 Windows 和 Ubuntu 双系统的选项。 安装之后想利用 Grub2 引导器页面的背景图片功能装个逼，把笔记本电脑厂商 logo 之后、Windows 启动之前那段黑屏加一个打着自己 logo 的背景图片。研究明白之后还是很简">
+<meta property="og:description" content="Disqus 是一个的评论社区。它可以通过 iframe 提供嵌入式的评论区。可以用于静态网页。 但是在中国会被墙。 问题引出#disqus.com 似乎并没有被墙，只有 *.disqus.com 被墙了。 恰巧 Disqus 的评论数据是从 disqus.com 获取的。 也就是说，通过一点小技巧就可以不翻墙用 Disqus。 解决方法#Disqus 默认使用一个 script 标签来获取数据">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-10-19T05:29:04.062Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Grub2 添加背景图片">
-<meta name="twitter:description" content="今天尝试安装了一下 Ubuntu 18.04.1，现在安装系统越来越简单了，用 Rufus 做一个 U 盘启动盘，然后就正常下一步就行了，Ubuntu 直接提供安装 Windows 和 Ubuntu 双系统的选项。 安装之后想利用 Grub2 引导器页面的背景图片功能装个逼，把笔记本电脑厂商 logo 之后、Windows 启动之前那段黑屏加一个打着自己 logo 的背景图片。研究明白之后还是很简">
+<meta name="twitter:title" content="在国内使用 Disqus 的小技巧">
+<meta name="twitter:description" content="Disqus 是一个的评论社区。它可以通过 iframe 提供嵌入式的评论区。可以用于静态网页。 但是在中国会被墙。 问题引出#disqus.com 似乎并没有被墙，只有 *.disqus.com 被墙了。 恰巧 Disqus 的评论数据是从 disqus.com 获取的。 也就是说，通过一点小技巧就可以不翻墙用 Disqus。 解决方法#Disqus 默认使用一个 script 标签来获取数据">
 <link rel="alternate" href="/atom.xml" title="Ganlv&#39;s Blog" type="application/atom+xml">
 <link rel="icon" href="/favicon.png">
 <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
@@ -50,65 +50,53 @@
 </div>
 </header>
 <div class="outer">
-<section id="main"><article id="blog-grub-image" class="article article-type-blog" itemscope itemprop="blogPost">
+<section id="main"><article id="post-disqus-in-china-trick" class="article article-type-post" itemscope itemprop="blogPost">
 <div class="article-meta">
-<a href="/2018/09/13/grub-image/" class="article-date">
-<time datetime="2018-09-13T17:20:05.000Z" itemprop="datePublished">2018-09-14</time>
+<a href="/2018/10/18/disqus-in-china-trick/" class="article-date">
+<time datetime="2018-10-18T19:30:34.000Z" itemprop="datePublished">2018-10-19</time>
 </a>
 </div>
 <div class="article-inner">
 <header class="article-header">
 <h1 class="article-title" itemprop="name">
-Grub2 添加背景图片
+在国内使用 Disqus 的小技巧
 </h1>
 </header>
 <div class="article-entry" itemprop="articleBody">
-<p>今天尝试安装了一下 Ubuntu 18.04.1，现在安装系统越来越简单了，用 Rufus 做一个 U 盘启动盘，然后就正常下一步就行了，Ubuntu 直接提供安装 Windows 和 Ubuntu 双系统的选项。</p>
-<p>安装之后想利用 Grub2 引导器页面的背景图片功能装个逼，把笔记本电脑厂商 logo 之后、Windows 启动之前那段黑屏加一个打着自己 logo 的背景图片。研究明白之后还是很简单的，不过查的过程还是挺麻烦的。</p>
-<h2><span id="add-a-grub-background-image">Add a grub background image</span><a href="#add-a-grub-background-image" class="header-anchor">#</a></h2><p>First, add grub background image support.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install grub2-splashimages</span><br></pre></td></tr></table></figure>
-<p>Then, copy a image to <code>/boot/grub/</code>.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp bg.png /boot/grub/</span><br></pre></td></tr></table></figure>
-<p>Now, you can use</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo update-grub</span><br></pre></td></tr></table></figure>
-<p>to apply the change.</p>
-<p>You can have a try now. And then, you will find that the 10 seconds timeout is really annoying.</p>
-<h2><span id="no-timeout-and-no-menu">No timeout and no menu</span><a href="#no-timeout-and-no-menu" class="header-anchor">#</a></h2><p>Edit <code>/etc/default/grub</code>. Add or edit following settings.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GRUB_TIMEOUT_STYLE=hidden</span><br><span class="line">GRUB_TIMEOUT=1</span><br></pre></td></tr></table></figure>
-<p>I will also set <code>GRUB_DEFAULT</code> to <code>2</code>, so the highlight selected default boot choice will be the 3rd option, which means <code>Windows boot manager</code>.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GRUB_DEFAULT=2</span><br></pre></td></tr></table></figure>
-<p>It seems everything is ready, but grub do more things. Grub checks if you have multiple systems. If more than one system was found, grub will force <code>timeout_style</code> to be <code>menu</code>. This is not what we expected.</p>
-<p>So open <code>/etc/grub.d/03_os-prober</code>, and remove the last line</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adjust_timeout</span><br></pre></td></tr></table></figure>
-<p>Now, run <code>update-grub</code> and restart.</p>
-<p>You can see the splash image and no menu is shown. Windows boot after a brief delay.</p>
-<p>If you want to switch back to Ubuntu, you can press <code>Esc</code> during that 1 second timeout to get back the boot options menu, and select a different system to boot.</p>
-<h2><span id="more-details">More details</span><a href="#more-details" class="header-anchor">#</a></h2><h3><span id="related-files-and-functions">Related files and functions</span><a href="#related-files-and-functions" class="header-anchor">#</a></h3><ul>
-<li><code>/boot/grub/grub.cfg</code></li>
-<li><code>/etc/default/grub</code></li>
-<li><code>/etc/grub.d/00_header</code> function <code>make_timeout()</code></li>
-<li><code>/etc/grub.d/03_os-prober</code> function <code>adjust_timeout()</code></li>
-</ul>
-<h3><span id="related-links">Related links</span><a href="#related-links" class="header-anchor">#</a></h3><ul>
-<li><a href="https://help.ubuntu.com/community/Grub2/Displays" target="_blank" rel="noopener">Grub2 displays docs</a></li>
-</ul>
+<p><a href="https://disqus.com/" target="_blank" rel="noopener">Disqus</a> 是一个的评论社区。它可以通过 iframe 提供嵌入式的评论区。可以用于静态网页。</p>
+<p><strong>但是在中国会被墙。</strong></p>
+<h2><span id="wen-ti-yin-chu">问题引出</span><a href="#wen-ti-yin-chu" class="header-anchor">#</a></h2><p><code>disqus.com</code> 似乎并没有被墙，只有 <code>*.disqus.com</code> 被墙了。</p>
+<p>恰巧 Disqus 的评论数据是从 <code>disqus.com</code> 获取的。</p>
+<p>也就是说，通过一点小技巧就可以不翻墙用 Disqus。</p>
+<h2><span id="jie-jue-fang-fa">解决方法</span><a href="#jie-jue-fang-fa" class="header-anchor">#</a></h2><p>Disqus 默认使用一个 <code>script</code> 标签来获取数据</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"//ganlvtech.disqus.com/embed.js"</span>&gt;</span><span class="undefined"></span></span><br></pre></td></tr></table></figure>
+<p>其实如果阅读代码后可以发现，这个 <code>embed.js</code> 并不会变化。他只是用来搜索所有 <code>script</code> 标签的 <code>src</code> 属性，匹配出类似 <code>ganlvtech</code> 的 shortname。然后利用这个 shortname 来获取评论数据。</p>
+<p>又恰巧，disqus有一个没有被墙的 CDN <code>a.disquscdn.com</code>。</p>
+<p>那么我们把上面的代码改成</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">    var disqus_shortname = "ganlvtech";</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"//a.disquscdn.com/embed.js"</span>&gt;</span><span class="undefined"></span></span><br></pre></td></tr></table></figure>
+<p>然后就可以不翻墙使用了。</p>
+<p>效果并不是不太好，仅仅只是能用。</p>
+<h2><span id="todo">TODO</span><a href="#todo" class="header-anchor">#</a></h2><p><code>count.js</code> 应该也需要改一下，否则仍然无法使用。因为它依然需要从 <code>ganlvtech.disqus.com</code> 加载脚本。</p>
+<h2><span id="hexo">Hexo</span><a href="#hexo" class="header-anchor">#</a></h2><p>Hexo 默认主题 <code>landscape</code> 是支持 Disqus 的，简单地配置一下。</p>
+<p>在 <code>_config.yml</code> 第一级添加</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">disqus_shortname:</span> <span class="string">ganlvtech</span></span><br></pre></td></tr></table></figure>
+<p>在需要打开评论的文章前面的元数据中加上</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">comments:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>在 <code>themes\landscape\layout\_partial\after-footer.ejs</code> 中把</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dsq.src = <span class="string">'//'</span> + disqus_shortname + <span class="string">'.disqus.com/&lt;% if (page.comments) &#123; %&gt;embed.js&lt;% &#125; else &#123; %&gt;count.js&lt;% &#125; %&gt;'</span>;</span><br></pre></td></tr></table></figure>
+<p>改成</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dsq.src = <span class="string">'//a.disquscdn.com/&lt;% if (page.comments) &#123; %&gt;embed.js&lt;% &#125; else &#123; %&gt;count.js&lt;% &#125; %&gt;'</span>;</span><br></pre></td></tr></table></figure>
 </div>
 <footer class="article-footer">
-<a data-url="https://ganlvtech.github.io/2018/09/13/grub-image/" data-id="cjnfkrcn80007yav4hpd27f80" class="article-share-link">Share</a>
-<a href="https://ganlvtech.github.io/2018/09/13/grub-image/#disqus_thread" class="article-comment-link">留言</a>
-<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/grub/">grub</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li></ul>
+<a data-url="https://ganlvtech.github.io/2018/10/18/disqus-in-china-trick/" data-id="cjnfkrcn00003yav49xx3wft3" class="article-share-link">Share</a>
+<a href="https://ganlvtech.github.io/2018/10/18/disqus-in-china-trick/#disqus_thread" class="article-comment-link">留言</a>
+<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/comment/">comment</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/disqus/">disqus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gfw/">gfw</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
 </footer>
 </div>
 <nav id="article-nav">
-<a href="/2018/09/22/great-firewall-ssl-connection/" id="article-nav-newer" class="article-nav-link-wrap">
-<strong class="article-nav-caption">Newer</strong>
-<div class="article-nav-title">
-关于 GFW 的 SSL 连接检测
-</div>
-</a>
-<a href="/2018/09/10/jekyll-vs-hexo/" id="article-nav-older" class="article-nav-link-wrap">
+<a href="/2018/10/17/external-link-rel-no-opener/" id="article-nav-older" class="article-nav-link-wrap">
 <strong class="article-nav-caption">Older</strong>
-<div class="article-nav-title">Jekyll v.s. Hexo</div>
+<div class="article-nav-title">使用 rel=noopener 打开外部链接</div>
 </a>
 </nav>
 </article>
@@ -174,7 +162,7 @@ Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
 <a href="/" class="mobile-nav-link">Home</a>
 <a href="/archives" class="mobile-nav-link">Archives</a>
 </nav>
-<script>var disqus_shortname="ganlvtech",disqus_url="https://ganlvtech.github.io/2018/09/13/grub-image/";!function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="//a.disquscdn.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)}()</script>
+<script>var disqus_shortname="ganlvtech",disqus_url="https://ganlvtech.github.io/2018/10/18/disqus-in-china-trick/";!function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="//a.disquscdn.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)}()</script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
 <script src="/fancybox/jquery.fancybox.pack.js"></script>
