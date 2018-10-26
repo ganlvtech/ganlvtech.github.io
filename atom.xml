@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ganlvtech.github.io/"/>
-  <updated>2018-10-26T07:46:29.240Z</updated>
+  <updated>2018-10-26T17:28:10.961Z</updated>
   <id>https://ganlvtech.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://ganlvtech.github.io/2018/10/26/photoshop-memory-problem/"/>
     <id>https://ganlvtech.github.io/2018/10/26/photoshop-memory-problem/</id>
     <published>2018-10-26T06:45:21.000Z</published>
-    <updated>2018-10-26T07:46:29.240Z</updated>
+    <updated>2018-10-26T17:28:10.961Z</updated>
     
     <summary type="html">
     
@@ -48,11 +48,41 @@
   </entry>
   
   <entry>
+    <title>安装 Hexo</title>
+    <link href="https://ganlvtech.github.io/2018/10/21/install-hexo/"/>
+    <id>https://ganlvtech.github.io/2018/10/21/install-hexo/</id>
+    <published>2018-10-21T11:40:15.000Z</published>
+    <updated>2018-10-26T17:28:10.961Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2&gt;&lt;span id=&quot;an-zhuang-node-js&quot;&gt;&amp;#x5B89;&amp;#x88C5; Node.js&lt;/span&gt;&lt;a href=&quot;#an-zhuang-node-js&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="https://ganlvtech.github.io/tags/hexo/"/>
+    
+      <category term="node.js" scheme="https://ganlvtech.github.io/tags/node-js/"/>
+    
+      <category term="npm" scheme="https://ganlvtech.github.io/tags/npm/"/>
+    
+      <category term="git" scheme="https://ganlvtech.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Markdown 引用块加颜色作为提示框</title>
     <link href="https://ganlvtech.github.io/2018/10/19/hexo-markdown-blockquote-colorful-message/"/>
     <id>https://ganlvtech.github.io/2018/10/19/hexo-markdown-blockquote-colorful-message/</id>
     <published>2018-10-19T14:06:25.000Z</published>
-    <updated>2018-10-26T07:46:29.240Z</updated>
+    <updated>2018-10-26T17:28:10.961Z</updated>
     
     <summary type="html">
     
@@ -88,7 +118,7 @@
     <link href="https://ganlvtech.github.io/2018/10/18/disqus-in-china-trick/"/>
     <id>https://ganlvtech.github.io/2018/10/18/disqus-in-china-trick/</id>
     <published>2018-10-18T19:30:34.000Z</published>
-    <updated>2018-10-26T07:46:29.240Z</updated>
+    <updated>2018-10-26T17:28:10.961Z</updated>
     
     <summary type="html">
     
@@ -122,7 +152,7 @@
     <link href="https://ganlvtech.github.io/2018/10/17/external-link-rel-no-opener/"/>
     <id>https://ganlvtech.github.io/2018/10/17/external-link-rel-no-opener/</id>
     <published>2018-10-17T17:33:35.000Z</published>
-    <updated>2018-10-26T07:46:29.240Z</updated>
+    <updated>2018-10-26T17:28:10.961Z</updated>
     
     <summary type="html">
     
@@ -162,7 +192,7 @@
     <link href="https://ganlvtech.github.io/2018/10/15/chrome-local-override/"/>
     <id>https://ganlvtech.github.io/2018/10/15/chrome-local-override/</id>
     <published>2018-10-15T20:46:09.000Z</published>
-    <updated>2018-10-26T07:46:29.236Z</updated>
+    <updated>2018-10-26T17:28:10.961Z</updated>
     
     <summary type="html">
     
@@ -208,7 +238,7 @@
     <link href="https://ganlvtech.github.io/2018/10/08/install-pure-ftpd-enable-tls/"/>
     <id>https://ganlvtech.github.io/2018/10/08/install-pure-ftpd-enable-tls/</id>
     <published>2018-10-08T17:38:17.000Z</published>
-    <updated>2018-10-26T07:46:29.240Z</updated>
+    <updated>2018-10-26T17:28:10.961Z</updated>
     
     <summary type="html">
     
@@ -243,7 +273,7 @@
     <link href="https://ganlvtech.github.io/2018/09/28/ubuntu-font-noto-sans-cjk-problem/"/>
     <id>https://ganlvtech.github.io/2018/09/28/ubuntu-font-noto-sans-cjk-problem/</id>
     <published>2018-09-28T23:25:00.000Z</published>
-    <updated>2018-10-26T07:46:29.240Z</updated>
+    <updated>2018-10-26T17:28:10.961Z</updated>
     
     <summary type="html">
     
@@ -271,7 +301,7 @@
     <link href="https://ganlvtech.github.io/2018/09/24/hexo-deploy-vs-travis-pages-provider/"/>
     <id>https://ganlvtech.github.io/2018/09/24/hexo-deploy-vs-travis-pages-provider/</id>
     <published>2018-09-24T13:54:53.000Z</published>
-    <updated>2018-10-26T07:46:29.240Z</updated>
+    <updated>2018-10-26T17:28:10.961Z</updated>
     
     <summary type="html">
     
@@ -307,7 +337,7 @@
     <link href="https://ganlvtech.github.io/2018/09/24/xx-net-teredo-problem/"/>
     <id>https://ganlvtech.github.io/2018/09/24/xx-net-teredo-problem/</id>
     <published>2018-09-24T09:34:35.000Z</published>
-    <updated>2018-10-26T07:46:29.240Z</updated>
+    <updated>2018-10-26T17:28:10.961Z</updated>
     
     <summary type="html">
     
@@ -337,7 +367,7 @@
     <link href="https://ganlvtech.github.io/2018/09/22/great-firewall-ssl-connection/"/>
     <id>https://ganlvtech.github.io/2018/09/22/great-firewall-ssl-connection/</id>
     <published>2018-09-22T15:11:47.000Z</published>
-    <updated>2018-10-26T07:46:29.240Z</updated>
+    <updated>2018-10-26T17:28:10.961Z</updated>
     
     <summary type="html">
     
@@ -365,7 +395,7 @@
     <link href="https://ganlvtech.github.io/2018/09/13/grub-image/"/>
     <id>https://ganlvtech.github.io/2018/09/13/grub-image/</id>
     <published>2018-09-13T17:20:05.000Z</published>
-    <updated>2018-10-26T07:46:29.240Z</updated>
+    <updated>2018-10-26T17:28:10.961Z</updated>
     
     <summary type="html">
     
@@ -393,7 +423,7 @@
     <link href="https://ganlvtech.github.io/2018/09/10/jekyll-vs-hexo/"/>
     <id>https://ganlvtech.github.io/2018/09/10/jekyll-vs-hexo/</id>
     <published>2018-09-10T13:51:47.000Z</published>
-    <updated>2018-10-26T07:46:29.240Z</updated>
+    <updated>2018-10-26T17:28:10.961Z</updated>
     
     <summary type="html">
     
