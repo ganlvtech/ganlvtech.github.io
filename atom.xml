@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ganlvtech.github.io/"/>
-  <updated>2018-12-12T16:29:12.769Z</updated>
+  <updated>2018-12-15T21:06:56.288Z</updated>
   <id>https://ganlvtech.github.io/</id>
   
   <author>
@@ -17,11 +17,44 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Bilibili Live Personal Introduction</title>
+    <link href="https://ganlvtech.github.io/2018/12/15/bilibili-live-personal-introduction/"/>
+    <id>https://ganlvtech.github.io/2018/12/15/bilibili-live-personal-introduction/</id>
+    <published>2018-12-15T19:49:09.000Z</published>
+    <updated>2018-12-15T21:06:56.288Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Today, I created a new personal introduction for my live room on bilibili.&lt;/p&gt;
+&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="bilibili" scheme="https://ganlvtech.github.io/tags/bilibili/"/>
+    
+      <category term="html" scheme="https://ganlvtech.github.io/tags/html/"/>
+    
+      <category term="css" scheme="https://ganlvtech.github.io/tags/css/"/>
+    
+      <category term="flex" scheme="https://ganlvtech.github.io/tags/flex/"/>
+    
+      <category term="pages" scheme="https://ganlvtech.github.io/tags/pages/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Go Simple HTTP Server Demo</title>
     <link href="https://ganlvtech.github.io/2018/12/08/go-http-server-demo/"/>
     <id>https://ganlvtech.github.io/2018/12/08/go-http-server-demo/</id>
     <published>2018-12-08T22:01:35.000Z</published>
-    <updated>2018-12-12T16:29:12.769Z</updated>
+    <updated>2018-12-15T21:06:56.288Z</updated>
     
     <summary type="html">
     
@@ -54,7 +87,7 @@
     <link href="https://ganlvtech.github.io/2018/12/03/my-jetbrains-idea-settings/"/>
     <id>https://ganlvtech.github.io/2018/12/03/my-jetbrains-idea-settings/</id>
     <published>2018-12-03T17:20:12.000Z</published>
-    <updated>2018-12-12T16:29:12.769Z</updated>
+    <updated>2018-12-15T21:06:56.288Z</updated>
     
     <summary type="html">
     
@@ -95,7 +128,7 @@
     <link href="https://ganlvtech.github.io/2018/11/18/debug-bilibili-live-websocket/"/>
     <id>https://ganlvtech.github.io/2018/11/18/debug-bilibili-live-websocket/</id>
     <published>2018-11-18T20:08:36.000Z</published>
-    <updated>2018-12-12T16:29:12.769Z</updated>
+    <updated>2018-12-15T21:06:56.288Z</updated>
     
     <summary type="html">
     
@@ -112,11 +145,11 @@
     
       <category term="chrome" scheme="https://ganlvtech.github.io/tags/chrome/"/>
     
+      <category term="bilibili" scheme="https://ganlvtech.github.io/tags/bilibili/"/>
+    
       <category term="devtools" scheme="https://ganlvtech.github.io/tags/devtools/"/>
     
       <category term="js" scheme="https://ganlvtech.github.io/tags/js/"/>
-    
-      <category term="bilibili" scheme="https://ganlvtech.github.io/tags/bilibili/"/>
     
       <category term="live" scheme="https://ganlvtech.github.io/tags/live/"/>
     
@@ -133,7 +166,7 @@
     <link href="https://ganlvtech.github.io/2018/11/17/vue-webpack-example/"/>
     <id>https://ganlvtech.github.io/2018/11/17/vue-webpack-example/</id>
     <published>2018-11-17T07:12:25.000Z</published>
-    <updated>2018-12-12T16:29:12.769Z</updated>
+    <updated>2018-12-15T21:06:56.288Z</updated>
     
     <summary type="html">
     
@@ -168,7 +201,7 @@
     <link href="https://ganlvtech.github.io/2018/11/07/software-on-my-windows/"/>
     <id>https://ganlvtech.github.io/2018/11/07/software-on-my-windows/</id>
     <published>2018-11-07T12:35:37.000Z</published>
-    <updated>2018-12-12T16:29:12.769Z</updated>
+    <updated>2018-12-15T21:06:56.288Z</updated>
     
     <summary type="html">
     
@@ -195,7 +228,7 @@
     <link href="https://ganlvtech.github.io/2018/10/27/install-ubuntu-server-18-04-on-virtual-machine/"/>
     <id>https://ganlvtech.github.io/2018/10/27/install-ubuntu-server-18-04-on-virtual-machine/</id>
     <published>2018-10-27T06:13:12.000Z</published>
-    <updated>2018-12-12T16:29:12.769Z</updated>
+    <updated>2018-12-15T21:06:56.288Z</updated>
     
     <summary type="html">
     
@@ -237,7 +270,7 @@
     <link href="https://ganlvtech.github.io/2018/10/26/photoshop-memory-problem/"/>
     <id>https://ganlvtech.github.io/2018/10/26/photoshop-memory-problem/</id>
     <published>2018-10-26T06:45:21.000Z</published>
-    <updated>2018-12-12T16:29:12.769Z</updated>
+    <updated>2018-12-15T21:06:56.288Z</updated>
     
     <summary type="html">
     
@@ -268,7 +301,7 @@
     <link href="https://ganlvtech.github.io/2018/10/21/install-hexo/"/>
     <id>https://ganlvtech.github.io/2018/10/21/install-hexo/</id>
     <published>2018-10-21T11:40:15.000Z</published>
-    <updated>2018-12-12T16:29:12.769Z</updated>
+    <updated>2018-12-15T21:06:56.288Z</updated>
     
     <summary type="html">
     
@@ -298,7 +331,7 @@
     <link href="https://ganlvtech.github.io/2018/10/19/hexo-markdown-blockquote-colorful-message/"/>
     <id>https://ganlvtech.github.io/2018/10/19/hexo-markdown-blockquote-colorful-message/</id>
     <published>2018-10-19T14:06:25.000Z</published>
-    <updated>2018-12-12T16:29:12.769Z</updated>
+    <updated>2018-12-15T21:06:56.288Z</updated>
     
     <summary type="html">
     
@@ -313,9 +346,9 @@
     </summary>
     
     
-      <category term="js" scheme="https://ganlvtech.github.io/tags/js/"/>
-    
       <category term="css" scheme="https://ganlvtech.github.io/tags/css/"/>
+    
+      <category term="js" scheme="https://ganlvtech.github.io/tags/js/"/>
     
       <category term="hexo" scheme="https://ganlvtech.github.io/tags/hexo/"/>
     
@@ -334,7 +367,7 @@
     <link href="https://ganlvtech.github.io/2018/10/18/disqus-in-china-trick/"/>
     <id>https://ganlvtech.github.io/2018/10/18/disqus-in-china-trick/</id>
     <published>2018-10-18T19:30:34.000Z</published>
-    <updated>2018-12-12T16:29:12.769Z</updated>
+    <updated>2018-12-15T21:06:56.288Z</updated>
     
     <summary type="html">
     
@@ -368,7 +401,7 @@
     <link href="https://ganlvtech.github.io/2018/10/17/external-link-rel-no-opener/"/>
     <id>https://ganlvtech.github.io/2018/10/17/external-link-rel-no-opener/</id>
     <published>2018-10-17T17:33:35.000Z</published>
-    <updated>2018-12-12T16:29:12.769Z</updated>
+    <updated>2018-12-15T21:06:56.288Z</updated>
     
     <summary type="html">
     
@@ -385,9 +418,9 @@
     
       <category term="chrome" scheme="https://ganlvtech.github.io/tags/chrome/"/>
     
-      <category term="devtools" scheme="https://ganlvtech.github.io/tags/devtools/"/>
-    
       <category term="html" scheme="https://ganlvtech.github.io/tags/html/"/>
+    
+      <category term="devtools" scheme="https://ganlvtech.github.io/tags/devtools/"/>
     
       <category term="phishing" scheme="https://ganlvtech.github.io/tags/phishing/"/>
     
@@ -408,7 +441,7 @@
     <link href="https://ganlvtech.github.io/2018/10/15/chrome-local-override/"/>
     <id>https://ganlvtech.github.io/2018/10/15/chrome-local-override/</id>
     <published>2018-10-15T20:46:09.000Z</published>
-    <updated>2018-12-12T16:29:12.769Z</updated>
+    <updated>2018-12-15T21:06:56.288Z</updated>
     
     <summary type="html">
     
@@ -424,6 +457,10 @@
     
     
       <category term="chrome" scheme="https://ganlvtech.github.io/tags/chrome/"/>
+    
+      <category term="html" scheme="https://ganlvtech.github.io/tags/html/"/>
+    
+      <category term="css" scheme="https://ganlvtech.github.io/tags/css/"/>
     
       <category term="extension" scheme="https://ganlvtech.github.io/tags/extension/"/>
     
@@ -443,10 +480,6 @@
     
       <category term="js" scheme="https://ganlvtech.github.io/tags/js/"/>
     
-      <category term="css" scheme="https://ganlvtech.github.io/tags/css/"/>
-    
-      <category term="html" scheme="https://ganlvtech.github.io/tags/html/"/>
-    
   </entry>
   
   <entry>
@@ -454,7 +487,7 @@
     <link href="https://ganlvtech.github.io/2018/10/08/install-pure-ftpd-enable-tls/"/>
     <id>https://ganlvtech.github.io/2018/10/08/install-pure-ftpd-enable-tls/</id>
     <published>2018-10-08T17:38:17.000Z</published>
-    <updated>2018-12-12T16:29:12.769Z</updated>
+    <updated>2018-12-15T21:06:56.288Z</updated>
     
     <summary type="html">
     
@@ -489,7 +522,7 @@
     <link href="https://ganlvtech.github.io/2018/09/28/ubuntu-font-noto-sans-cjk-problem/"/>
     <id>https://ganlvtech.github.io/2018/09/28/ubuntu-font-noto-sans-cjk-problem/</id>
     <published>2018-09-28T23:25:00.000Z</published>
-    <updated>2018-12-12T16:29:12.769Z</updated>
+    <updated>2018-12-15T21:06:56.288Z</updated>
     
     <summary type="html">
     
@@ -517,7 +550,7 @@
     <link href="https://ganlvtech.github.io/2018/09/24/hexo-deploy-vs-travis-pages-provider/"/>
     <id>https://ganlvtech.github.io/2018/09/24/hexo-deploy-vs-travis-pages-provider/</id>
     <published>2018-09-24T13:54:53.000Z</published>
-    <updated>2018-12-12T16:29:12.769Z</updated>
+    <updated>2018-12-15T21:06:56.288Z</updated>
     
     <summary type="html">
     
@@ -532,6 +565,8 @@
     </summary>
     
     
+      <category term="pages" scheme="https://ganlvtech.github.io/tags/pages/"/>
+    
       <category term="hexo" scheme="https://ganlvtech.github.io/tags/hexo/"/>
     
       <category term="node.js" scheme="https://ganlvtech.github.io/tags/node-js/"/>
@@ -544,8 +579,6 @@
     
       <category term="github" scheme="https://ganlvtech.github.io/tags/github/"/>
     
-      <category term="pages" scheme="https://ganlvtech.github.io/tags/pages/"/>
-    
   </entry>
   
   <entry>
@@ -553,7 +586,7 @@
     <link href="https://ganlvtech.github.io/2018/09/24/xx-net-teredo-problem/"/>
     <id>https://ganlvtech.github.io/2018/09/24/xx-net-teredo-problem/</id>
     <published>2018-09-24T09:34:35.000Z</published>
-    <updated>2018-12-12T16:29:12.769Z</updated>
+    <updated>2018-12-15T21:06:56.288Z</updated>
     
     <summary type="html">
     
@@ -583,7 +616,7 @@
     <link href="https://ganlvtech.github.io/2018/09/22/great-firewall-ssl-connection/"/>
     <id>https://ganlvtech.github.io/2018/09/22/great-firewall-ssl-connection/</id>
     <published>2018-09-22T15:11:47.000Z</published>
-    <updated>2018-12-12T16:29:12.769Z</updated>
+    <updated>2018-12-15T21:06:56.288Z</updated>
     
     <summary type="html">
     
@@ -611,7 +644,7 @@
     <link href="https://ganlvtech.github.io/2018/09/13/grub-image/"/>
     <id>https://ganlvtech.github.io/2018/09/13/grub-image/</id>
     <published>2018-09-13T17:20:05.000Z</published>
-    <updated>2018-12-12T16:29:12.769Z</updated>
+    <updated>2018-12-15T21:06:56.288Z</updated>
     
     <summary type="html">
     
@@ -639,7 +672,7 @@
     <link href="https://ganlvtech.github.io/2018/09/10/jekyll-vs-hexo/"/>
     <id>https://ganlvtech.github.io/2018/09/10/jekyll-vs-hexo/</id>
     <published>2018-09-10T13:51:47.000Z</published>
-    <updated>2018-12-12T16:29:12.769Z</updated>
+    <updated>2018-12-15T21:06:56.288Z</updated>
     
     <summary type="html">
     
@@ -654,6 +687,8 @@
     </summary>
     
     
+      <category term="pages" scheme="https://ganlvtech.github.io/tags/pages/"/>
+    
       <category term="hexo" scheme="https://ganlvtech.github.io/tags/hexo/"/>
     
       <category term="node.js" scheme="https://ganlvtech.github.io/tags/node-js/"/>
@@ -665,8 +700,6 @@
       <category term="ci" scheme="https://ganlvtech.github.io/tags/ci/"/>
     
       <category term="github" scheme="https://ganlvtech.github.io/tags/github/"/>
-    
-      <category term="pages" scheme="https://ganlvtech.github.io/tags/pages/"/>
     
       <category term="jekyll" scheme="https://ganlvtech.github.io/tags/jekyll/"/>
     
