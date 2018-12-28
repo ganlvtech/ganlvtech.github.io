@@ -12,13 +12,13 @@
 <meta property="og:site_name" content="Ganlv&#39;s Blog">
 <meta property="og:description" content="&amp;#x8981;&amp;#x6C42; 96 &amp;#x548C; 8 &amp;#x4E4B;&amp;#x95F4;&amp;#x7684;&amp;#x6574;&amp;#x6570;&amp;#x3002;&amp;#x5DF2;&amp;#x63D2;&amp;#x5165;&amp;#x6700;&amp;#x63A5;&amp;#x8FD1;&amp;#x7684;&amp;#x6570;&amp;#x503C;   &amp;#x8FD9;&amp;#x4E2A;&amp;#x95EE;&amp;#x9898;&amp;#x56F0;&amp;#x62">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://ganlvtech.github.io/images/photoshop-memory-problem/cannot-open-performance-tab.jpg">
-<meta property="og:image" content="https://ganlvtech.github.io/images/photoshop-memory-problem/regedit.jpg">
-<meta property="og:updated_time" content="2018-12-15T21:06:56.288Z">
+<meta property="og:image" content="https://ganlvtech.github.io/images/2018-10-26-photoshop-memory-problem/cannot-open-performance-tab.jpg">
+<meta property="og:image" content="https://ganlvtech.github.io/images/2018-10-26-photoshop-memory-problem/regedit.jpg">
+<meta property="og:updated_time" content="2018-12-28T13:23:47.937Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Photoshop 内存问题无法打开性能选项">
 <meta name="twitter:description" content="&amp;#x8981;&amp;#x6C42; 96 &amp;#x548C; 8 &amp;#x4E4B;&amp;#x95F4;&amp;#x7684;&amp;#x6574;&amp;#x6570;&amp;#x3002;&amp;#x5DF2;&amp;#x63D2;&amp;#x5165;&amp;#x6700;&amp;#x63A5;&amp;#x8FD1;&amp;#x7684;&amp;#x6570;&amp;#x503C;   &amp;#x8FD9;&amp;#x4E2A;&amp;#x95EE;&amp;#x9898;&amp;#x56F0;&amp;#x62">
-<meta name="twitter:image" content="https://ganlvtech.github.io/images/photoshop-memory-problem/cannot-open-performance-tab.jpg">
+<meta name="twitter:image" content="https://ganlvtech.github.io/images/2018-10-26-photoshop-memory-problem/cannot-open-performance-tab.jpg">
 <link rel="alternate" href="/atom.xml" title="Ganlv&#39;s Blog" type="application/atom+xml">
 <link rel="icon" href="/favicon.png">
 <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
@@ -76,15 +76,15 @@ Photoshop 内存问题无法打开性能选项
 <blockquote>
 <p>&#x8981;&#x6C42; 96 &#x548C; 8 &#x4E4B;&#x95F4;&#x7684;&#x6574;&#x6570;&#x3002;&#x5DF2;&#x63D2;&#x5165;&#x6700;&#x63A5;&#x8FD1;&#x7684;&#x6570;&#x503C;</p>
 </blockquote>
-<p><img src="/images/photoshop-memory-problem/cannot-open-performance-tab.jpg" alt="&#x65E0;&#x6CD5;&#x6253;&#x5F00;&#x9996;&#x9009;&#x9879;&#x4E2D;&#x7684;&#x6027;&#x80FD;"></p>
+<p><img src="/images/2018-10-26-photoshop-memory-problem/cannot-open-performance-tab.jpg" alt="&#x65E0;&#x6CD5;&#x6253;&#x5F00;&#x9996;&#x9009;&#x9879;&#x4E2D;&#x7684;&#x6027;&#x80FD;"></p>
 <p>&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x56F0;&#x6270;&#x4E86;&#x6211;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x3002;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4E5F;&#x662F;&#x4ECE;&#x7F51;&#x4E0A;&#x627E;&#x5230;&#x7684;&#x3002;</p>
 <h2><span id="shou-dong-xiu-gai-zhu-ce-biao">&#x624B;&#x52A8;&#x4FEE;&#x6539;&#x6CE8;&#x518C;&#x8868;</span><a href="#shou-dong-xiu-gai-zhu-ce-biao" class="header-anchor">#</a></h2><p>&#x6253;&#x5F00;&#x6CE8;&#x518C;&#x8868;&#x7F16;&#x8F91;&#x5668; <code>regedit</code>&#x3002;</p>
 <p>&#x627E;&#x5230; <code>HKEY_CURRENT_USER\Software\Adobe\Photoshop\110.0</code>&#xFF0C;&#x6700;&#x540E;&#x9762;&#x7684;&#x7248;&#x672C;&#x53F7;&#x53EF;&#x80FD;&#x4E0D;&#x4E00;&#x6837;&#x3002;</p>
 <p>&#x53F3;&#x952E;&#xFF0C;<code>&#x65B0;&#x5EFA;</code>&#xFF0C;<code>DWORD (32 &#x4F4D;) &#x503C;</code>&#xFF0C;&#x540D;&#x79F0;&#x586B; <code>OverridePhysicalMemoryMB</code>&#x3002;</p>
 <p>&#x53CC;&#x51FB;&#x4FEE;&#x6539;&#xFF0C;&#x628A; <code>&#x57FA;&#x6570;</code> &#x6539;&#x6210; <code>&#x5341;&#x8FDB;&#x5236;</code>&#x3002;&#x7136;&#x540E;&#x628A;&#x6570;&#x503C;&#x4FEE;&#x6539;&#x6210;&#x4F60;&#x7684;&#x5185;&#x5B58;&#x5927;&#x5C0F;&#xFF08;&#x6BD4;&#x5982; 4GB &#x5185;&#x5B58;&#x586B;&#x5199; <code>4096</code>&#xFF09;&#x3002;&#x786E;&#x5B9A;&#x3002;</p>
-<p><img src="/images/photoshop-memory-problem/regedit.jpg" alt="&#x6CE8;&#x518C;&#x8868;&#x7F16;&#x8F91;&#x5668;&#x754C;&#x9762;"></p>
+<p><img src="/images/2018-10-26-photoshop-memory-problem/regedit.jpg" alt="&#x6CE8;&#x518C;&#x8868;&#x7F16;&#x8F91;&#x5668;&#x754C;&#x9762;"></p>
 <p>&#x91CD;&#x65B0;&#x6253;&#x5F00; Photoshop&#x3002;</p>
-<h2><span id="xia-zai-zhu-ce-biao-wen-jian">&#x4E0B;&#x8F7D;&#x6CE8;&#x518C;&#x8868;&#x6587;&#x4EF6;</span><a href="#xia-zai-zhu-ce-biao-wen-jian" class="header-anchor">#</a></h2><figure class="highlight plain"><figcaption><span>photoshop-memory-problem.reg</span><a href="/downloads/code/photoshop-memory-problem/photoshop-memory-problem.reg">view raw</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\Adobe\Photoshop\110.0]</span><br><span class="line">&quot;OverridePhysicalMemoryMB&quot;=dword:00001000</span><br></pre></td></tr></table></figure>
+<h2><span id="xia-zai-zhu-ce-biao-wen-jian">&#x4E0B;&#x8F7D;&#x6CE8;&#x518C;&#x8868;&#x6587;&#x4EF6;</span><a href="#xia-zai-zhu-ce-biao-wen-jian" class="header-anchor">#</a></h2><figure class="highlight plain"><figcaption><span>photoshop-memory-problem.reg</span><a href="/downloads/code/2018-10-26-photoshop-memory-problem/photoshop-memory-problem.reg">view raw</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\Adobe\Photoshop\110.0]</span><br><span class="line">&quot;OverridePhysicalMemoryMB&quot;=dword:00001000</span><br></pre></td></tr></table></figure>
 <section class="message is-info">
 <p>&#x8FD9;&#x91CC;&#x9762;&#x7684; <code>00001000</code> &#x662F; 16 &#x8FDB;&#x5236;&#xFF0C;&#x8F6C;&#x6362;&#x6210; 10 &#x8FDB;&#x5236;&#x5C31;&#x662F; <code>4096</code>&#xFF0C;&#x8FD9;&#x662F;&#x6211;&#x81EA;&#x5DF1;&#x7684;&#x7535;&#x8111;&#x7684;&#x603B;&#x5185;&#x5B58;&#x5927;&#x5C0F;&#x3002;</p>
 <p>&#x6839;&#x636E;&#x6CE8;&#x518C;&#x8868;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#xFF0C;&#x8FD9;&#x91CC;&#x53EA;&#x80FD;&#x662F; 16 &#x8FDB;&#x5236;&#xFF0C;&#x5FC5;&#x987B;&#x624B;&#x52A8;&#x8FDB;&#x884C;&#x628A; 10 &#x8FDB;&#x5236;&#x548C; 16 &#x8FDB;&#x5236;&#x7684;&#x8F6C;&#x6362;&#x3002;</p>
@@ -95,7 +95,7 @@ Photoshop 内存问题无法打开性能选项
 <p>&#x7136;&#x540E;&#x4F30;&#x8BA1;&#x662F;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x88AB; catch &#x4F4F;&#x4E86;&#xFF0C;&#x7136;&#x540E;&#x5C31;&#x4EC0;&#x4E48;&#x4E5F;&#x6CA1;&#x53D1;&#x751F;&#xFF0C;&#x4F46;&#x662F;&#x4E5F;&#x4EC0;&#x4E48;&#x90FD;&#x505A;&#x4E0D;&#x4E86;&#x3002;</p>
 </div>
 <footer class="article-footer">
-<a data-url="https://ganlvtech.github.io/2018/10/26/photoshop-memory-problem/" data-id="cjppyd6jz000niwxrcv6h3qgw" class="article-share-link">Share</a>
+<a data-url="https://ganlvtech.github.io/2018/10/26/photoshop-memory-problem/" data-id="cjq82jnjk000iivr1x46fc0yh" class="article-share-link">Share</a>
 <a href="https://ganlvtech.github.io/2018/10/26/photoshop-memory-problem/#disqus_thread" class="article-comment-link">留言</a>
 <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/memory/">memory</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/photoshop/">photoshop</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ram/">ram</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/registry/">registry</a></li></ul>
 </footer>

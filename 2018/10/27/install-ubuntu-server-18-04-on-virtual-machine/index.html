@@ -5,19 +5,19 @@
 <title>虚拟机安装 Ubuntu Server 18.04 | Ganlv&#39;s Blog</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 <meta name="description" content="&amp;#x5B89;&amp;#x88C5;&amp;#x7CFB;&amp;#x7EDF;#&amp;#x7CFB;&amp;#x7EDF;&amp;#x5B89;&amp;#x88C5;&amp;#x8FC7;&amp;#x7A0B;&amp;#x5F88;&amp;#x7B80;&amp;#x5355;&amp;#xFF0C;&amp;#x57FA;&amp;#x672C;&amp;#x4E0A;&amp;#x4E00;&amp;#x8DEF;&amp;#x56DE;&amp;#x8F66;&amp;#xFF0C;&amp;#x6700;&amp;#x540E;&amp;#x8F93">
-<meta name="keywords" content="server,ubuntu,virtualbox,vm,filesystem,network,nic,nat,ssh,homestead">
+<meta name="keywords" content="ubuntu,virtualbox,vm,filesystem,server,network,nic,nat,ssh,homestead">
 <meta property="og:type" content="article">
 <meta property="og:title" content="虚拟机安装 Ubuntu Server 18.04">
 <meta property="og:url" content="https://ganlvtech.github.io/2018/10/27/install-ubuntu-server-18-04-on-virtual-machine/index.html">
 <meta property="og:site_name" content="Ganlv&#39;s Blog">
 <meta property="og:description" content="&amp;#x5B89;&amp;#x88C5;&amp;#x7CFB;&amp;#x7EDF;#&amp;#x7CFB;&amp;#x7EDF;&amp;#x5B89;&amp;#x88C5;&amp;#x8FC7;&amp;#x7A0B;&amp;#x5F88;&amp;#x7B80;&amp;#x5355;&amp;#xFF0C;&amp;#x57FA;&amp;#x672C;&amp;#x4E0A;&amp;#x4E00;&amp;#x8DEF;&amp;#x56DE;&amp;#x8F66;&amp;#xFF0C;&amp;#x6700;&amp;#x540E;&amp;#x8F93">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://ganlvtech.github.io/images/install-ubuntu-server-18-04-on-virtual-machine/insert-guest-addition-cd-image.jpg">
-<meta property="og:updated_time" content="2018-12-15T21:06:56.288Z">
+<meta property="og:image" content="https://ganlvtech.github.io/images/2018-10-27-install-ubuntu-server-18-04-on-virtual-machine/insert-guest-addition-cd-image.jpg">
+<meta property="og:updated_time" content="2018-12-28T13:23:47.937Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="虚拟机安装 Ubuntu Server 18.04">
 <meta name="twitter:description" content="&amp;#x5B89;&amp;#x88C5;&amp;#x7CFB;&amp;#x7EDF;#&amp;#x7CFB;&amp;#x7EDF;&amp;#x5B89;&amp;#x88C5;&amp;#x8FC7;&amp;#x7A0B;&amp;#x5F88;&amp;#x7B80;&amp;#x5355;&amp;#xFF0C;&amp;#x57FA;&amp;#x672C;&amp;#x4E0A;&amp;#x4E00;&amp;#x8DEF;&amp;#x56DE;&amp;#x8F66;&amp;#xFF0C;&amp;#x6700;&amp;#x540E;&amp;#x8F93">
-<meta name="twitter:image" content="https://ganlvtech.github.io/images/install-ubuntu-server-18-04-on-virtual-machine/insert-guest-addition-cd-image.jpg">
+<meta name="twitter:image" content="https://ganlvtech.github.io/images/2018-10-27-install-ubuntu-server-18-04-on-virtual-machine/insert-guest-addition-cd-image.jpg">
 <link rel="alternate" href="/atom.xml" title="Ganlv&#39;s Blog" type="application/atom+xml">
 <link rel="icon" href="/favicon.png">
 <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
@@ -90,7 +90,7 @@
 </section>
 <h3><span id="xu-ni-ji-nei-an-zhuang-kuo-zhan-gong-neng">&#x865A;&#x62DF;&#x673A;&#x5185;&#x5B89;&#x88C5;&#x6269;&#x5C55;&#x529F;&#x80FD;</span><a href="#xu-ni-ji-nei-an-zhuang-kuo-zhan-gong-neng" class="header-anchor">#</a></h3><p>&#x60F3;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x5171;&#x4EAB;&#x6587;&#x4EF6;&#x5939;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x5FC5;&#x987B;&#x8BA9;&#x865A;&#x62DF;&#x673A;&#x5B89;&#x88C5;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#x3002;</p>
 <p>&#x5411;&#x865A;&#x62DF;&#x673A;&#x63D2;&#x5165; Guest Additions &#x5149;&#x76D8;&#x3002;</p>
-<p><img src="/images/install-ubuntu-server-18-04-on-virtual-machine/insert-guest-addition-cd-image.jpg" alt="Insert Guest Additions CD image"></p>
+<p><img src="/images/2018-10-27-install-ubuntu-server-18-04-on-virtual-machine/insert-guest-addition-cd-image.jpg" alt="Insert Guest Additions CD image"></p>
 <p>&#x7136;&#x540E;&#x6302;&#x8F7D;&#x5149;&#x76D8;</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /media/</span><br><span class="line">sudo mkdir cdrom</span><br><span class="line">sudo mount /dev/cdrom /media/cdrom/</span><br></pre></td></tr></table></figure>
 <p>&#x7136;&#x540E;&#x5B89;&#x88C5;&#x5373;&#x53EF;</p>
@@ -145,7 +145,7 @@
 </ul>
 </div>
 <footer class="article-footer">
-<a data-url="https://ganlvtech.github.io/2018/10/27/install-ubuntu-server-18-04-on-virtual-machine/" data-id="cjppyd6jv000iiwxr8gribv0f" class="article-share-link">Share</a>
+<a data-url="https://ganlvtech.github.io/2018/10/27/install-ubuntu-server-18-04-on-virtual-machine/" data-id="cjq82jnjm000kivr10up4ip5f" class="article-share-link">Share</a>
 <a href="https://ganlvtech.github.io/2018/10/27/install-ubuntu-server-18-04-on-virtual-machine/#disqus_thread" class="article-comment-link">留言</a>
 <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/filesystem/">filesystem</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/homestead/">homestead</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nat/">nat</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/network/">network</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nic/">nic</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/server/">server</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ssh/">ssh</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/virtualbox/">virtualbox</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vm/">vm</a></li></ul>
 </footer>

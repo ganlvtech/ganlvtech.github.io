@@ -12,12 +12,12 @@
 <meta property="og:site_name" content="Ganlv&#39;s Blog">
 <meta property="og:description" content="&amp;#x5076;&amp;#x5C14;&amp;#x7528; XX-Net &amp;#x6765;&amp;#x8BBF;&amp;#x95EE; Google&amp;#x3001;MDN&amp;#x3002;&amp;#x6559;&amp;#x80B2;&amp;#x7F51;&amp;#x539F;&amp;#x751F; IPv6 &amp;#x53EF;&amp;#x4EE5;&amp;#x5B8C;&amp;#x5168;&amp;#x6B63;&amp;#x5E38;&amp;#x4F7F;&amp;#x7528; XX-net&amp;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://ganlvtech.github.io/images/xx-net-teredo-problem/firewall-settings.jpg">
-<meta property="og:updated_time" content="2018-12-15T21:06:56.288Z">
+<meta property="og:image" content="https://ganlvtech.github.io/images/2018-09-24-xx-net-teredo-problem/firewall-settings.jpg">
+<meta property="og:updated_time" content="2018-12-28T13:23:47.937Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="XX-Net Teredo 问题">
 <meta name="twitter:description" content="&amp;#x5076;&amp;#x5C14;&amp;#x7528; XX-Net &amp;#x6765;&amp;#x8BBF;&amp;#x95EE; Google&amp;#x3001;MDN&amp;#x3002;&amp;#x6559;&amp;#x80B2;&amp;#x7F51;&amp;#x539F;&amp;#x751F; IPv6 &amp;#x53EF;&amp;#x4EE5;&amp;#x5B8C;&amp;#x5168;&amp;#x6B63;&amp;#x5E38;&amp;#x4F7F;&amp;#x7528; XX-net&amp;">
-<meta name="twitter:image" content="https://ganlvtech.github.io/images/xx-net-teredo-problem/firewall-settings.jpg">
+<meta name="twitter:image" content="https://ganlvtech.github.io/images/2018-09-24-xx-net-teredo-problem/firewall-settings.jpg">
 <link rel="alternate" href="/atom.xml" title="Ganlv&#39;s Blog" type="application/atom+xml">
 <link rel="icon" href="/favicon.png">
 <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
@@ -75,14 +75,14 @@ XX-Net Teredo 问题
 <p>&#x5076;&#x5C14;&#x7528; <a href="https://github.com/XX-net/XX-Net" target="_blank" rel="noopener">XX-Net</a> &#x6765;&#x8BBF;&#x95EE; <a href="https://www.google.com/ncr" target="_blank" rel="noopener">Google</a>&#x3001;<a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN</a>&#x3002;&#x6559;&#x80B2;&#x7F51;&#x539F;&#x751F; IPv6 &#x53EF;&#x4EE5;&#x5B8C;&#x5168;&#x6B63;&#x5E38;&#x4F7F;&#x7528; XX-net&#xFF0C;&#x4F46;&#x5176;&#x4ED6;&#x60C5;&#x51B5;&#x4E0B;&#x9700;&#x8981; Teredo &#x96A7;&#x9053;&#xFF0C;&#x7136;&#x800C;&#x6211;&#x7684;&#x7535;&#x8111;&#x5C31;&#x662F;&#x7528;&#x4E0D;&#x4E86;&#xFF0C;&#x5468;&#x56F4;&#x7684;&#x4EBA;&#x90FD;&#x53EF;&#x4EE5;&#xFF0C;&#x4E00;&#x76F4;&#x4E0D;&#x77E5;&#x9053;&#x4E3A;&#x4EC0;&#x4E48;&#x3002;</p>
 <p>&#x4ECA;&#x5929;&#x7EC8;&#x53D1;&#x73B0;&#x4E8E;&#x539F;&#x56E0;&#x4E86;&#xFF1A;&#x6211;&#x521A;&#x88C5;&#x7CFB;&#x7EDF;&#x7684;&#x65F6;&#x5019;&#x624B;&#x8D31;&#x628A;&#x5F88;&#x591A;&#x9632;&#x706B;&#x5899;&#x89C4;&#x5219;&#x90FD;&#x6539;&#x6210;&#x7981;&#x7528;&#x4E86;&#xFF0C;&#x7136;&#x540E;&#x9ED8;&#x8BA4;&#x5C31;&#x963B;&#x6B62;&#x8FDE;&#x63A5;&#x4E86;&#x3002;</p>
 <h2><span id="fa-xian-guo-cheng">&#x53D1;&#x73B0;&#x8FC7;&#x7A0B;</span><a href="#fa-xian-guo-cheng" class="header-anchor">#</a></h2><p>&#x6211;&#x4ECA;&#x5929;&#x518D;&#x4E00;&#x6B21;&#x67E5;&#x770B; <a href="https://github.com/XX-net/XX-Net/wiki/%E5%A6%82%E4%BD%95%E5%BC%80%E5%90%AFIPv6" target="_blank" rel="noopener">XX-Net IPv6 &#x8BF4;&#x660E;</a>&#xFF0C;&#x5F88;&#x968F;&#x610F;&#x7684;&#x70B9;&#x5F00;&#x4E86; <a href="https://en.wikipedia.org/wiki/Teredo_tunneling" target="_blank" rel="noopener">Teredo Wikipedia</a>&#x3002;&#x7B80;&#x5355;&#x6D4F;&#x89C8;&#x4E86;&#x4E00;&#x4E0B;&#xFF0C;&#x7A81;&#x7136;&#x53D1;&#x73B0;&#x8FD9;&#x4E2A;&#x670D;&#x52A1;&#x662F;&#x9700;&#x8981;&#x5F00;&#x542F; UDP 3544 &#x7AEF;&#x53E3;&#x3002;&#x6211;&#x731B;&#x7136;&#x610F;&#x8BC6;&#x5230;&#x6211;&#x521A;&#x88C5;&#x7CFB;&#x7EDF;&#x4E4B;&#x540E;&#xFF0C;&#x5728;&#x9632;&#x706B;&#x5899;&#x4E2D;&#x628A;&#x5927;&#x90E8;&#x5206;&#x7AEF;&#x53E3;&#x90FD;&#x7981;&#x4E86;&#x3002;</p>
-<p><img src="/images/xx-net-teredo-problem/firewall-settings.jpg" alt="Windows Defender Firewall Advanced Settings"></p>
+<p><img src="/images/2018-09-24-xx-net-teredo-problem/firewall-settings.jpg" alt="Windows Defender Firewall Advanced Settings"></p>
 <p>&#x5728;&#x9AD8;&#x7EA7;&#x5B89;&#x5168; Windows Defender &#x9632;&#x706B;&#x5899;&#x8BBE;&#x7F6E;&#x4E2D;&#xFF0C;&#x628A;&#x4E0E; IPv6 &#x6709;&#x5173;&#x7684;&#x6761;&#x76EE;&#x90FD;&#x542F;&#x7528;&#xFF0C;&#x518D;&#x8BD5;&#x4E86;&#x4E00;&#x4E0B;&#x679C;&#x7136;&#x5C31;&#x6210;&#x529F;&#x4E86;&#x3002;</p>
 <p>&#x81EA;&#x5DF1;&#x624B;&#x6B20;&#x554A;&#xFF01;</p>
 <p>&#x6211;&#x7EE7;&#x7EED;&#x770B; XX-Net &#x7684; Wiki &#x4E2D;&#xFF0C;FAQ &#x4E2D;&#x63D0;&#x5230;&#x4E86; <a href="https://support.xbox.com/zh-CN/xbox-on-windows/social/troubleshoot-party-chat" target="_blank" rel="noopener">Teredo Xbox Support</a>&#xFF0C;&#x70B9;&#x8FDB;&#x53BB;&#x53D1;&#x73B0;&#x91CC;&#x9762;&#x8BF4;&#x4E86;&#x9632;&#x706B;&#x5899;&#x95EE;&#x9898;&#x3002;</p>
 <p>&#x771F;&#x662F;&#x61D2;&#x554A;&#xFF0C;&#x6CA1;&#x8010;&#x5FC3;&#x53BB;&#x8BFB;&#x6587;&#x6863;&#x3002;</p>
 </div>
 <footer class="article-footer">
-<a data-url="https://ganlvtech.github.io/2018/09/24/xx-net-teredo-problem/" data-id="cjppyd6k4000tiwxrps2x4gnr" class="article-share-link">Share</a>
+<a data-url="https://ganlvtech.github.io/2018/09/24/xx-net-teredo-problem/" data-id="cjq82jnj40007ivr1k28ihzl3" class="article-share-link">Share</a>
 <a href="https://ganlvtech.github.io/2018/09/24/xx-net-teredo-problem/#disqus_thread" class="article-comment-link">留言</a>
 <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gfw/">gfw</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/google/">google</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/teredo/">teredo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/xx-net/">xx-net</a></li></ul>
 </footer>

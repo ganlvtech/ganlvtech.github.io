@@ -1116,14 +1116,24 @@ a.article-title:hover {
   font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
 }
 .article-entry code {
-  background: #eee;
-  text-shadow: 0 1px #fff;
+  background: rgba(0,0,0,0.05);
   padding: 0 0.3em;
 }
 .article-entry pre code {
   background: none;
   text-shadow: none;
   padding: 0;
+}
+.article-entry kbd {
+  border: 1px solid #c6cbd1;
+  border-bottom-color: #959da5;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 -1px 0 #959da5;
+  -webkit-box-shadow: inset 0 -1px 0 #959da5;
+  box-shadow: inset 0 -1px 0 #959da5;
+  font-size: 0.8em;
+  line-height: 1;
+  padding: 0.2em 0.6em;
 }
 .article-entry .highlight pre {
   border: none;

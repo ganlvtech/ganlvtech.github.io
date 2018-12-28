@@ -5,21 +5,21 @@
 <title>调试分析 BiliBili 直播 WebSocket 协议 | Ganlv&#39;s Blog</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 <meta name="description" content="&amp;#x672C;&amp;#x6587;&amp;#x4E3B;&amp;#x8981;&amp;#x8BB2;&amp;#x5982;&amp;#x4F55;&amp;#x4F7F;&amp;#x7528; Chrome DevTools&amp;#xFF0C;Bilibili &amp;#x7684;&amp;#x76F4;&amp;#x64AD;&amp;#x95F4; WebSocket &amp;#x534F;&amp;#x8BAE;&amp;#x53EA;&amp;#x662F;&amp;#x4F5C;&amp;#x4E3A;&amp;#x4">
-<meta name="keywords" content="chrome,bilibili,devtools,js,live,websocket,debug,heartbeat">
+<meta name="keywords" content="chrome,devtools,js,bilibili,live,websocket,debug,heartbeat">
 <meta property="og:type" content="article">
 <meta property="og:title" content="调试分析 BiliBili 直播 WebSocket 协议">
 <meta property="og:url" content="https://ganlvtech.github.io/2018/11/18/debug-bilibili-live-websocket/index.html">
 <meta property="og:site_name" content="Ganlv&#39;s Blog">
 <meta property="og:description" content="&amp;#x672C;&amp;#x6587;&amp;#x4E3B;&amp;#x8981;&amp;#x8BB2;&amp;#x5982;&amp;#x4F55;&amp;#x4F7F;&amp;#x7528; Chrome DevTools&amp;#xFF0C;Bilibili &amp;#x7684;&amp;#x76F4;&amp;#x64AD;&amp;#x95F4; WebSocket &amp;#x534F;&amp;#x8BAE;&amp;#x53EA;&amp;#x662F;&amp;#x4F5C;&amp;#x4E3A;&amp;#x4">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://ganlvtech.github.io/images/debug-bilibili-live-websocket/01.jpg">
-<meta property="og:image" content="https://ganlvtech.github.io/images/debug-bilibili-live-websocket/02.jpg">
-<meta property="og:image" content="https://ganlvtech.github.io/images/debug-bilibili-live-websocket/03.jpg">
-<meta property="og:updated_time" content="2018-12-15T21:06:56.288Z">
+<meta property="og:image" content="https://ganlvtech.github.io/images/2018-11-19-debug-bilibili-live-websocket/01.jpg">
+<meta property="og:image" content="https://ganlvtech.github.io/images/2018-11-19-debug-bilibili-live-websocket/02.jpg">
+<meta property="og:image" content="https://ganlvtech.github.io/images/2018-11-19-debug-bilibili-live-websocket/03.jpg">
+<meta property="og:updated_time" content="2018-12-28T13:23:47.937Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="调试分析 BiliBili 直播 WebSocket 协议">
 <meta name="twitter:description" content="&amp;#x672C;&amp;#x6587;&amp;#x4E3B;&amp;#x8981;&amp;#x8BB2;&amp;#x5982;&amp;#x4F55;&amp;#x4F7F;&amp;#x7528; Chrome DevTools&amp;#xFF0C;Bilibili &amp;#x7684;&amp;#x76F4;&amp;#x64AD;&amp;#x95F4; WebSocket &amp;#x534F;&amp;#x8BAE;&amp;#x53EA;&amp;#x662F;&amp;#x4F5C;&amp;#x4E3A;&amp;#x4">
-<meta name="twitter:image" content="https://ganlvtech.github.io/images/debug-bilibili-live-websocket/01.jpg">
+<meta name="twitter:image" content="https://ganlvtech.github.io/images/2018-11-19-debug-bilibili-live-websocket/01.jpg">
 <link rel="alternate" href="/atom.xml" title="Ganlv&#39;s Blog" type="application/atom+xml">
 <link rel="icon" href="/favicon.png">
 <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
@@ -87,14 +87,14 @@
 <li><p>&#x6253;&#x5F00;&#x7B5B;&#x9009;&#xFF0C;&#x7B5B;&#x9009;&#x7C7B;&#x578B;&#x4E3A; WS&#xFF08;&#x5373; WebSocket&#xFF09;&#x7684;&#x8BF7;&#x6C42;&#x3002;</p>
 </li>
 </ol>
-<p><img src="/images/debug-bilibili-live-websocket/01.jpg" alt="Network &#x9009;&#x9879;&#x5361;&#xFF0C;&#x7B5B;&#x9009; WS"></p>
+<p><img src="/images/2018-11-19-debug-bilibili-live-websocket/01.jpg" alt="Network &#x9009;&#x9879;&#x5361;&#xFF0C;&#x7B5B;&#x9009; WS"></p>
 <ol start="4">
 <li><p>&#x9F20;&#x6807;&#x60AC;&#x505C;&#x5728;&#x4EE3;&#x7801;&#x4F4D;&#x7F6E;&#x7684;&#x4E0A;&#x65B9;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8BF7;&#x6C42;&#x7684;&#x53D1;&#x51FA;&#x4F4D;&#x7F6E;&#xFF0C;&#x4EE5;&#x53CA;&#x5B83;&#x7684;&#x8C03;&#x7528;&#x6808;&#x3002;</p>
 <p>&#x901A;&#x5E38;&#x7C7B;&#x4E0D;&#x4F1A;&#x662F;&#x6700;&#x5185;&#x5C42;&#xFF08;&#x4E5F;&#x5C31;&#x662F;&#x7B2C;&#x4E00;&#x4E2A;&#xFF09;&#xFF0C;&#x5F80;&#x4E0B;&#x627E;&#x51E0;&#x4E2A;&#xFF0C;&#x4F30;&#x8BA1;&#x4E00;&#x4E2A;&#x5927;&#x6982;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
 <p>&#x5982;&#x679C;&#x4F30;&#x8BA1;&#x4E0D;&#x597D;&#x7684;&#x8BDD;&#xFF0C;&#x6700;&#x9EBB;&#x70E6;&#x7684;&#x65B9;&#x6CD5;&#x4E5F;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x4E00;&#x4E2A;&#x770B;&#x4E86;&#x3002;</p>
 </li>
 </ol>
-<p><img src="/images/debug-bilibili-live-websocket/02.jpg" alt="&#x8BF7;&#x6C42;&#x8C03;&#x7528;&#x5806;&#x6808;"></p>
+<p><img src="/images/2018-11-19-debug-bilibili-live-websocket/02.jpg" alt="&#x8BF7;&#x6C42;&#x8C03;&#x7528;&#x5806;&#x6808;"></p>
 <section class="message is-info">
 <p>&#x8FD9;&#x79CD;&#x987A;&#x5E8F;&#x903B;&#x8F91;&#x7684;&#x4EE3;&#x7801;&#x4E00;&#x822C;&#x90FD;&#x662F;&#x540C;&#x6B65;&#x6267;&#x884C;&#x7684;&#xFF0C;&#x901A;&#x5E38;&#x4E0D;&#x4F1A;&#x8D8A;&#x8FC7; <code>(async)</code>&#x3002;&#x8FD9;&#x5DE5;&#x4F5C;&#x91CF;&#x77AC;&#x95F4;&#x5C31;&#x51CF;&#x5C0F;&#x5230;&#x53EA;&#x5269; 10 &#x884C;&#x4E86;&#x3002;</p>
 <p>&#x4E00;&#x822C;&#x7279;&#x522B;&#x8981;&#x6CE8;&#x610F; <code>(anonymous)</code> &#x524D;&#x540E;&#xFF0C;&#x53EF;&#x80FD;&#x5C31;&#x662F;&#x8DE8;&#x7C7B;&#x8C03;&#x7528;&#x7684;&#x90E8;&#x5206;&#x3002;&#x8FD9;&#x4E00;&#x6761;&#x7684;&#x51C6;&#x786E;&#x6027;&#x4E0D;&#x597D;&#xFF0C;&#x7528;&#x5904;&#x901A;&#x5E38;&#x4E0D;&#x5927;&#x3002;</p>
@@ -111,7 +111,7 @@
 <p>&#x7136;&#x540E;&#x5728;&#x8FD9;&#x884C;&#x4E0B;&#x4E00;&#x4E2A;&#x65AD;&#x70B9;&#x3002;</p>
 <p>&#x5237;&#x65B0;&#x9875;&#x9762;&#x3002;</p>
 <p>&#x5F53;&#x8FD9;&#x4E2A;&#x65AD;&#x70B9;&#x65AD;&#x4E0B;&#x65F6;&#xFF0C;&#x53F3;&#x4FA7;&#x6709;&#x5F53;&#x524D;&#x7684;&#x8C03;&#x7528;&#x6808;&#xFF0C;&#x4E5F;&#x80FD;&#x770B;&#x5230;&#x5F53;&#x524D;&#x5C42;&#x4E2D;&#x7684;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x3002;&#x53EF;&#x4EE5;&#x70B9;&#x51FB;&#x67D0;&#x4E00;&#x5C42;&#xFF0C;&#x5C06;&#x4EE3;&#x7801;&#x5207;&#x6362;&#x5230;&#x8FD9;&#x4E00;&#x5C42;&#x7684;&#x8C03;&#x7528;&#x4F4D;&#x7F6E;&#xFF0C;&#x540C;&#x65F6;&#x628A;&#x4E0A;&#x4E0B;&#x6587;&#x5207;&#x6362;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5BF9;&#x5E94;&#x5C42;&#x7684;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x3002;&#x5DE6;&#x4FA7;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#x4E5F;&#x4F1A;&#x5185;&#x8054;&#x663E;&#x793A;&#x5BF9;&#x5E94;&#x884C;&#x5185;&#x6709;&#x5173;&#x7684;&#x53D8;&#x91CF;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x65B9;&#x4FBF;&#x8C03;&#x8BD5;&#x3002;</p>
-<p><img src="/images/debug-bilibili-live-websocket/03.jpg" alt="&#x8C03;&#x7528;&#x5806;&#x6808;&#x8C03;&#x8BD5;"></p>
+<p><img src="/images/2018-11-19-debug-bilibili-live-websocket/03.jpg" alt="&#x8C03;&#x7528;&#x5806;&#x6808;&#x8C03;&#x8BD5;"></p>
 <p>&#x8FD9;&#x4E2A;&#x5728; Source &#x9009;&#x9879;&#x5361;&#x4E2D;&#x7684;&#x6808;&#x548C;&#x4E4B;&#x524D;&#x5728; Network &#x9009;&#x9879;&#x5361;&#x4E2D;&#x7684;&#x6808;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x4F9D;&#x6B21;&#x5F80;&#x4E0B;&#x627E;&#xFF0C;&#x770B;&#x770B;&#x54EA;&#x4E24;&#x5C42;&#x6808;&#x4E4B;&#x95F4;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x53D8;&#x5316;&#x8FC7;&#x4E8E;&#x5267;&#x70C8;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x627E;&#x5230;&#x8FD9;&#x4E2A;&#x6A21;&#x5757;&#x5927;&#x6982;&#x7684;&#x5C42;&#x6B21;&#x4E86;&#x3002;</p>
 <section class="message is-info">
 <p>&#x56E0;&#x4E3A;&#x8FD9;&#x4E2A; js &#x6587;&#x4EF6;&#x662F;&#x901A;&#x8FC7; webpack &#x7F16;&#x8BD1;&#x51FA;&#x6765;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x624D;&#x4F1A;&#x6709;&#x6A21;&#x5757;&#x8FD9;&#x79CD;&#x4E1C;&#x897F;&#x3002;&#x67D0;&#x4E9B;&#x5176;&#x4ED6;&#x7684; JavaScript &#x7684;&#x524D;&#x7AEF;&#x8F6F;&#x4EF6;&#xFF0C;&#x539F;&#x672C;&#x5C31;&#x662F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7528;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#xFF0C;&#x6A21;&#x5757;&#x4E5F;&#x90FD;&#x5199;&#x5728;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x4E2D;&#x7684;&#xFF0C;&#x60C5;&#x51B5;&#x53EF;&#x80FD;&#x4F1A;&#x6709;&#x4E9B;&#x4E0D;&#x4E00;&#x6837;&#x3002;</p>
@@ -124,7 +124,7 @@
 <h2><span id="fen-xi-suan-fa">&#x5206;&#x6790;&#x7B97;&#x6CD5;</span><a href="#fen-xi-suan-fa" class="header-anchor">#</a></h2><p>&#x8FD9;&#x4E2A;&#x90E8;&#x5206;&#x5176;&#x5B9E;&#x6CA1;&#x4EC0;&#x4E48;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5C31;&#x662F;&#x5355;&#x6B65;&#x8FD0;&#x884C;&#x5C31;&#x597D;&#x4E86;&#x3002;</p>
 </div>
 <footer class="article-footer">
-<a data-url="https://ganlvtech.github.io/2018/11/18/debug-bilibili-live-websocket/" data-id="cjppyd6j90004iwxrunju2u27" class="article-share-link">Share</a>
+<a data-url="https://ganlvtech.github.io/2018/11/18/debug-bilibili-live-websocket/" data-id="cjq82jnjr000oivr1wat1hmjp" class="article-share-link">Share</a>
 <a href="https://ganlvtech.github.io/2018/11/18/debug-bilibili-live-websocket/#disqus_thread" class="article-comment-link">留言</a>
 <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bilibili/">bilibili</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/chrome/">chrome</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/debug/">debug</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/devtools/">devtools</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/heartbeat/">heartbeat</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/live/">live</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/websocket/">websocket</a></li></ul>
 </footer>

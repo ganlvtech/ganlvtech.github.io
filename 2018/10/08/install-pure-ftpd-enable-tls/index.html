@@ -5,20 +5,20 @@
 <title>安装 Pure-FTPd 并启用 TLS | Ganlv&#39;s Blog</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 <meta name="description" content="&amp;#x5B89;&amp;#x88C5; Pure-FTPd &amp;#x67E5;&amp;#x770B;&amp;#x4E00;&amp;#x4E0B;&amp;#x7AEF;&amp;#x53E3; &amp;#x5C1D;&amp;#x8BD5;&amp;#x8FDE;&amp;#x63A5;&amp;#x4E00;&amp;#x4E0B; &amp;#x542F;&amp;#x7528;&amp;#x865A;&amp;#x62DF;&amp;#x8D26;&amp;#x6237; &amp;#x91CD;&amp;#x542F; FTP &amp;#x">
-<meta name="keywords" content="ssl,ubuntu,ftp,pure-ftpd,tls">
+<meta name="keywords" content="ubuntu,ssl,ftp,pure-ftpd,tls">
 <meta property="og:type" content="article">
 <meta property="og:title" content="安装 Pure-FTPd 并启用 TLS">
 <meta property="og:url" content="https://ganlvtech.github.io/2018/10/08/install-pure-ftpd-enable-tls/index.html">
 <meta property="og:site_name" content="Ganlv&#39;s Blog">
 <meta property="og:description" content="&amp;#x5B89;&amp;#x88C5; Pure-FTPd &amp;#x67E5;&amp;#x770B;&amp;#x4E00;&amp;#x4E0B;&amp;#x7AEF;&amp;#x53E3; &amp;#x5C1D;&amp;#x8BD5;&amp;#x8FDE;&amp;#x63A5;&amp;#x4E00;&amp;#x4E0B; &amp;#x542F;&amp;#x7528;&amp;#x865A;&amp;#x62DF;&amp;#x8D26;&amp;#x6237; &amp;#x91CD;&amp;#x542F; FTP &amp;#x">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://ganlvtech.github.io/images/install-pure-ftpd-enable-tls/filezilla-connect.jpg">
-<meta property="og:image" content="https://ganlvtech.github.io/images/install-pure-ftpd-enable-tls/filezilla-explicit-tls.jpg">
-<meta property="og:updated_time" content="2018-12-15T21:06:56.288Z">
+<meta property="og:image" content="https://ganlvtech.github.io/images/2018-10-09-install-pure-ftpd-enable-tls/filezilla-connect.jpg">
+<meta property="og:image" content="https://ganlvtech.github.io/images/2018-10-09-install-pure-ftpd-enable-tls/filezilla-explicit-tls.jpg">
+<meta property="og:updated_time" content="2018-12-28T13:23:47.937Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="安装 Pure-FTPd 并启用 TLS">
 <meta name="twitter:description" content="&amp;#x5B89;&amp;#x88C5; Pure-FTPd &amp;#x67E5;&amp;#x770B;&amp;#x4E00;&amp;#x4E0B;&amp;#x7AEF;&amp;#x53E3; &amp;#x5C1D;&amp;#x8BD5;&amp;#x8FDE;&amp;#x63A5;&amp;#x4E00;&amp;#x4E0B; &amp;#x542F;&amp;#x7528;&amp;#x865A;&amp;#x62DF;&amp;#x8D26;&amp;#x6237; &amp;#x91CD;&amp;#x542F; FTP &amp;#x">
-<meta name="twitter:image" content="https://ganlvtech.github.io/images/install-pure-ftpd-enable-tls/filezilla-connect.jpg">
+<meta name="twitter:image" content="https://ganlvtech.github.io/images/2018-10-09-install-pure-ftpd-enable-tls/filezilla-connect.jpg">
 <link rel="alternate" href="/atom.xml" title="Ganlv&#39;s Blog" type="application/atom+xml">
 <link rel="icon" href="/favicon.png">
 <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
@@ -151,17 +151,17 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/pure-ftpd.pem -out /etc/ssl/private/pure-ftpd.pem</span><br></pre></td></tr></table></figure>
 <h3><span id="chong-qi-ftp-fu-wu-qi">&#x91CD;&#x542F; FTP &#x670D;&#x52A1;&#x5668;</span><a href="#chong-qi-ftp-fu-wu-qi" class="header-anchor">#</a></h3><p>&#x51E1;&#x662F;&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x80AF;&#x5B9A;&#x8981;&#x91CD;&#x542F;&#xFF0C;&#x56E0;&#x4E3A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x53EA;&#x5728;&#x7A0B;&#x5E8F;&#x542F;&#x52A8;&#x7684;&#x65F6;&#x5019;&#x52A0;&#x8F7D;&#xFF0C;&#x4E4B;&#x540E;&#x5C31;&#x4E0D;&#x4F1A;&#x518D;&#x8BFB;&#x53D6;&#x914D;&#x7F6E;&#x4E86;&#x3002;</p>
 <h2><span id="da-gong-gao-cheng">&#x5927;&#x529F;&#x544A;&#x6210;</span><a href="#da-gong-gao-cheng" class="header-anchor">#</a></h2><p>FileZilla &#x8FDE;&#x63A5;&#x4E00;&#x4E0B;&#x8BD5;&#x4E00;&#x8BD5;</p>
-<p><img src="/images/install-pure-ftpd-enable-tls/filezilla-connect.jpg" alt="&#x4F7F;&#x7528; Pure-FTPd &#x8FDE;&#x63A5;&#x5230; FTP &#x670D;&#x52A1;&#x5668;"></p>
+<p><img src="/images/2018-10-09-install-pure-ftpd-enable-tls/filezilla-connect.jpg" alt="&#x4F7F;&#x7528; Pure-FTPd &#x8FDE;&#x63A5;&#x5230; FTP &#x670D;&#x52A1;&#x5668;"></p>
 <p>&#x786E;&#x5B9A;&#x5373;&#x53EF;&#xFF0C;&#x4FE1;&#x4EFB;&#x8FD9;&#x4E2A;&#x8BC1;&#x4E66;&#xFF0C;&#x4EE5;&#x540E;&#x5C31;&#x4E0D;&#x4F1A;&#x518D;&#x63D0;&#x793A;&#x4E86;&#x3002;</p>
 <p>&#x7AD9;&#x70B9;&#x7BA1;&#x7406;&#x5668;&#x4E2D;&#x4E5F;&#x53EF;&#x4EE5;&#x8981;&#x6C42;&#x663E;&#x5F0F;&#x7684; FTP &#x901A;&#x8FC7; TLS&#x3002;</p>
-<p><img src="/images/install-pure-ftpd-enable-tls/filezilla-explicit-tls.jpg" alt="&#x8981;&#x6C42;&#x663E;&#x5F0F;&#x7684; FTP &#x901A;&#x8FC7; TLS"></p>
+<p><img src="/images/2018-10-09-install-pure-ftpd-enable-tls/filezilla-explicit-tls.jpg" alt="&#x8981;&#x6C42;&#x663E;&#x5F0F;&#x7684; FTP &#x901A;&#x8FC7; TLS"></p>
 <h2><span id="guan-yu-pure-ftpd-de-pei-zhi-wen-jian">&#x5173;&#x4E8E; Pure-FTPd &#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</span><a href="#guan-yu-pure-ftpd-de-pei-zhi-wen-jian" class="header-anchor">#</a></h2><p>Pure-FTPd &#x5E76;&#x4E0D;&#x662F;&#x4F7F;&#x7528; <code>/etc/pure-ftpd/pure-ftpd.conf</code> &#x6765;&#x4F5C;&#x4E3A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x770B; <code>pure-ftpd.conf</code> &#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x5F00;&#x5934;&#x7684;&#x8BF4;&#x660E;&#x3002;</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># If you want to run Pure-FTPd with this configuration</span><br><span class="line"># instead of command-line options, please run the</span><br><span class="line"># following command :</span><br><span class="line">#</span><br><span class="line"># /usr/sbin/pure-ftpd /etc/pure-ftpd/etc/pure-ftpd.conf</span><br></pre></td></tr></table></figure>
 <p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x7528;&#x8FD9;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8FD0;&#x884C; Pure-FTPd&#xFF0C;&#x4F60;&#x5FC5;&#x987B;&#x8981;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x540E;&#x9762;&#x52A0;&#x4E0A;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x3002;</p>
 <p>&#x5982;&#x679C;&#x4F60;&#x4E0D;&#x7528;&#x8FD9;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x76F4;&#x63A5;&#x4FEE;&#x6539; <code>/etc/pure-ftpd/conf/</code> &#x4E0B;&#x7684;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x5C31;&#x884C;&#x3002;</p>
 </div>
 <footer class="article-footer">
-<a data-url="https://ganlvtech.github.io/2018/10/08/install-pure-ftpd-enable-tls/" data-id="cjppyd6jt000hiwxrb7u9wr9o" class="article-share-link">Share</a>
+<a data-url="https://ganlvtech.github.io/2018/10/08/install-pure-ftpd-enable-tls/" data-id="cjq82jnj7000aivr112ajp814" class="article-share-link">Share</a>
 <a href="https://ganlvtech.github.io/2018/10/08/install-pure-ftpd-enable-tls/#disqus_thread" class="article-comment-link">留言</a>
 <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ftp/">ftp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pure-ftpd/">pure-ftpd</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ssl/">ssl</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tls/">tls</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li></ul>
 </footer>
@@ -173,7 +173,7 @@
 Chrome Local Override 本地文件替换
 </div>
 </a>
-<a href="/2018/09/28/ubuntu-font-noto-sans-cjk-problem/" id="article-nav-older" class="article-nav-link-wrap">
+<a href="/2018/09/29/ubuntu-font-noto-sans-cjk-problem/" id="article-nav-older" class="article-nav-link-wrap">
 <strong class="article-nav-caption">Older</strong>
 <div class="article-nav-title">Ubuntu Use Noto Sans CJK SC as Default Fallback Font</div>
 </a>
