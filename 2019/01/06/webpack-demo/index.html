@@ -2,19 +2,20 @@
 <html>
 <head>
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-<title>Tag: production | Ganlv&#39;s Blog</title>
+<title>webpack-demo | Ganlv&#39;s Blog</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-<meta name="description" content="Hello everyone. This is Ganlv. Welcome to my static blog. Comment is not available now. The blog is under built. I will find or build a beautiful theme later. If you like my projects on GitHub, giving">
-<meta name="keywords" content="php,javascript,node,node.js,laravel,open source,hexo">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ganlv&#39;s Blog">
-<meta property="og:url" content="https://ganlvtech.github.io/tags/production/index.html">
+<meta name="description" content="&amp;#x5EFA;&amp;#x7ACB; JavaScript &amp;#x9879;&amp;#x76EE; &amp;#x5F15;&amp;#x5165; Webpack &amp;#x5F15;&amp;#x5165; Babel &amp;#x7F16;&amp;#x8BD1; ES2015 &amp;#x5F15;&amp;#x5165; Copy &amp;#x63D2;&amp;#x4EF6;&amp;#x76F4;&amp;#x63A5;&amp;#x590D;&amp;#x5236;&amp;#x9759;&amp;#x6">
+<meta name="keywords" content="js,html,webpack">
+<meta property="og:type" content="article">
+<meta property="og:title" content="webpack-demo">
+<meta property="og:url" content="https://ganlvtech.github.io/2019/01/06/webpack-demo/index.html">
 <meta property="og:site_name" content="Ganlv&#39;s Blog">
-<meta property="og:description" content="Hello everyone. This is Ganlv. Welcome to my static blog. Comment is not available now. The blog is under built. I will find or build a beautiful theme later. If you like my projects on GitHub, giving">
+<meta property="og:description" content="&amp;#x5EFA;&amp;#x7ACB; JavaScript &amp;#x9879;&amp;#x76EE; &amp;#x5F15;&amp;#x5165; Webpack &amp;#x5F15;&amp;#x5165; Babel &amp;#x7F16;&amp;#x8BD1; ES2015 &amp;#x5F15;&amp;#x5165; Copy &amp;#x63D2;&amp;#x4EF6;&amp;#x76F4;&amp;#x63A5;&amp;#x590D;&amp;#x5236;&amp;#x9759;&amp;#x6">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-01-06T19:48:59.013Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ganlv&#39;s Blog">
-<meta name="twitter:description" content="Hello everyone. This is Ganlv. Welcome to my static blog. Comment is not available now. The blog is under built. I will find or build a beautiful theme later. If you like my projects on GitHub, giving">
+<meta name="twitter:title" content="webpack-demo">
+<meta name="twitter:description" content="&amp;#x5EFA;&amp;#x7ACB; JavaScript &amp;#x9879;&amp;#x76EE; &amp;#x5F15;&amp;#x5165; Webpack &amp;#x5F15;&amp;#x5165; Babel &amp;#x7F16;&amp;#x8BD1; ES2015 &amp;#x5F15;&amp;#x5165; Copy &amp;#x63D2;&amp;#x4EF6;&amp;#x76F4;&amp;#x63A5;&amp;#x590D;&amp;#x5236;&amp;#x9759;&amp;#x6">
 <link rel="alternate" href="/atom.xml" title="Ganlv&#39;s Blog" type="application/atom+xml">
 <link rel="icon" href="/favicon.png">
 <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
@@ -56,25 +57,52 @@
 </div>
 </header>
 <div class="outer">
-<section id="main">
-<section class="archives-wrap">
-<div class="archive-year-wrap">
-<a href="/archives/2018" class="archive-year">2018</a>
-</div>
-<div class="archives">
-<article class="archive-article archive-type-post">
-<div class="archive-article-inner">
-<header class="archive-article-header">
-<a href="/2018/10/15/chrome-local-override/" class="archive-article-date">
-<time datetime="2018-10-15T20:46:09.000Z" itemprop="datePublished">10月 16</time>
+<section id="main"><article id="post-webpack-demo" class="article article-type-post" itemscope itemprop="blogPost">
+<div class="article-meta">
+<a href="/2019/01/06/webpack-demo/" class="article-date">
+<time datetime="2019-01-06T19:24:39.000Z" itemprop="datePublished">2019-01-07</time>
 </a>
-<h1 itemprop="name">
-<a class="archive-article-title" href="/2018/10/15/chrome-local-override/">Chrome Local Override 本地文件替换</a>
+</div>
+<div class="article-inner">
+<header class="article-header">
+<h1 class="article-title" itemprop="name">
+webpack-demo
 </h1>
 </header>
+<div class="article-entry" itemprop="articleBody">
+<ol>
+<li>&#x5EFA;&#x7ACB; JavaScript &#x9879;&#x76EE;</li>
+<li>&#x5F15;&#x5165; Webpack<ul>
+<li>&#x5F15;&#x5165; Babel &#x7F16;&#x8BD1; ES2015</li>
+<li>&#x5F15;&#x5165; Copy &#x63D2;&#x4EF6;&#x76F4;&#x63A5;&#x590D;&#x5236;&#x9759;&#x6001;&#x6587;&#x4EF6;</li>
+<li>&#x5F15;&#x5165; style-loader &#x5904;&#x7406;&#x6837;&#x5F0F;&#x6587;&#x4EF6;&#xFF0C;&#x6216;&#x7528; sass-loader &#x7F16;&#x8BD1;&#x6837;&#x5F0F;</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">npm init</span><br><span class="line">npm install webpack webpack-cli webpack-dev-server --save-dev</span><br><span class="line">npm install @babel/core @babel/preset-env babel-loader --save-dev</span><br><span class="line">npm install copy-webpack-plugin --save-dev</span><br><span class="line">npm install style-loader --save-dev</span><br><span class="line">npm install sass-loader node-sass --save-dev</span><br></pre></td></tr></table></figure>
+<p>&#x6CE8;&#x610F; <code>package.json</code> &#x4E2D;&#x7684; <code>scripts.dev</code> &#x8FD9;&#x4E00;&#x9879;&#xFF0C;&#x914D;&#x7F6E;&#x597D;&#x4E4B;&#x540E;&#x53EF;&#x4EE5;&#x7528; <code>npm run dev</code> &#x8FD0;&#x884C;&#x6D4B;&#x8BD5;&#x670D;&#x52A1;&#x5668;</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">{</span><br><span class="line">  <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;webpack-demo&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;version&quot;</span>: <span class="string">&quot;1.0.0&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;description&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;main&quot;</span>: <span class="string">&quot;index.js&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span>: {</span><br><span class="line">    <span class="attr">&quot;build&quot;</span>: <span class="string">&quot;webpack --config webpack.config.js&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;dev&quot;</span>: <span class="string">&quot;webpack-dev-server --config webpack.config.js&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;test&quot;</span>: <span class="string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span></span><br><span class="line">  },</span><br><span class="line">  <span class="attr">&quot;author&quot;</span>: <span class="string">&quot;Ganlv&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;license&quot;</span>: <span class="string">&quot;MIT&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;dependencies&quot;</span>: {</span><br><span class="line">    <span class="attr">&quot;vue&quot;</span>: <span class="string">&quot;^2.5.21&quot;</span></span><br><span class="line">  },</span><br><span class="line">  <span class="attr">&quot;devDependencies&quot;</span>: {</span><br><span class="line">    <span class="attr">&quot;@babel/core&quot;</span>: <span class="string">&quot;^7.2.2&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;@babel/preset-env&quot;</span>: <span class="string">&quot;^7.2.3&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;babel-loader&quot;</span>: <span class="string">&quot;^8.0.5&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;copy-webpack-plugin&quot;</span>: <span class="string">&quot;^4.6.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;css-loader&quot;</span>: <span class="string">&quot;^2.1.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;node-sass&quot;</span>: <span class="string">&quot;^4.11.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;sass-loader&quot;</span>: <span class="string">&quot;^7.1.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;style-loader&quot;</span>: <span class="string">&quot;^0.23.1&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;vue-loader&quot;</span>: <span class="string">&quot;^15.4.2&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;vue-template-compiler&quot;</span>: <span class="string">&quot;^2.5.21&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;webpack&quot;</span>: <span class="string">&quot;^4.28.3&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;webpack-cli&quot;</span>: <span class="string">&quot;^3.2.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;webpack-dev-server&quot;</span>: <span class="string">&quot;^3.1.14&quot;</span></span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<p><code>webpack.config.js</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&apos;path&apos;</span>);</span><br><span class="line"><span class="keyword">const</span> VueLoaderPlugin = <span class="built_in">require</span>(<span class="string">&apos;vue-loader/lib/plugin&apos;</span>);</span><br><span class="line"><span class="keyword">const</span> CopyWebpackPlugin = <span class="built_in">require</span>(<span class="string">&apos;copy-webpack-plugin&apos;</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = {</span><br><span class="line">  mode: <span class="string">&apos;development&apos;</span>,</span><br><span class="line">  entry: <span class="string">&apos;./src/index.js&apos;</span>,</span><br><span class="line">  output: {</span><br><span class="line">    path: path.resolve(__dirname, <span class="string">&apos;dist&apos;</span>),</span><br><span class="line">    filename: <span class="string">&apos;bundle.js&apos;</span></span><br><span class="line">  },</span><br><span class="line">  <span class="built_in">module</span>: {</span><br><span class="line">    rules: [</span><br><span class="line">      {</span><br><span class="line">        test: <span class="regexp">/\.vue$/</span>,</span><br><span class="line">        loader: <span class="string">&apos;vue-loader&apos;</span></span><br><span class="line">      },</span><br><span class="line">      {</span><br><span class="line">        test: <span class="regexp">/\.scss$/</span>,</span><br><span class="line">        use: [</span><br><span class="line">          <span class="string">&apos;style-loader&apos;</span>,</span><br><span class="line">          <span class="string">&apos;css-loader&apos;</span>,</span><br><span class="line">          <span class="string">&apos;sass-loader&apos;</span></span><br><span class="line">        ]</span><br><span class="line">      },</span><br><span class="line">      {</span><br><span class="line">        test: <span class="regexp">/\.css$/</span>,</span><br><span class="line">        use: [</span><br><span class="line">          <span class="string">&apos;style-loader&apos;</span>,</span><br><span class="line">          <span class="string">&apos;css-loader&apos;</span></span><br><span class="line">        ]</span><br><span class="line">      },</span><br><span class="line">      {</span><br><span class="line">        test: <span class="regexp">/\.m?js$/</span>,</span><br><span class="line">        exclude: <span class="regexp">/(node_modules|bower_components)/</span>,</span><br><span class="line">        use: {</span><br><span class="line">          loader: <span class="string">&apos;babel-loader&apos;</span>,</span><br><span class="line">          options: {</span><br><span class="line">            presets: [<span class="string">&apos;@babel/preset-env&apos;</span>]</span><br><span class="line">          }</span><br><span class="line">        }</span><br><span class="line">      }</span><br><span class="line">    ]</span><br><span class="line">  },</span><br><span class="line">  plugins: [</span><br><span class="line">    <span class="keyword">new</span> VueLoaderPlugin(),</span><br><span class="line">    <span class="keyword">new</span> CopyWebpackPlugin([</span><br><span class="line">      {</span><br><span class="line">        <span class="keyword">from</span>: <span class="string">&apos;public&apos;</span></span><br><span class="line">      }</span><br><span class="line">    ])</span><br><span class="line">  ]</span><br><span class="line">};</span><br></pre></td></tr></table></figure>
 </div>
+<footer class="article-footer">
+<a data-url="https://ganlvtech.github.io/2019/01/06/webpack-demo/" data-id="cjqlb9o9p000yijufdzl80pmp" class="article-share-link">Share</a>
+<a href="https://ganlvtech.github.io/2019/01/06/webpack-demo/#disqus_thread" class="article-comment-link">留言</a>
+<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
+</footer>
+</div>
+<nav id="article-nav">
+<a href="/2019/01/03/php-tutorial-01-hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+<strong class="article-nav-caption">Older</strong>
+<div class="article-nav-title">PHP Tutorial 01 - Hello, world!</div>
+</a>
+</nav>
 </article>
-</div></section>
+<section id="comments">
+<div id="disqus_thread">
+<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
 </section>
 <aside id="sidebar">
 <div class="widget-wrap">
@@ -132,7 +160,7 @@ Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
 <a href="/" class="mobile-nav-link">Home</a>
 <a href="/archives" class="mobile-nav-link">Archives</a>
 </nav>
-<script>var disqus_shortname="ganlvtech";!function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="//c.disquscdn.com/count.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)}()</script>
+<script>var disqus_shortname="ganlvtech",disqus_url="https://ganlvtech.github.io/2019/01/06/webpack-demo/";!function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="//c.disquscdn.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)}()</script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
 <script src="/fancybox/jquery.fancybox.pack.js"></script>
